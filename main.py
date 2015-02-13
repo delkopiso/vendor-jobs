@@ -5,11 +5,12 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
 from apscheduler.jobstores.memory import MemoryJobStore
 from apscheduler.executors.pool import ProcessPoolExecutor
-
+import logging
 from pymongo.mongo_client import MongoClient
 from popular_scrapers import BellaNaijaScraper
 from tech_scrapers import TechCabalScraper
 
+logging.basicConfig()
 DB_NAME = "vendor"
 ARTICLE_COLLECTION = "article"
 scrapers = []
@@ -60,7 +61,7 @@ if __name__ == '__main__':
     }
     scheduler.configure(jobstores=jobstores, executors=executors, job_defaults=job_defaults, timezone=timezone('US/Eastern'))
     # scheduler.add_job(tick, 'interval', seconds=3, id='test_timer_tick')
-    scheduler.add_job(scrape, 'cron', day_of_week='mon-sun', hour=3)
+    scheduler.add_job(scrape, 'cron', minute=5)#day_of_week='mon-sun', hour=3)
     print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
 
     try:
