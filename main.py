@@ -1,28 +1,10 @@
 import os
 from pytz import utc
+from datetime import datetime
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
 from apscheduler.jobstores.memory import MemoryJobStore
 from apscheduler.executors.pool import ProcessPoolExecutor
-
-scheduler = BlockingScheduler()
-url = os.environ.get('DATABASE_URL')
-jobstores = {}
-if url != None:
-    jobstores = {
-        'default': SQLAlchemyJobStore(url=url)
-    }
-else:
-    jobstores = {
-        'default': MemoryJobStore()
-    }
-executors = {
-    'processpool': ProcessPoolExecutor(max_workers=1)
-}
-job_defaults = {
-    # 'coalesce': True
-}
-
 
 # from pymongo.mongo_client import MongoClient
 # from popular_scrapers import BellaNaijaScraper
@@ -55,14 +37,33 @@ job_defaults = {
 #     run_scrapers()
 
 
-@scheduler.interval_schedule(seconds=3, id='test_timer')
-def timed_job():
-    print 'This job is run every three minutes.'
+def tick():
+    print('Tick! The time is: %s' % datetime.now())
 
 
-scheduler.configure(jobstores=jobstores, executors=executors, job_defaults=job_defaults, timezone=utc)
-scheduler.start()
-print "Scheduler started"
+if __name__ == '__main__':
+    scheduler = BlockingScheduler()
+    url = os.environ.get('DATABASE_URL')
+    jobstores = {}
+    if url != None:
+        jobstores = {
+            'default': SQLAlchemyJobStore(url=url)
+        }
+    else:
+        jobstores = {
+            'default': MemoryJobStore()
+        }
+    executors = {
+        'processpool': ProcessPoolExecutor(max_workers=1)
+    }
+    job_defaults = {
+        # 'coalesce': True
+    }
+    scheduler.configure(jobstores=jobstores, executors=executors, job_defaults=job_defaults, timezone=utc)
+    scheduler.add_job(tick, 'interval', seconds=3, id='test_timer_tick')
+    print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
 
-while __name__ == '__main__':
-    pass
+    try:
+        scheduler.start()
+    except (KeyboardInterrupt, SystemExit):
+        pass
