@@ -60,7 +60,7 @@ if __name__ == '__main__':
     }
     scheduler.configure(jobstores=jobstores, executors=executors, job_defaults=job_defaults, timezone=timezone('US/Eastern'))
     # scheduler.add_job(tick, 'interval', seconds=3, id='test_timer_tick')
-    scheduler.add_job(scrape, 'cron', day_of_week='mon-sun', hour=1, id='main_scrape_job')
+    scheduler.add_job(scrape, 'cron', day_of_week='mon-sun', hour=3, id='main_scrape_job')
     print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
 
     try:
