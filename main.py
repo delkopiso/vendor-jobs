@@ -56,11 +56,11 @@ if __name__ == '__main__':
         'processpool': ProcessPoolExecutor(max_workers=1)
     }
     job_defaults = {
-        # 'coalesce': True
+        'coalesce': True
     }
     scheduler.configure(jobstores=jobstores, executors=executors, job_defaults=job_defaults, timezone=timezone('US/Eastern'))
-    scheduler.add_job(tick, 'interval', seconds=3, id='test_timer_tick')
-    # scheduler.add_job(scrape, 'cron', day_of_week='mon-sun', hour=0, id='main_scrape_job')
+    # scheduler.add_job(tick, 'interval', seconds=3, id='test_timer_tick')
+    scheduler.add_job(scrape, 'cron', day_of_week='mon-sun', hour=1, id='main_scrape_job')
     print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
 
     try:
