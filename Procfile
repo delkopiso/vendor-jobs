@@ -1,1 +1,1 @@
-clock: python main.py --loglevel=INFO
+clock: python main.py
