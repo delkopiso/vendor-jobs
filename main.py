@@ -11,6 +11,7 @@ from popular_scrapers import BellaNaijaScraper
 from tech_scrapers import TechCabalScraper
 
 logging.basicConfig()
+DB_NAME = "heroku_app33940774"
 ARTICLE_COLLECTION = "article"
 scrapers = []
 
@@ -36,7 +37,8 @@ def scrape():
     print "Acquired {0} from the system as the connection string".format(uri)
     db_connection = MongoClient(host=uri) if uri is not None else MongoClient()
     print "Database connection established"
-    collection = db_connection[ARTICLE_COLLECTION]
+    db = db_connection[DB_NAME]
+    collection = db[ARTICLE_COLLECTION]
     print "Defining scrapers..."
     define_scrapers(collection)
     print "Running each scraper..."
