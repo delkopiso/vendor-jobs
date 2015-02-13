@@ -17,8 +17,10 @@ scrapers = []
 
 
 def define_scrapers(collection):
+    print "Defining Bella Naija scraper..."
     b_naij = BellaNaijaScraper(collection)
     scrapers.append(b_naij)
+    print "Defining Tech Cabal scraper..."
     tech_cabal = TechCabalScraper(collection)
     scrapers.append(tech_cabal)
 
@@ -29,11 +31,17 @@ def run_scrapers():
 
 
 def scrape():
+    print "Starting scraper..."
+    print "Fetching MONGOLAB_URI..."
     uri = os.environ.get('MONGOLAB_URI')
+    print "Acquired {0} from the system as the connection string".format(uri)
     db_connection = MongoClient(host=uri) if uri is not None else MongoClient()
+    print "Database connection established"
     db = db_connection[DB_NAME]
     collection = db[ARTICLE_COLLECTION]
+    print "Defining scrapers..."
     define_scrapers(collection)
+    print "Running each scraper..."
     run_scrapers()
 
 
@@ -61,7 +69,7 @@ if __name__ == '__main__':
     }
     scheduler.configure(jobstores=jobstores, executors=executors, job_defaults=job_defaults, timezone=timezone('US/Eastern'))
     # scheduler.add_job(tick, 'interval', seconds=3, id='test_timer_tick')
-    scheduler.add_job(scrape, 'cron', minute=5)#day_of_week='mon-sun', hour=3)
+    scheduler.add_job(scrape, 'interval', minute=4)#day_of_week='mon-sun', hour=3)
     print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
 
     try:
