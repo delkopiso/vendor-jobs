@@ -1,1 +1,1 @@
-worker: python -u ./main.py
+clock: python main.py --loglevel=INFO

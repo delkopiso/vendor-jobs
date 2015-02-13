@@ -23,9 +23,6 @@ job_defaults = {
     # 'coalesce': True
 }
 
-scheduler.configure(jobstores=jobstores, executors=executors, job_defaults=job_defaults, timezone=utc)
-scheduler.start()
-
 
 # from pymongo.mongo_client import MongoClient
 # from popular_scrapers import BellaNaijaScraper
@@ -58,6 +55,14 @@ scheduler.start()
 #     run_scrapers()
 
 
-@scheduler.scheduled_job('interval', seconds=3, id='test_timer')
+@scheduler.interval_schedule(seconds=3, id='test_timer')
 def timed_job():
     print 'This job is run every three minutes.'
+
+
+scheduler.configure(jobstores=jobstores, executors=executors, job_defaults=job_defaults, timezone=utc)
+scheduler.start()
+print "Scheduler started"
+
+while __name__ == '__main__':
+    pass
