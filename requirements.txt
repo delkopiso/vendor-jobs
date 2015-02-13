@@ -1,3 +1,4 @@
 BeautifulSoup==3.2.1
 html2text==2014.12.29
+pymongo==2.8
 requests==2.5.1
