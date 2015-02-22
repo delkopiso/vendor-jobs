@@ -1,4 +1,5 @@
 import os
+from apscheduler.events import EVENT_JOB_ERROR, EVENT_JOB_EXECUTED
 from pytz import timezone
 from apscheduler.schedulers.blocking import BlockingScheduler
 #from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
@@ -38,6 +39,13 @@ def scrape():
     run_scrapers()
 
 
+def my_listener(event):
+    if event.exception:
+        print('The job crashed :(')
+    else:
+        print('The job worked :)')
+
+
 if __name__ == '__main__':
     scheduler = BlockingScheduler()
     url = os.environ.get('DATABASE_URL')
@@ -54,7 +62,9 @@ if __name__ == '__main__':
         'processpool': ProcessPoolExecutor(max_workers=1)
     }
     scheduler.configure(jobstores=jobstores, executors=executors, timezone=timezone('US/Eastern'))
+    scheduler.add_listener(my_listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)
     scheduler.start()
 
-    scheduler.add_job(scrape, trigger='cron', hour='*', day='*', month='*')
-    print 'Scrape job has been scheduled'
+    print 'Scheduler has been started'
+    scheduler.add_job(scrape, trigger='cron', minute='*')
+    print 'Scrape job has been added'
