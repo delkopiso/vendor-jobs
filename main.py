@@ -54,7 +54,7 @@ if __name__ == '__main__':
         'processpool': ProcessPoolExecutor(max_workers=1)
     }
     scheduler.configure(jobstores=jobstores, executors=executors, timezone=timezone('US/Eastern'))
-    scheduler.add_job(scrape, 'interval', hours=1, start_date='2015-2-21 19:20')
+    scheduler.add_job(scrape, 'interval', hours=1, start_date='2015-2-21 19:25')
     print 'Scrape job has been scheduled'
 
     try:
