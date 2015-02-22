@@ -1,6 +1,6 @@
 import os
 from pytz import timezone
-from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.schedulers.blocking import Scheduler
 #from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
 from apscheduler.jobstores.memory import MemoryJobStore
 from apscheduler.executors.pool import ProcessPoolExecutor
@@ -39,7 +39,7 @@ def scrape():
 
 
 if __name__ == '__main__':
-    scheduler = BlockingScheduler()
+    scheduler = Scheduler()
     url = os.environ.get('DATABASE_URL')
     jobstores = {'default': MemoryJobStore()}
     # if url != None:
