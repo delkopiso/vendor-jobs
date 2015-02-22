@@ -1,5 +1,6 @@
 import json
 import urllib
+from pymongo.errors import DuplicateKeyError
 import requests
 from BeautifulSoup import BeautifulSoup as BS
 
@@ -42,15 +43,18 @@ class BaseScraper:
         self.soup = BS(content)
 
     def push_to_database(self):
-        self.db_collection.insert({
-            "title": self.title,
-            "text": self.body_text,
-            "source": self.source_url,
-            "coverPic": self.cover_picture,
-            "section": self.category,
-            "logo": self.logo,
-            "popularity": 0
-        })
+        try:
+            self.db_collection.insert({
+                "title": self.title,
+                "text": self.body_text,
+                "source": self.source_url,
+                "coverPic": self.cover_picture,
+                "section": self.category,
+                "logo": self.logo,
+                "popularity": 0
+            })
+        except DuplicateKeyError:
+            print "skipped over duplicate item"
 
     def run(self):
         self.load_data()
