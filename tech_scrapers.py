@@ -25,7 +25,8 @@ class TechCabalScraper(BaseScraper):
         self.title = piece['title']['text'].encode('utf-8')
 
     def parse_text_body(self, piece):
-        self.body_text = piece['text'].encode('utf-8')
+        print piece['text']
+        self.body_text = piece['text']
 
     def parse_cover_picture(self, piece):
         self.cover_picture = piece['pic']['src'].encode('utf-8')
