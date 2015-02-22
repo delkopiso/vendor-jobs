@@ -55,7 +55,7 @@ if __name__ == '__main__':
     scheduler = BackgroundScheduler()
     scheduler.configure(#jobstores=jobstores, executors=executors,
                         timezone=timezone('US/Eastern'))
-    scheduler.add_cron_job(scrape, hour='*', day='*', month='*')
+    scheduler.add_job(scrape, 'cron', hour='*', day='*', month='*')
     print 'Scrape job has been scheduled'
 
     try:
