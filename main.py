@@ -1,9 +1,9 @@
 import os
+from apscheduler.schedulers.background import BackgroundScheduler
 from pytz import timezone
-from apscheduler.schedulers.blocking import Scheduler
 #from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
-from apscheduler.jobstores.memory import MemoryJobStore
-from apscheduler.executors.pool import ProcessPoolExecutor
+# from apscheduler.jobstores.memory import MemoryJobStore
+# from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from popular_scrapers import BellaNaijaScraper
@@ -39,9 +39,8 @@ def scrape():
 
 
 if __name__ == '__main__':
-    scheduler = Scheduler()
     # url = os.environ.get('DATABASE_URL')
-    jobstores = {'default': MemoryJobStore()}
+    # jobstores = {'default': MemoryJobStore()}
     # if url != None:
     #     jobstores = {
     #         'default': SQLAlchemyJobStore(url=url)
@@ -50,10 +49,12 @@ if __name__ == '__main__':
     #     jobstores = {
     #         'default': MemoryJobStore()
     #     }
-    executors = {
-        'processpool': ProcessPoolExecutor(max_workers=1)
-    }
-    scheduler.configure(jobstores=jobstores, executors=executors, timezone=timezone('US/Eastern'))
+    # executors = {
+    #     'processpool': ProcessPoolExecutor(max_workers=1)
+    # }
+    scheduler = BackgroundScheduler()
+    scheduler.configure(#jobstores=jobstores, executors=executors,
+                        timezone=timezone('US/Eastern'))
     scheduler.add_cron_job(scrape, hour='*', day='*', month='*')
     print 'Scrape job has been scheduled'
 
