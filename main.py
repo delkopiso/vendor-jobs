@@ -54,10 +54,7 @@ if __name__ == '__main__':
         'processpool': ProcessPoolExecutor(max_workers=1)
     }
     scheduler.configure(jobstores=jobstores, executors=executors, timezone=timezone('US/Eastern'))
+    scheduler.start()
+
     scheduler.add_job(scrape, trigger='cron', hour='*', day='*', month='*')
     print 'Scrape job has been scheduled'
-
-    try:
-        scheduler.start()
-    except (KeyboardInterrupt, SystemExit):
-        pass
