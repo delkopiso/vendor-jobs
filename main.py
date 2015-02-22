@@ -40,7 +40,7 @@ def scrape():
 
 if __name__ == '__main__':
     scheduler = Scheduler()
-    url = os.environ.get('DATABASE_URL')
+    # url = os.environ.get('DATABASE_URL')
     jobstores = {'default': MemoryJobStore()}
     # if url != None:
     #     jobstores = {
