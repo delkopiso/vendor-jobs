@@ -35,7 +35,7 @@ def run_scrapers():
 def scrape():
     uri = os.environ.get('MONGOLAB_URI')
     db_connection = MongoClient(host=uri) if uri is not None else MongoClient()
-    db = db_connection.get_default_database()
+    db = db_connection.get_default_database() if uri is not None else db_connection['vendor']
     collection = db[ARTICLE_COLLECTION]
     define_scrapers(collection)
     print "Running scrapers..."
