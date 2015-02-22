@@ -63,8 +63,7 @@ if __name__ == '__main__':
     }
     scheduler.configure(jobstores=jobstores, executors=executors, timezone=timezone('US/Eastern'))
     scheduler.add_listener(my_listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)
-    scheduler.start()
-
-    print 'Scheduler has been started'
     scheduler.add_job(scrape, trigger='cron', minute='*')
     print 'Scrape job has been added'
+    scheduler.start()
+    print 'Scheduler has been started'
