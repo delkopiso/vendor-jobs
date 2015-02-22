@@ -1,5 +1,6 @@
 import json
 import urllib
+from pip._vendor.requests import ConnectionError
 from pymongo.errors import DuplicateKeyError
 import requests
 from BeautifulSoup import BeautifulSoup as BS
@@ -38,9 +39,12 @@ class BaseScraper:
         raise NotImplementedError
 
     def load_soup_object(self):
-        request = requests.get(self.source_url)
-        content = request.content
-        self.soup = BS(content)
+        try:
+            request = requests.get(self.source_url)
+            content = request.content
+            self.soup = BS(content)
+        except ConnectionError:
+            return
 
     def push_to_database(self):
         try:
@@ -54,7 +58,7 @@ class BaseScraper:
                 "popularity": 0
             })
         except DuplicateKeyError:
-            print "skipped over duplicate item"
+            return
 
     def run(self):
         self.load_data()

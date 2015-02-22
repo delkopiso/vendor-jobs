@@ -26,7 +26,10 @@ def define_scrapers(collection):
 
 def run_scrapers():
     for scraper in scrapers:
-        scraper.run()
+        try:
+            scraper.run()
+        except Exception as e:
+            print "Unexpected error:", e
 
 
 def scrape():
