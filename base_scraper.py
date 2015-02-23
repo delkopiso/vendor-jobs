@@ -1,5 +1,6 @@
 import json
 import urllib
+import datetime
 from pip._vendor.requests import ConnectionError
 from pymongo.errors import DuplicateKeyError
 import requests
@@ -10,6 +11,7 @@ KIMONO_API_KEY = "b08304e70880d8872c8732a6c32985df"
 
 class BaseScraper:
     def __init__(self, api_id, category, db_collection, logo=""):
+        self.mix_index = 0
         self.api_id = api_id
         self.category = category
         self.logo = logo
@@ -55,7 +57,9 @@ class BaseScraper:
                 "coverPic": self.cover_picture,
                 "section": self.category,
                 "logo": self.logo,
-                "popularity": 0
+                "popularity": 0,
+                "mixIndex": self.mix_index,
+                "dateAdded": datetime.datetime.now()
             })
         except DuplicateKeyError:
             return
@@ -70,5 +74,6 @@ class BaseScraper:
             self.parse_title(piece)
             self.parse_cover_picture(piece)
             self.parse_text_body(piece)
+            self.mix_index = count % self.results["count"]
             self.push_to_database()
             count += 1
