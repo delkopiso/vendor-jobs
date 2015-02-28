@@ -1,10 +1,10 @@
 import json
 import urllib
 import datetime
-from pip._vendor.requests import ConnectionError
 from pymongo.errors import DuplicateKeyError
-import requests
 from BeautifulSoup import BeautifulSoup as BS
+from requests import *
+import requests
 
 KIMONO_API_KEY = "b08304e70880d8872c8732a6c32985df"
 
@@ -42,14 +42,16 @@ class BaseScraper:
 
     def load_soup_object(self):
         try:
-            request = requests.get(self.source_url)
-            content = request.content
+            retrieved_request = requests.get(self.source_url)
+            content = retrieved_request.content
             self.soup = BS(content)
         except ConnectionError:
             return
 
     def push_to_database(self):
-        try:
+        if self.db_collection.find({"source": self.source_url}).count() != 0:
+            return
+        else:
             self.db_collection.insert({
                 "title": self.title,
                 "text": self.body_text,
@@ -61,8 +63,6 @@ class BaseScraper:
                 "mixIndex": self.mix_index,
                 "dateAdded": datetime.datetime.now()
             })
-        except DuplicateKeyError:
-            return
 
     def run(self):
         self.load_data()
