@@ -116,7 +116,7 @@ if __name__ == '__main__':
     executors = {'processpool': ProcessPoolExecutor(max_workers=1)}
     scheduler.configure(jobstores=jobstores, executors=executors, timezone=timezone('US/Eastern'))
     scheduler.add_listener(my_listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)
-    scheduler.add_job(scrape, trigger='cron', hour='*')
+    scheduler.add_job(scrape, trigger='cron', minute='*/2')
     print 'Scrape job has been added'
     scheduler.start()
     print 'Scheduler has been started'
