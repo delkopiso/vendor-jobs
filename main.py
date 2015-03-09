@@ -56,7 +56,7 @@ def define_scrapers(collection):
     scrapers.append(sahara)
 
     # Tech
-    today_ng_tech = Scraper("Today NG", api_id="2yio1io4", category="Tech", db_collection=collection,
+    today_ng_tech = Scraper("Today NG", api_id="747byvlu", category="Tech", db_collection=collection,
                             logo="http://static.today.ng/wp-content/uploads/2014/09/logo.jpg")
     print "Adding " + today_ng_tech.get_name() + " scraper..."
     scrapers.append(today_ng_tech)
@@ -64,6 +64,10 @@ def define_scrapers(collection):
                          logo="http://www.techcabal.com/wp-content/uploads/2013/09/tclogobig.png")
     print "Adding " + tech_cabal.get_name() + " scraper..."
     scrapers.append(tech_cabal)
+    vanguard_tech = Scraper("Vanguard", api_id="e9qp7s1a", category="Tech", db_collection=collection,
+        logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
+    print "Adding " + vanguard_tech.get_name() + " scraper..."
+    scrapers.append(vanguard_tech)
 
     # Business
     ventures = Scraper("Ventures Africa", api_id="7l5zbtl6", category="Business", db_collection=collection,
