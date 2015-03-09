@@ -89,7 +89,7 @@ def run_scrapers():
         try:
             scraper.run()
         except Exception as e:
-            print "Unexpected error:", e
+            print "Unexpected error:", e, "with ", scraper.get_name()
 
 
 def scrape():
