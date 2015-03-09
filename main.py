@@ -60,7 +60,7 @@ def define_scrapers(collection):
                             logo="http://static.today.ng/wp-content/uploads/2014/09/logo.jpg")
     print "Adding " + today_ng_tech.get_name() + " scraper..."
     scrapers.append(today_ng_tech)
-    tech_cabal = Scraper("Tech Cabal", api_id="3lfnkuxu", category="Tech", db_collection=collection,
+    tech_cabal = Scraper("Tech Cabal", api_id="4bsxr58e", category="Tech", db_collection=collection,
                          logo="http://www.techcabal.com/wp-content/uploads/2013/09/tclogobig.png")
     print "Adding " + tech_cabal.get_name() + " scraper..."
     scrapers.append(tech_cabal)
