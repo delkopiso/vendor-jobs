@@ -37,7 +37,7 @@ class Scraper:
                     self.db_collection.insert({
                         "title": piece["title"]["text"],
                         "source": source,
-                        "coverPic": piece["coverPic"]["src"],
+                        "coverPic": piece["coverPic"],
                         "section": self.category,
                         "logo": self.logo,
                         "popularity": 0,
