@@ -28,23 +28,20 @@ class Scraper:
         results = self.load_data()
         count = 0
         while count < results["count"]:
-            try:
-                piece = results["results"]["collection1"][count]
-                source = piece["title"]["href"]
-                if self.db_collection.find({"source": source}).count() != 0:
-                    return
-                else:
-                    self.db_collection.insert({
-                        "title": piece["title"]["text"],
-                        "source": source,
-                        "coverPic": piece["coverPic"]["src"],
-                        "section": self.category,
-                        "logo": self.logo,
-                        "popularity": 0,
-                        "mixIndex": self.mix_index,
-                        "dateAdded": datetime.datetime.now()
-                    })
-                self.mix_index = count % results["count"]
-                count += 1
-            except Exception as e:
-                print e.message, e.args
+            piece = results["results"]["collection1"][count]
+            source = piece["title"]["href"]
+            if self.db_collection.find({"source": source}).count() != 0:
+                return
+            else:
+                self.db_collection.insert({
+                    "title": piece["title"]["text"],
+                    "source": source,
+                    "coverPic": piece["coverPic"]["src"],
+                    "section": self.category,
+                    "logo": self.logo,
+                    "popularity": 0,
+                    "mixIndex": self.mix_index,
+                    "dateAdded": datetime.datetime.now()
+                })
+            self.mix_index = count % results["count"]
+            count += 1
