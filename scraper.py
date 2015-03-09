@@ -33,8 +33,8 @@ class Scraper:
                 return
             else:
                 self.db_collection.insert({
-                    "title": piece["title"],
-                    "source": piece["source"],
+                    "title": piece["title"]["text"],
+                    "source": piece["title"]["href"],
                     "coverPic": piece["coverPic"],
                     "section": self.category,
                     "logo": self.logo,
