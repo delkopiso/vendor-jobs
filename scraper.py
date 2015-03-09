@@ -29,13 +29,14 @@ class Scraper:
         count = 0
         while count < results["count"]:
             piece = results["results"]["collection1"][count]
-            if self.db_collection.find({"source": piece["source"]}).count() != 0:
+            source = piece["title"]["href"]
+            if self.db_collection.find({"source": source}).count() != 0:
                 return
             else:
                 self.db_collection.insert({
                     "title": piece["title"]["text"],
-                    "source": piece["title"]["href"],
-                    "coverPic": piece["coverPic"],
+                    "source": source,
+                    "coverPic": piece["coverPic"]["src"],
                     "section": self.category,
                     "logo": self.logo,
                     "popularity": 0,
