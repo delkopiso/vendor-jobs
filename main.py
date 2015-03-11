@@ -29,7 +29,7 @@ def define_scrapers(collection):
     print "Adding " + y_naija_gossip.get_name() + " scraper..."
     scrapers.append(y_naija_gossip)
     pulse = Scraper("Pulse.ng", api_id="dnxrp1h6", category="Gossip", db_collection=collection,
-                    logo="http://static.pulse.ng/resources/20150218-3ng/ver1-0/img/pulse_red.png")
+                    logo="http://static.pulse.ng/resources/20150218-3ng/ver1-0/img/logo_print.gif")
     print "Adding " + pulse.get_name() + " scraper..."
     scrapers.append(pulse)
     radr_ng = RadrScraper("Radr.ng", api_id="6g898ewm", category="Gossip", db_collection=collection,
