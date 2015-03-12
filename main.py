@@ -68,6 +68,10 @@ def define_scrapers(collection):
                             logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
     print "Adding " + vanguard_tech.get_name() + " scraper..."
     scrapers.append(vanguard_tech)
+    techpoint = Scraper("Techpoint", api_id="531kc2u2", category="Tech", db_collection=collection,
+                        logo="http://techpoint.ng/wp-content/uploads/2014/05/Techpoint_web_logo.png")
+    print "Adding " + techpoint.get_name() + " scraper..."
+    scrapers.append(techpoint)
 
     # Business
     ventures = Scraper("Ventures Africa", api_id="7l5zbtl6", category="Business", db_collection=collection,
