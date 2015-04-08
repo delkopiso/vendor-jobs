@@ -5,8 +5,8 @@ from BeautifulSoup import BeautifulSoup as BS
 
 
 class SaharaScraper(Scraper):
-    def __init__(self, name, api_id, category, db_collection, logo=""):
-        Scraper.__init__(self, name, api_id, category, db_collection, logo)
+    def __init__(self, name, api_id, region, category, db_collection, logo=""):
+        Scraper.__init__(self, name, api_id, region, category, db_collection, logo)
 
     def retrieve_picture(self, source):
         r = requests.get(source)
@@ -45,6 +45,7 @@ class SaharaScraper(Scraper):
                     "title": title,
                     "source": source,
                     "coverPic": cover_pic,
+                    "region": self.region,
                     "section": self.category,
                     "logo": self.logo,
                     "popularity": 0,
@@ -56,8 +57,8 @@ class SaharaScraper(Scraper):
 
 
 class RadrScraper(Scraper):
-    def __init__(self, name, api_id, category, db_collection, logo=""):
-        Scraper.__init__(self, name, api_id, category, db_collection, logo)
+    def __init__(self, name, api_id, region, category, db_collection, logo=""):
+        Scraper.__init__(self, name, api_id, region, category, db_collection, logo)
 
     def retrieve_picture(self, source):
         r = requests.get(source)
@@ -87,6 +88,7 @@ class RadrScraper(Scraper):
                     "title": title,
                     "source": source,
                     "coverPic": cover_pic,
+                    "region": self.region,
                     "section": self.category,
                     "logo": self.logo,
                     "popularity": 0,

@@ -7,10 +7,11 @@ KIMONO_API_KEY = os.environ.get('KIMONO_API_KEY')
 
 
 class Scraper:
-    def __init__(self, name, api_id, category, db_collection, logo=""):
+    def __init__(self, name, api_id, region, category, db_collection, logo=""):
         self.mix_index = 0
         self.name = name
         self.api_id = api_id
+        self.region = region
         self.category = category
         self.logo = logo
         self.db_collection = db_collection
@@ -37,6 +38,7 @@ class Scraper:
                     "title": piece["title"]["text"],
                     "source": source,
                     "coverPic": piece["coverPic"]["src"],
+                    "region": self.region,
                     "section": self.category,
                     "logo": self.logo,
                     "popularity": 0,
