@@ -57,7 +57,7 @@ def define_scrapers(collection):
 
     # Tech
     today_ng_tech = Scraper("Today NG", api_id="747byvlu", region="nigeria", category="Tech", db_collection=collection,
-                            logo="http://static.today.ng/wp-content/uploads/2014/09/logo.jpg")
+                            logo="http://www.today.ng/wp-content/uploads/2015/01/logo.jpg")
     print "Adding " + today_ng_tech.get_name() + " scraper..."
     scrapers.append(today_ng_tech)
     tech_cabal = Scraper("Tech Cabal", api_id="4bsxr58e", region="nigeria", category="Tech", db_collection=collection,
