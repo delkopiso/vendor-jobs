@@ -96,6 +96,10 @@ def define_scrapers(collection):
     print "Adding " + punch_biz.get_name() + " scraper..."
     scrapers.append(punch_biz)
     
+    premium_biz = Scraper("Premium Times", api_id="8lc0dzni", region="nigeria", category="Business", db_collection=collection,
+                           logo="http://media.premiumtimesng.com/wp-content/themes/PTN/images/176x64xptn-logo.png.pagespeed.ic.AedNv1evLn.png")
+    print "Adding " + premium_biz.get_name() + " scraper..."
+    scrapers.append(premium_biz)
     
 
 
