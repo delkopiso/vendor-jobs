@@ -54,6 +54,11 @@ def define_scrapers(collection):
                            logo="http://saharareporters.com/sites/default/themes/sr_theme/images/layout/header/header-logo.png")
     print "Adding " + sahara.get_name() + " scraper..."
     scrapers.append(sahara)
+    
+    premium = Scraper("Premium Times", api_id="4r6sdgjm", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://media.premiumtimesng.com/wp-content/themes/PTN/images/176x64xptn-logo.png.pagespeed.ic.AedNv1evLn.png")
+    print "Adding " + premium.get_name() + " scraper..."
+    scrapers.append(premium)
 
     # Tech
     today_ng_tech = Scraper("Today NG", api_id="747byvlu", region="nigeria", category="Tech", db_collection=collection,
