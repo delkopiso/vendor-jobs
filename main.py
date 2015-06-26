@@ -36,10 +36,10 @@ def define_scrapers(collection):
                            logo="http://www.radar.ng/wp-content/uploads/2014/05/logo.png")
     print "Adding " + radr_ng.get_name() + " scraper..."
     scrapers.append(radr_ng)
-    360_gossip = Scraper("360 Gossip", api_id="3007ai6g", region="nigeria", category="Gossip", db_collection=collection,
+    sixty_gossip = Scraper("360 Gossip", api_id="3007ai6g", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
-    print "Adding " + 360_gossip.get_name() + " scraper..."
-    scrapers.append(360_gossip)
+    print "Adding " + sixty_gossip.get_name() + " scraper..."
+    scrapers.append(sixty_gossip)
     
     
 
