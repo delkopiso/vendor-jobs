@@ -97,10 +97,6 @@ def define_scrapers(collection):
     print "Adding " + ventures.get_name() + " scraper..."
     scrapers.append(ventures)
     
-    ventures_biz_long = venturesScraper("Ventures Africa", api_id="bbudi886", region="nigeria", category="Business", db_collection=collection, logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
-    print "Adding " + ventures_biz_long.get_name() + " scraper..."
-    scrapers.append(ventures_biz_long)
-    
     vanguard_business = Scraper("Vanguard", api_id="cskj1sxo", region="nigeria", category="Business", db_collection=collection,
                                 logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
     print "Adding " + vanguard_business.get_name() + " scraper..."
