@@ -20,10 +20,7 @@ def define_scrapers(collection):
                      logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
     print "Adding " + b_naij.get_name() + " scraper..."
     scrapers.append(b_naij)
-    # ndani = Scraper("Ndani TV", api_id="8ms0cfmi", region="nigeria", category="Gossip", db_collection=collection,
-    # logo="http://ndani.tv/images/logo.png")
-    # print "Adding " + ndani.get_name() + " scraper..."
-    # scrapers.append(ndani)
+    
     y_naija_gossip = Scraper("Y Naija", api_id="2nf95wdg", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
     print "Adding " + y_naija_gossip.get_name() + " scraper..."
