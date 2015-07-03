@@ -66,6 +66,11 @@ def define_scrapers(collection):
     print "Adding " + premium.get_name() + " scraper..."
     scrapers.append(premium)
 
+    guard_head = Scraper("Guardian Headlines", api_id="egzuf672", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
+    print "Adding " + guard_head.get_name() + " scraper..."
+    scrapers.append(guard_head)
+
     # Tech
     today_ng_tech = Scraper("Today NG", api_id="747byvlu", region="nigeria", category="Tech", db_collection=collection,
                             logo="http://www.today.ng/wp-content/uploads/2015/01/logo.jpg")
