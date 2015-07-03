@@ -56,7 +56,7 @@ def define_scrapers(collection):
                                 logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
     print "Adding " + y_naija_headlines.get_name() + " scraper..."
     scrapers.append(y_naija_headlines)
-    sahara = SaharaScraper("Sahara Reporters", api_id="8wd4g63i", region="nigeria", category="Headlines", db_collection=collection,
+    sahara = Scraper("Sahara Reporters", api_id="5ih3db3a", region="nigeria", category="Headlines", db_collection=collection,
                            logo="http://saharareporters.com/sites/default/themes/sr_theme/images/layout/header/header-logo.png")
     print "Adding " + sahara.get_name() + " scraper..."
     scrapers.append(sahara)
