@@ -37,10 +37,16 @@ def define_scrapers(collection):
                              logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
     print "Adding " + sixty_gossip.get_name() + " scraper..."
     scrapers.append(sixty_gossip)
+    
     ynaij_gossip = Scraper("Ynaija Gossip", api_id="6pma1t9s", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
     print "Adding " + ynaij_gossip.get_name() + " scraper..."
     scrapers.append(ynaij_gossip)
+
+    ventures_gossip = venturesScraper("Ventures Africa", api_id="3w6fsfew", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
+    print "Adding " + ventures_gossip.get_name() + " scraper..."
+    scrapers.append(ventures_gossip)
     
 
     # Headline sources
