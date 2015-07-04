@@ -107,13 +107,11 @@ class venturesScraper(Scraper):
         content = r.content
         soup = BS(content)
         try:
-            img = soup.findAll('div',{'class':'imgwrap fitted-container cover'})
+            img = soup.findAll('section',{'class':'top-story banner type--post'})
             content = BS(str(img))
             images = str(content.findAll('img'))
-            coverPic = images.split("http")
-            coverPic = str(coverPic[5]).split('jpg')[0]
-            coverPic = coverPic.split('//')
-            coverPic = "http://"+coverPic[1]+"jpg"
+            coverPic = str(images.split(' 3072w')[0])
+            coverPic = str(coverPic.split(', ')[len(images.split(' 3072w'))+2])
             return coverPic
         except:
             return ""
