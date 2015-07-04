@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -66,7 +66,7 @@ def define_scrapers(collection):
     print "Adding " + premium.get_name() + " scraper..."
     scrapers.append(premium)
 
-    guard_head = Scraper("Guardian Headlines", api_id="egzuf672", region="nigeria", category="Headlines", db_collection=collection,
+    guard_head = guardScraper("Guardian Headlines", api_id="egzuf672", region="nigeria", category="Headlines", db_collection=collection,
                            logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
     print "Adding " + guard_head.get_name() + " scraper..."
     scrapers.append(guard_head)
