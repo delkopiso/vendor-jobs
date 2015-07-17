@@ -50,10 +50,12 @@ def define_scrapers(collection):
     
 
     # Headline sources
+    '''
     today_ng_headlines = Scraper("Today NG", api_id="68dq8a2w", region="nigeria", category="Headlines", db_collection=collection,
                                  logo="http://www.today.ng/wp-content/uploads/2015/01/logo.jpg")
     print "Adding " + today_ng_headlines.get_name() + " scraper..."
     scrapers.append(today_ng_headlines)
+    '''
     vanguard_headlines = Scraper("Vanguard", api_id="abzmopk8", region="nigeria", category="Headlines", db_collection=collection,
                                  logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
     print "Adding " + vanguard_headlines.get_name() + " scraper..."
