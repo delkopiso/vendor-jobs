@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -122,7 +122,7 @@ def define_scrapers(collection):
     print "Adding " + vanguard_business.get_name() + " scraper..."
     scrapers.append(vanguard_business)
     
-    punch_biz = Scraper("Punch", api_id="bdid5uka", region="nigeria", category="Business", db_collection=collection,
+    punch_biz = punchScraper("Punch", api_id="bdid5uka", region="nigeria", category="Business", db_collection=collection,
                         logo="http://punch.cdn.ng/wp-content/themes/punch/images/punch_logo.jpg")
     print "Adding " + punch_biz.get_name() + " scraper..."
     scrapers.append(punch_biz)
