@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -105,6 +105,11 @@ def define_scrapers(collection):
                        logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
     print "Adding " + ventures_tech_long.get_name() + " scraper..."
     scrapers.append(ventures_tech_long)
+
+    it_news = itnScraper("IT News Africa", api_id="1youwujk", region="nigeria", category="Tech", db_collection=collection,
+                       logo="http://www.itnewsafrica.com/wp-content/uploads/2013/08/ITNewsAfrica_logo.gif")
+    print "Adding " + it_news.get_name() + " scraper..."
+    scrapers.append(it_news)
 
     # Business
     ventures = Scraper("Ventures Africa", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
