@@ -84,18 +84,22 @@ def define_scrapers(collection):
                             logo="http://www.today.ng/wp-content/uploads/2015/01/logo.jpg")
     print "Adding " + today_ng_tech.get_name() + " scraper..."
     scrapers.append(today_ng_tech)
+
     tech_cabal = Scraper("Tech Cabal", api_id="4bsxr58e", region="nigeria", category="Tech", db_collection=collection,
                          logo="http://www.techcabal.com/wp-content/uploads/2013/09/tclogobig.png")
     print "Adding " + tech_cabal.get_name() + " scraper..."
     scrapers.append(tech_cabal)
+
     vanguard_tech = Scraper("Vanguard", api_id="e9qp7s1a", region="nigeria", category="Tech", db_collection=collection,
                             logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
     print "Adding " + vanguard_tech.get_name() + " scraper..."
     scrapers.append(vanguard_tech)
-    techpoint = Scraper("Techpoint", api_id="531kc2u2", region="nigeria", category="Tech", db_collection=collection,
+
+    techpoint = Scraper("Techpoint", api_id="490y6x36", region="nigeria", category="Tech", db_collection=collection,
                         logo="http://techpoint.ng/wp-content/uploads/2014/05/Techpoint_web_logo.png")
     print "Adding " + techpoint.get_name() + " scraper..."
     scrapers.append(techpoint)
+    
     ventures_tech = Scraper("Ventures Africa", api_id="bu960i24", region="nigeria", category="Tech", db_collection=collection,
                        logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
     print "Adding " + ventures_tech.get_name() + " scraper..."
