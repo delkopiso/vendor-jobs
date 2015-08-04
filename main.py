@@ -99,7 +99,7 @@ def define_scrapers(collection):
                         logo="http://techpoint.ng/wp-content/uploads/2014/05/Techpoint_web_logo.png")
     print "Adding " + techpoint.get_name() + " scraper..."
     scrapers.append(techpoint)
-    
+
     ventures_tech = Scraper("Ventures Africa", api_id="bu960i24", region="nigeria", category="Tech", db_collection=collection,
                        logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
     print "Adding " + ventures_tech.get_name() + " scraper..."
@@ -115,6 +115,11 @@ def define_scrapers(collection):
     print "Adding " + it_news.get_name() + " scraper..."
     scrapers.append(it_news)
 
+    ms_techy = Scraper("Miss Techy", api_id="an3p00uy", region="nigeria", category="Tech", db_collection=collection,
+                       logo="http://misstechy.com/wp-content/uploads/2015/05/misstechy-header-logo.jpg")
+    print "Adding " + ms_techy.get_name() + " scraper..."
+    scrapers.append(ms_techy)
+    
     # Business
     ventures = Scraper("Ventures Africa", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
                        logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
