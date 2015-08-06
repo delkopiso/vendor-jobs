@@ -19,12 +19,12 @@ def define_scrapers(collection):
 
 
     # Gossip sources
-    bnaij_gossip = Scraper("Bella Naija", api_id="5u0c0qoi", region="nigeria", category="Gossip", db_collection=collection,
+    bnaij_gossip = Scraper("Bella Naija Gossip", api_id="5u0c0qoi", region="nigeria", category="Gossip", db_collection=collection,
                      logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
     print "Adding " + bnaij_gossip.get_name() + " scraper..."
     scrapers.append(bnaij_gossip)
     
-    pulse = Scraper("Pulse.ng", api_id="dnxrp1h6", region="nigeria", category="Gossip", db_collection=collection,
+    pulse = Scraper("Pulse Gossip", api_id="dnxrp1h6", region="nigeria", category="Gossip", db_collection=collection,
                     logo="http://static.pulse.ng/resources/20150218-3ng/ver1-0/img/logo_print.gif")
     print "Adding " + pulse.get_name() + " scraper..."
     scrapers.append(pulse)
@@ -39,17 +39,17 @@ def define_scrapers(collection):
     print "Adding " + ynaij_gossip.get_name() + " scraper..."
     scrapers.append(ynaij_gossip)
 
-    ventures_gossip = venturesScraper("Ventures Africa", api_id="3w6fsfew", region="nigeria", category="Gossip", db_collection=collection,
+    ventures_gossip = venturesScraper("Ventures Africa Gossip", api_id="3w6fsfew", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
     print "Adding " + ventures_gossip.get_name() + " scraper..."
     scrapers.append(ventures_gossip)
     
-    zikoko_gossip = Scraper("Zikoko", api_id="6tyylw1s", region="nigeria", category="Gossip", db_collection=collection,
+    zikoko_gossip = Scraper("Zikoko Gossip", api_id="6tyylw1s", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://zikoko.com/wp-content/uploads/2015/07/logo-300x92.png")
     print "Adding " + zikoko_gossip.get_name() + " scraper..."
     scrapers.append(zikoko_gossip)
 
-    today_gossip = todayScraper("Today", api_id="98sgndus", region="nigeria", category="Gossip", db_collection=collection,
+    today_gossip = todayScraper("Today Gossip", api_id="98sgndus", region="nigeria", category="Gossip", db_collection=collection,
                             logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
     print "Adding " + today_gossip.get_name() + " scraper..."
     scrapers.append(today_gossip)
@@ -58,25 +58,27 @@ def define_scrapers(collection):
 
     # Headline sources
     
-    today_headlines = Scraper("Today", api_id="b9lqpkyy", region="nigeria", category="Headlines", db_collection=collection,
+    today_headlines = Scraper("Today Headlines", api_id="b9lqpkyy", region="nigeria", category="Headlines", db_collection=collection,
                                  logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
     print "Adding " + today_headlines.get_name() + " scraper..."
     scrapers.append(today_headlines)
     
-    vanguard_headlines = Scraper("Vanguard", api_id="abzmopk8", region="nigeria", category="Headlines", db_collection=collection,
+    vanguard_headlines = Scraper("Vanguard Headlines", api_id="abzmopk8", region="nigeria", category="Headlines", db_collection=collection,
                                  logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
     print "Adding " + vanguard_headlines.get_name() + " scraper..."
     scrapers.append(vanguard_headlines)
-    y_naija_headlines = Scraper("Y Naija", api_id="e6jhynpm", region="nigeria", category="Headlines", db_collection=collection,
+    
+    y_naija_headlines = Scraper("Y Naija Headlines", api_id="e6jhynpm", region="nigeria", category="Headlines", db_collection=collection,
                                 logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
     print "Adding " + y_naija_headlines.get_name() + " scraper..."
     scrapers.append(y_naija_headlines)
-    sahara = Scraper("Sahara Reporters", api_id="5ih3db3a", region="nigeria", category="Headlines", db_collection=collection,
+    
+    sahara = Scraper("Sahara Headlines", api_id="5ih3db3a", region="nigeria", category="Headlines", db_collection=collection,
                            logo="http://saharareporters.com/sites/default/themes/sr_theme/images/layout/header/header-logo.png")
     print "Adding " + sahara.get_name() + " scraper..."
     scrapers.append(sahara)
     
-    premium = Scraper("Premium Times", api_id="4r6sdgjm", region="nigeria", category="Headlines", db_collection=collection,
+    premium = Scraper("Premium Headlines", api_id="4r6sdgjm", region="nigeria", category="Headlines", db_collection=collection,
                            logo="http://media.premiumtimesng.com/wp-content/themes/PTN/images/176x64xptn-logo.png.pagespeed.ic.AedNv1evLn.png")
     print "Adding " + premium.get_name() + " scraper..."
     scrapers.append(premium)
@@ -90,42 +92,43 @@ def define_scrapers(collection):
 
 
     # Tech
-    today_tech = Scraper("Today", api_id="2f7vilp6", region="nigeria", category="Tech", db_collection=collection,
+
+    today_tech = Scraper("Today Tech", api_id="2f7vilp6", region="nigeria", category="Tech", db_collection=collection,
                             logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
     print "Adding " + today_tech.get_name() + " scraper..."
     scrapers.append(today_tech)
 
-    tech_cabal = Scraper("Tech Cabal", api_id="4bsxr58e", region="nigeria", category="Tech", db_collection=collection,
+    tech_cabal = Scraper("Tech Cabal Tech", api_id="4bsxr58e", region="nigeria", category="Tech", db_collection=collection,
                          logo="http://www.techcabal.com/wp-content/uploads/2013/09/tclogobig.png")
     print "Adding " + tech_cabal.get_name() + " scraper..."
     scrapers.append(tech_cabal)
 
-    vanguard_tech = Scraper("Vanguard", api_id="e9qp7s1a", region="nigeria", category="Tech", db_collection=collection,
+    vanguard_tech = Scraper("Vanguard Tech", api_id="e9qp7s1a", region="nigeria", category="Tech", db_collection=collection,
                             logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
     print "Adding " + vanguard_tech.get_name() + " scraper..."
     scrapers.append(vanguard_tech)
 
-    techpoint = Scraper("Techpoint", api_id="490y6x36", region="nigeria", category="Tech", db_collection=collection,
+    techpoint = Scraper("Techpoint Tech", api_id="490y6x36", region="nigeria", category="Tech", db_collection=collection,
                         logo="http://techpoint.ng/wp-content/uploads/2014/05/Techpoint_web_logo.png")
     print "Adding " + techpoint.get_name() + " scraper..."
     scrapers.append(techpoint)
 
-    ventures_tech = Scraper("Ventures Africa", api_id="bu960i24", region="nigeria", category="Tech", db_collection=collection,
+    ventures_tech = Scraper("Ventures Africa Tech", api_id="bu960i24", region="nigeria", category="Tech", db_collection=collection,
                        logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
     print "Adding " + ventures_tech.get_name() + " scraper..."
     scrapers.append(ventures_tech)
     
-    ventures_tech_long = venturesScraper("Ventures Africa", api_id="2dlebr7k", region="nigeria", category="Tech", db_collection=collection,
+    ventures_tech_long = venturesScraper("Ventures Africa Tech Long", api_id="2dlebr7k", region="nigeria", category="Tech", db_collection=collection,
                        logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
     print "Adding " + ventures_tech_long.get_name() + " scraper..."
     scrapers.append(ventures_tech_long)
 
-    it_news = itnScraper("IT News Africa", api_id="1youwujk", region="nigeria", category="Tech", db_collection=collection,
+    it_news = itnScraper("IT News Africa Tech", api_id="1youwujk", region="nigeria", category="Tech", db_collection=collection,
                        logo="http://www.itnewsafrica.com/wp-content/uploads/2013/08/ITNewsAfrica_logo.gif")
     print "Adding " + it_news.get_name() + " scraper..."
     scrapers.append(it_news)
 
-    ms_techy = Scraper("Miss Techy", api_id="an3p00uy", region="nigeria", category="Tech", db_collection=collection,
+    ms_techy = Scraper("Miss Techy Tech", api_id="an3p00uy", region="nigeria", category="Tech", db_collection=collection,
                        logo="http://misstechy.com/wp-content/uploads/2015/05/misstechy-header-logo.jpg")
     print "Adding " + ms_techy.get_name() + " scraper..."
     scrapers.append(ms_techy)
@@ -134,41 +137,161 @@ def define_scrapers(collection):
 
 
     # Business
-    ventures = Scraper("Ventures Africa", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
+
+    ventures = Scraper("Ventures Africa Business", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
                        logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
     print "Adding " + ventures.get_name() + " scraper..."
     scrapers.append(ventures)
     
-    ventures_biz_long = venturesScraper("Ventures Africa", api_id="bbudi886", region="nigeria", category="Business", db_collection=collection,
+    ventures_biz_long = venturesScraper("Ventures Africa Business Long", api_id="bbudi886", region="nigeria", category="Business", db_collection=collection,
                        logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
     print "Adding " + ventures_biz_long.get_name() + " scraper..."
     scrapers.append(ventures_biz_long)
     
-    vanguard_business = Scraper("Vanguard", api_id="cskj1sxo", region="nigeria", category="Business", db_collection=collection,
+    vanguard_business = Scraper("Vanguard Business", api_id="cskj1sxo", region="nigeria", category="Business", db_collection=collection,
                                 logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
     print "Adding " + vanguard_business.get_name() + " scraper..."
     scrapers.append(vanguard_business)
     
-    punch_biz = punchScraper("Punch", api_id="bdid5uka", region="nigeria", category="Business", db_collection=collection,
+    punch_biz = punchScraper("Punch Business", api_id="bdid5uka", region="nigeria", category="Business", db_collection=collection,
                         logo="http://punch.cdn.ng/wp-content/themes/punch/images/punch_logo.jpg")
     print "Adding " + punch_biz.get_name() + " scraper..."
     scrapers.append(punch_biz)
     
-    premium_biz = Scraper("Premium Times", api_id="8lc0dzni", region="nigeria", category="Business", db_collection=collection,
+    premium_biz = Scraper("Premium Business", api_id="8lc0dzni", region="nigeria", category="Business", db_collection=collection,
                            logo="http://media.premiumtimesng.com/wp-content/themes/PTN/images/176x64xptn-logo.png.pagespeed.ic.AedNv1evLn.png")
     print "Adding " + premium_biz.get_name() + " scraper..."
     scrapers.append(premium_biz)
 
-    today_biz = Scraper("Today", api_id="ah2kx1zc", region="nigeria", category="Business", db_collection=collection,
+    today_biz = Scraper("Today Business", api_id="ah2kx1zc", region="nigeria", category="Business", db_collection=collection,
                                  logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
     print "Adding " + today_biz.get_name() + " scraper..."
     scrapers.append(today_biz)
 
-    guard_biz = guardScraper("Guardian Headlines", api_id="egzuf672", region="nigeria", category="Business", db_collection=collection,
+    guard_biz = guardScraper("Guardian Business", api_id="egzuf672", region="nigeria", category="Business", db_collection=collection,
                            logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
     print "Adding " + guard_biz.get_name() + " scraper..."
     scrapers.append(guard_biz)
+
+
+    #Sport
     
+    sahara_sport = Scraper("Sahara Sport", api_id="ayzkjxn6", region="nigeria", category="Sports", db_collection=collection,
+                           logo="http://saharareporters.com/sites/default/themes/sr_theme/images/layout/header/header-logo.png")
+    print "Adding " + sahara_sport.get_name() + " scraper..."
+    scrapers.append(sahara_sport)
+    
+
+    guard_sport = guardScraper("Guardian Sport", api_id="2x0tlqrm", region="nigeria", category="Sports", db_collection=collection,
+                           logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
+    print "Adding " + guard_sport.get_name() + " scraper..."
+    scrapers.append(guard_sport)    
+
+    
+    ynaija_sport = Scraper("Y Naija Sport", api_id="61gee0ww", region="nigeria", category="Sports", db_collection=collection,
+                                logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
+    print "Adding " + ynaija_sport.get_name() + " scraper..."
+    scrapers.append(ynaija_sport)
+
+    
+    sixty_sport = Scraper("360 Sport", api_id="82amsk5k", region="nigeria", category="Sports", db_collection=collection,
+                             logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
+    print "Adding " + sixty_sport.get_name() + " scraper..."
+    scrapers.append(sixty_sport)
+
+
+    premium_sport = Scraper("Premium Sport", api_id="43z2ds64", region="nigeria", category="Sports", db_collection=collection,
+                           logo="http://media.premiumtimesng.com/wp-content/themes/PTN/images/176x64xptn-logo.png.pagespeed.ic.AedNv1evLn.png")
+    print "Adding " + premium_sport.get_name() + " scraper..."
+    scrapers.append(premium_sport)
+
+
+    today_sport = Scraper("Today Sport", api_id="6230ic18", region="nigeria", category="Sports", db_collection=collection,
+                                 logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+    print "Adding " + today_sport.get_name() + " scraper..."
+    scrapers.append(today_sport)
+
+
+    vanguard_sport = Scraper("Vanguard Sport", api_id="8h4jou12", region="nigeria", category="Sports", db_collection=collection,
+                                logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
+    print "Adding " + vanguard_sport.get_name() + " scraper..."
+    scrapers.append(vanguard_sport)
+
+
+    pulse_sport = Scraper("Pulse Sport", api_id="atek2opq", region="nigeria", category="Sports", db_collection=collection,
+                    logo="http://static.pulse.ng/resources/20150218-3ng/ver1-0/img/logo_print.gif")
+    print "Adding " + pulse_sport.get_name() + " scraper..."
+    scrapers.append(pulse_sport)
+
+
+    #Fashion
+
+    ynaija_fash = Scraper("Y Naija Fashion", api_id="7nmx31t2", region="nigeria", category="Fashion", db_collection=collection,
+                                logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
+    print "Adding " + ynaija_fash.get_name() + " scraper..."
+    scrapers.append(ynaija_fash)
+
+    sixty_fash = Scraper("360 Fashion", api_id="9g7x0tow", region="nigeria", category="Fashion", db_collection=collection,
+                             logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
+    print "Adding " + sixty_fash.get_name() + " scraper..."
+    scrapers.append(sixty_fash)
+
+    vanguard_fash = Scraper("Vanguard Fashion", api_id="74hktc3i", region="nigeria", category="Fashion", db_collection=collection,
+                                logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
+    print "Adding " + vanguard_fash.get_name() + " scraper..."
+    scrapers.append(vanguard_fash)
+
+    pulse_fash = Scraper("Pulse Fashion", api_id="6iq08fpw", region="nigeria", category="Fashion", db_collection=collection,
+                    logo="http://static.pulse.ng/resources/20150218-3ng/ver1-0/img/logo_print.gif")
+    print "Adding " + pulse_fash.get_name() + " scraper..."
+    scrapers.append(pulse_fash)
+
+    bnaij_fash = Scraper("Bella Naija Fashion", api_id="7zpspzcs", region="nigeria", category="Fashion", db_collection=collection,
+                     logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
+    print "Adding " + bnaij_fash.get_name() + " scraper..."
+    scrapers.append(bnaij_fash)
+
+    
+    #Politics
+
+    sahara_politics = Scraper("Sahara Politics", api_id="adq8oezk", region="nigeria", category="Politics", db_collection=collection,
+                           logo="http://saharareporters.com/sites/default/themes/sr_theme/images/layout/header/header-logo.png")
+    print "Adding " + sahara_politics.get_name() + " scraper..."
+    scrapers.append(sahara_politics)
+    
+
+    guard_politics = guardScraper("Guardian Politics", api_id="dafhjgqo", region="nigeria", category="Politics", db_collection=collection,
+                           logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
+    print "Adding " + guard_politics.get_name() + " scraper..."
+    scrapers.append(guard_politics)    
+
+    
+    ynaija_politics = Scraper("Y Naija Politics", api_id="4qnchaxu", region="nigeria", category="Politics", db_collection=collection,
+                                logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
+    print "Adding " + ynaija_politics.get_name() + " scraper..."
+    scrapers.append(ynaija_politics)
+
+
+    today_politics = Scraper("Today Politics", api_id="5o03jioc", region="nigeria", category="Politics", db_collection=collection,
+                                 logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+    print "Adding " + today_politics.get_name() + " scraper..."
+    scrapers.append(today_politics)
+
+
+    vanguard_politics = Scraper("Vanguard Politics", api_id="415802o6", region="nigeria", category="Politics", db_collection=collection,
+                                logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
+    print "Adding " + vanguard_politics.get_name() + " scraper..."
+    scrapers.append(vanguard_politics)
+
+
+    punch_politics = punchScraper("Punch Politics", api_id="ei7tbc0y", region="nigeria", category="Politics", db_collection=collection,
+                        logo="http://punch.cdn.ng/wp-content/themes/punch/images/punch_logo.jpg")
+    print "Adding " + punch_politics.get_name() + " scraper..."
+    scrapers.append(punch_politics)
+    
+
+
+
 
 
 def run_scrapers():
