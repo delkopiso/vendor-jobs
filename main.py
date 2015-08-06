@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -19,7 +19,7 @@ def define_scrapers(collection):
 
 
     # Gossip sources
-    bnaij_gossip = Scraper("Bella Naija", api_id="9bnqctdw", region="nigeria", category="Gossip", db_collection=collection,
+    bnaij_gossip = Scraper("Bella Naija", api_id="5u0c0qoi", region="nigeria", category="Gossip", db_collection=collection,
                      logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
     print "Adding " + bnaij_gossip.get_name() + " scraper..."
     scrapers.append(bnaij_gossip)
@@ -48,13 +48,18 @@ def define_scrapers(collection):
                              logo="http://zikoko.com/wp-content/uploads/2015/07/logo-300x92.png")
     print "Adding " + zikoko_gossip.get_name() + " scraper..."
     scrapers.append(zikoko_gossip)
+
+    today_gossip = todayScraper("Today", api_id="98sgndus", region="nigeria", category="Gossip", db_collection=collection,
+                            logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+    print "Adding " + today_gossip.get_name() + " scraper..."
+    scrapers.append(today_gossip)
     
 
 
     # Headline sources
     
     today_headlines = Scraper("Today", api_id="b9lqpkyy", region="nigeria", category="Headlines", db_collection=collection,
-                                 logo="http://media.today.ng/news/wp-content/uploads/2015/01/today_logo2.svg")
+                                 logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
     print "Adding " + today_headlines.get_name() + " scraper..."
     scrapers.append(today_headlines)
     
@@ -85,10 +90,10 @@ def define_scrapers(collection):
 
 
     # Tech
-    today_ng_tech = Scraper("Today NG", api_id="747byvlu", region="nigeria", category="Tech", db_collection=collection,
-                            logo="http://www.today.ng/wp-content/uploads/2015/01/logo.jpg")
-    print "Adding " + today_ng_tech.get_name() + " scraper..."
-    scrapers.append(today_ng_tech)
+    today_tech = Scraper("Today", api_id="2f7vilp6", region="nigeria", category="Tech", db_collection=collection,
+                            logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+    print "Adding " + today_tech.get_name() + " scraper..."
+    scrapers.append(today_tech)
 
     tech_cabal = Scraper("Tech Cabal", api_id="4bsxr58e", region="nigeria", category="Tech", db_collection=collection,
                          logo="http://www.techcabal.com/wp-content/uploads/2013/09/tclogobig.png")
@@ -153,6 +158,16 @@ def define_scrapers(collection):
                            logo="http://media.premiumtimesng.com/wp-content/themes/PTN/images/176x64xptn-logo.png.pagespeed.ic.AedNv1evLn.png")
     print "Adding " + premium_biz.get_name() + " scraper..."
     scrapers.append(premium_biz)
+
+    today_biz = Scraper("Today", api_id="ah2kx1zc", region="nigeria", category="Business", db_collection=collection,
+                                 logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+    print "Adding " + today_biz.get_name() + " scraper..."
+    scrapers.append(today_biz)
+
+    guard_biz = guardScraper("Guardian Headlines", api_id="egzuf672", region="nigeria", category="Business", db_collection=collection,
+                           logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
+    print "Adding " + guard_biz.get_name() + " scraper..."
+    scrapers.append(guard_biz)
     
 
 
