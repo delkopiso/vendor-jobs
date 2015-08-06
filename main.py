@@ -15,24 +15,20 @@ scrapers = []
 
 
 def define_scrapers(collection):
-    # Gossip sources
-    b_naij = Scraper("Bella Naija", api_id="arepnqw8", region="nigeria", category="Gossip", db_collection=collection,
-                     logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
-    print "Adding " + b_naij.get_name() + " scraper..."
-    scrapers.append(b_naij)
     
-    y_naija_gossip = Scraper("Y Naija", api_id="2nf95wdg", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
-    print "Adding " + y_naija_gossip.get_name() + " scraper..."
-    scrapers.append(y_naija_gossip)
+
+
+    # Gossip sources
+    bnaij_gossip = Scraper("Bella Naija", api_id="9bnqctdw", region="nigeria", category="Gossip", db_collection=collection,
+                     logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
+    print "Adding " + bnaij_gossip.get_name() + " scraper..."
+    scrapers.append(bnaij_gossip)
+    
     pulse = Scraper("Pulse.ng", api_id="dnxrp1h6", region="nigeria", category="Gossip", db_collection=collection,
                     logo="http://static.pulse.ng/resources/20150218-3ng/ver1-0/img/logo_print.gif")
     print "Adding " + pulse.get_name() + " scraper..."
     scrapers.append(pulse)
-    radr_ng = RadrScraper("Radr.ng", api_id="6g898ewm", region="nigeria", category="Gossip", db_collection=collection,
-                           logo="http://www.radar.ng/wp-content/uploads/2014/05/logo.png")
-    print "Adding " + radr_ng.get_name() + " scraper..."
-    scrapers.append(radr_ng)
+    
     sixty_gossip = Scraper("360 Gossip", api_id="3007ai6g", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
     print "Adding " + sixty_gossip.get_name() + " scraper..."
@@ -48,6 +44,12 @@ def define_scrapers(collection):
     print "Adding " + ventures_gossip.get_name() + " scraper..."
     scrapers.append(ventures_gossip)
     
+    zikoko_gossip = Scraper("Zikoko", api_id="6tyylw1s", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://zikoko.com/wp-content/uploads/2015/07/logo-300x92.png")
+    print "Adding " + zikoko_gossip.get_name() + " scraper..."
+    scrapers.append(zikoko_gossip)
+    
+
 
     # Headline sources
     '''
@@ -78,6 +80,9 @@ def define_scrapers(collection):
                            logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
     print "Adding " + guard_head.get_name() + " scraper..."
     scrapers.append(guard_head)
+
+    
+
 
     # Tech
     today_ng_tech = Scraper("Today NG", api_id="747byvlu", region="nigeria", category="Tech", db_collection=collection,
@@ -120,6 +125,9 @@ def define_scrapers(collection):
     print "Adding " + ms_techy.get_name() + " scraper..."
     scrapers.append(ms_techy)
     
+    
+
+
     # Business
     ventures = Scraper("Ventures Africa", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
                        logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
