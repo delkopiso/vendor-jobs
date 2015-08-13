@@ -236,19 +236,19 @@ def define_scrapers(collection):
     print "Adding " + sixty_fash.get_name() + " scraper..."
     scrapers.append(sixty_fash)
 
-    '''
-    vanguard_fash = Scraper("Vanguard Fashion", api_id="74hktc3i", region="nigeria", category="Fashion", db_collection=collection,
-                                logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
-    print "Adding " + vanguard_fash.get_name() + " scraper..."
-    scrapers.append(vanguard_fash)
-    '''
-
+    
+    style_vitae = Scraper("Style Vitae Fashion", api_id="ajm8bq7c", region="nigeria", category="Fashion", db_collection=collection,
+                                logo="http://www.stylevitae.com/wp-content/uploads/2015/05/Header-StyleVitae.com-Fun-Fashion-Real-Style..png")
+    print "Adding " + style_vitae.get_name() + " scraper..."
+    scrapers.append(style_vitae)
+    
 
     pulse_fash = Scraper("Pulse Fashion", api_id="6iq08fpw", region="nigeria", category="Fashion", db_collection=collection,
                     logo="http://static.pulse.ng/resources/20150218-3ng/ver1-0/img/logo_print.gif")
     print "Adding " + pulse_fash.get_name() + " scraper..."
     scrapers.append(pulse_fash)
 
+    
     bnaij_fash = Scraper("Bella Naija Fashion", api_id="7zpspzcs", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
     print "Adding " + bnaij_fash.get_name() + " scraper..."
