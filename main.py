@@ -19,6 +19,7 @@ def define_scrapers(collection):
 
 
     # Gossip sources
+    
     bnaij_gossip = Scraper("Bella Naija Gossip", api_id="5u0c0qoi", region="nigeria", category="Gossip", db_collection=collection,
                      logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
     print "Adding " + bnaij_gossip.get_name() + " scraper..."
@@ -253,6 +254,16 @@ def define_scrapers(collection):
                      logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
     print "Adding " + bnaij_fash.get_name() + " scraper..."
     scrapers.append(bnaij_fash)
+
+    styleme = Scraper("Style Me Africa", api_id="8ok6a8yk", region="nigeria", category="Fashion", db_collection=collection,
+                     logo="http://www.stylemeafrica.com/wp-content/uploads/2014/09/SMA-Logo.jpg")
+    print "Adding " + styleme.get_name() + " scraper..."
+    scrapers.append(styleme)
+
+    shirley = Scraper("Shirley's Wardrobe", api_id="3uwqzkjk", region="nigeria", category="Fashion", db_collection=collection,
+                     logo="http://shirleyswardrobe.com/wp-content/uploads/2014/11/Logo.png")
+    print "Adding " + shirley.get_name() + " scraper..."
+    scrapers.append(shirley)
 
     
     #Politics
