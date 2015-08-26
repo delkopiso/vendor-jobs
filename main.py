@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -88,6 +88,11 @@ def define_scrapers(collection):
                            logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
     print "Adding " + guard_head.get_name() + " scraper..."
     scrapers.append(guard_head)
+
+    thisday_head = thisdayScraper("Thisday Headlines", api_id="4thturvi", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://cdn.akamai.thisdaylive.com/0bef99d6-acf5-4e2c-9779-8fa02ba3fcd4/img/thisday_logo.gif")
+    print "Adding " + thisday_head.get_name() + " scraper..."
+    scrapers.append(thisday_head)
 
     
 
@@ -178,6 +183,12 @@ def define_scrapers(collection):
                            logo="http://www.howwemadeitinafrica.com/wp-content/uploads/2015/01/HowWeMadeItInAfrica_logo.gif")
     print "Adding " + made_it.get_name() + " scraper..."
     scrapers.append(made_it)
+
+    bizday_biz = Scraper("Businessday Business", api_id="6zzop1eu", region="nigeria", category="Business", db_collection=collection,
+                           logo="http://businessdayonline.com/wp-content/uploads/2015/08/bd-mast-head_set.png")
+    print "Adding " + bizday_biz.get_name() + " scraper..."
+    scrapers.append(bizday_biz)
+
 
 
     #Sport
