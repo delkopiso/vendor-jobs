@@ -35,7 +35,7 @@ def define_scrapers(collection):
     print "Adding " + sixty_gossip.get_name() + " scraper..."
     scrapers.append(sixty_gossip)
     
-    ynaij_gossip = Scraper("Ynaija Gossip", api_id="6pma1t9s", region="nigeria", category="Gossip", db_collection=collection,
+    ynaij_gossip = Scraper("Ynaija Gossip", api_id="acbiv2i8", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
     print "Adding " + ynaij_gossip.get_name() + " scraper..."
     scrapers.append(ynaij_gossip)
@@ -69,7 +69,7 @@ def define_scrapers(collection):
     print "Adding " + vanguard_headlines.get_name() + " scraper..."
     scrapers.append(vanguard_headlines)
     
-    y_naija_headlines = Scraper("Y Naija Headlines", api_id="e6jhynpm", region="nigeria", category="Headlines", db_collection=collection,
+    y_naija_headlines = Scraper("Y Naija Headlines", api_id="8172f0f2", region="nigeria", category="Headlines", db_collection=collection,
                                 logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
     print "Adding " + y_naija_headlines.get_name() + " scraper..."
     scrapers.append(y_naija_headlines)
@@ -243,7 +243,7 @@ def define_scrapers(collection):
 
     #Fashion
 
-    ynaija_fash = Scraper("Y Naija Fashion", api_id="7nmx31t2", region="nigeria", category="Fashion", db_collection=collection,
+    ynaija_fash = Scraper("Y Naija Fashion", api_id="cvjlxu7w", region="nigeria", category="Fashion", db_collection=collection,
                                 logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
     print "Adding " + ynaija_fash.get_name() + " scraper..."
     scrapers.append(ynaija_fash)
@@ -296,7 +296,7 @@ def define_scrapers(collection):
     scrapers.append(guard_politics)    
 
     
-    ynaija_politics = Scraper("Y Naija Politics", api_id="4qnchaxu", region="nigeria", category="Politics", db_collection=collection,
+    ynaija_politics = Scraper("Y Naija Politics", api_id="46p6rxx6", region="nigeria", category="Politics", db_collection=collection,
                                 logo="http://ynaija.com/wp-content/uploads/2014/05/logo.png")
     print "Adding " + ynaija_politics.get_name() + " scraper..."
     scrapers.append(ynaija_politics)
