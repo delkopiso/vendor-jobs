@@ -204,12 +204,12 @@ def define_scrapers(collection):
     print "Adding " + guard_sport.get_name() + " scraper..."
     scrapers.append(guard_sport)    
 
-    
+    '''
     ynaija_sport = Scraper("Y Naija Sport", api_id="61gee0ww", region="nigeria", category="Sports", db_collection=collection,
                                 logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
     print "Adding " + ynaija_sport.get_name() + " scraper..."
     scrapers.append(ynaija_sport)
-
+    '''
     
     sixty_sport = Scraper("360 Sport", api_id="82amsk5k", region="nigeria", category="Sports", db_collection=collection,
                              logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
