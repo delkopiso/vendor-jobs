@@ -35,6 +35,7 @@ def define_scrapers(collection):
     print "Adding " + sixty_gossip.get_name() + " scraper..."
     scrapers.append(sixty_gossip)
     
+
     ynaij_gossip = Scraper("Ynaija Gossip", api_id="acbiv2i8", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
     print "Adding " + ynaij_gossip.get_name() + " scraper..."
@@ -69,10 +70,12 @@ def define_scrapers(collection):
     print "Adding " + vanguard_headlines.get_name() + " scraper..."
     scrapers.append(vanguard_headlines)
     
+
     y_naija_headlines = Scraper("Y Naija Headlines", api_id="8172f0f2", region="nigeria", category="Headlines", db_collection=collection,
                                 logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
     print "Adding " + y_naija_headlines.get_name() + " scraper..."
     scrapers.append(y_naija_headlines)
+
     
     sahara = Scraper("Sahara Headlines", api_id="5ih3db3a", region="nigeria", category="Headlines", db_collection=collection,
                            logo="http://saharareporters.com/sites/default/themes/sr_theme/images/layout/header/header-logo.png")
@@ -204,12 +207,12 @@ def define_scrapers(collection):
     print "Adding " + guard_sport.get_name() + " scraper..."
     scrapers.append(guard_sport)    
 
-    '''
+
     ynaija_sport = Scraper("Y Naija Sport", api_id="61gee0ww", region="nigeria", category="Sports", db_collection=collection,
                                 logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
     print "Adding " + ynaija_sport.get_name() + " scraper..."
     scrapers.append(ynaija_sport)
-    '''
+
     
     sixty_sport = Scraper("360 Sport", api_id="82amsk5k", region="nigeria", category="Sports", db_collection=collection,
                              logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
@@ -243,10 +246,12 @@ def define_scrapers(collection):
 
     #Fashion
 
+
     ynaija_fash = Scraper("Y Naija Fashion", api_id="cvjlxu7w", region="nigeria", category="Fashion", db_collection=collection,
                                 logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
     print "Adding " + ynaija_fash.get_name() + " scraper..."
     scrapers.append(ynaija_fash)
+
 
     sixty_fash = Scraper("360 Fashion", api_id="9g7x0tow", region="nigeria", category="Fashion", db_collection=collection,
                              logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
@@ -271,7 +276,7 @@ def define_scrapers(collection):
     print "Adding " + bnaij_fash.get_name() + " scraper..."
     scrapers.append(bnaij_fash)
 
-    styleme = Scraper("Style Me Africa", api_id="8ok6a8yk", region="nigeria", category="Fashion", db_collection=collection,
+    styleme = Scraper("Style Me Africa", api_id="bdjnldvy", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://www.stylemeafrica.com/wp-content/uploads/2014/09/SMA-Logo.jpg")
     print "Adding " + styleme.get_name() + " scraper..."
     scrapers.append(styleme)
@@ -295,7 +300,7 @@ def define_scrapers(collection):
     print "Adding " + guard_politics.get_name() + " scraper..."
     scrapers.append(guard_politics)    
 
-    
+
     ynaija_politics = Scraper("Y Naija Politics", api_id="46p6rxx6", region="nigeria", category="Politics", db_collection=collection,
                                 logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
     print "Adding " + ynaija_politics.get_name() + " scraper..."
