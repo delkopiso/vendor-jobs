@@ -247,10 +247,10 @@ def define_scrapers(collection):
     #Fashion
 
 
-    ynaija_fash = Scraper("Y Naija Fashion", api_id="cvjlxu7w", region="nigeria", category="Fashion", db_collection=collection,
-                                logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
-    print "Adding " + ynaija_fash.get_name() + " scraper..."
-    scrapers.append(ynaija_fash)
+    tss_style = Scraper("The September Style", api_id="46qaagqm", region="nigeria", category="Fashion", db_collection=collection,
+                                logo="http://theseptemberstandard.com/wp-content/uploads/2015/06/The-September-Standard-Logo.png")
+    print "Adding " + tss_style.get_name() + " scraper..."
+    scrapers.append(tss_style)
 
 
     sixty_fash = Scraper("360 Fashion", api_id="9g7x0tow", region="nigeria", category="Fashion", db_collection=collection,
