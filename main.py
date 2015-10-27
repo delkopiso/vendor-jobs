@@ -21,7 +21,7 @@ def define_scrapers(collection):
     # Gossip sources
     
     bnaij_gossip = Scraper("Bella Naija Gossip", api_id="5u0c0qoi", region="nigeria", category="Gossip", db_collection=collection,
-                     logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
+                     logo="http://s20.postimg.org/4up4q8vql/bellanaija_mobile.png")
     print "Adding " + bnaij_gossip.get_name() + " scraper..."
     scrapers.append(bnaij_gossip)
     
@@ -31,7 +31,7 @@ def define_scrapers(collection):
     scrapers.append(pulse)
     
     sixty_gossip = Scraper("360 Gossip", api_id="3007ai6g", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
+                             logo="http://s20.postimg.org/vehpsdwa1/360nobs_logo.png")
     print "Adding " + sixty_gossip.get_name() + " scraper..."
     scrapers.append(sixty_gossip)
     
@@ -215,7 +215,7 @@ def define_scrapers(collection):
 
     
     sixty_sport = Scraper("360 Sport", api_id="82amsk5k", region="nigeria", category="Sports", db_collection=collection,
-                             logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
+                             logo="http://s20.postimg.org/vehpsdwa1/360nobs_logo.png")
     print "Adding " + sixty_sport.get_name() + " scraper..."
     scrapers.append(sixty_sport)
 
@@ -254,7 +254,7 @@ def define_scrapers(collection):
 
 
     sixty_fash = Scraper("360 Fashion", api_id="9g7x0tow", region="nigeria", category="Fashion", db_collection=collection,
-                             logo="http://www.360nobs.com/wp-content/uploads/2015/04/360nobs_logo.png")
+                             logo="http://s20.postimg.org/vehpsdwa1/360nobs_logo.png")
     print "Adding " + sixty_fash.get_name() + " scraper..."
     scrapers.append(sixty_fash)
 
@@ -272,7 +272,7 @@ def define_scrapers(collection):
 
     
     bnaij_fash = Scraper("Bella Naija Fashion", api_id="7zpspzcs", region="nigeria", category="Fashion", db_collection=collection,
-                     logo="http://www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-mobile.png")
+                     logo="http://s20.postimg.org/4up4q8vql/bellanaija_mobile.png")
     print "Adding " + bnaij_fash.get_name() + " scraper..."
     scrapers.append(bnaij_fash)
 
