@@ -88,7 +88,7 @@ def define_scrapers(collection):
     scrapers.append(premium)
 
     guard_head = guardScraper("Guardian Headlines", api_id="egzuf672", region="nigeria", category="Headlines", db_collection=collection,
-                           logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
+                           logo="http://s20.postimg.org/ihd9yvd7x/The_guardian.png")
     print "Adding " + guard_head.get_name() + " scraper..."
     scrapers.append(guard_head)
 
@@ -178,7 +178,7 @@ def define_scrapers(collection):
     scrapers.append(today_biz)
 
     guard_biz = guardScraper("Guardian Business", api_id="94g1s2v4", region="nigeria", category="Business", db_collection=collection,
-                           logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
+                           logo="http://s20.postimg.org/ihd9yvd7x/The_guardian.png")
     print "Adding " + guard_biz.get_name() + " scraper..."
     scrapers.append(guard_biz)
 
@@ -203,7 +203,7 @@ def define_scrapers(collection):
     
 
     guard_sport = guardScraper("Guardian Sport", api_id="2x0tlqrm", region="nigeria", category="Sports", db_collection=collection,
-                           logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
+                           logo="http://s20.postimg.org/ihd9yvd7x/The_guardian.png")
     print "Adding " + guard_sport.get_name() + " scraper..."
     scrapers.append(guard_sport)    
 
@@ -296,7 +296,7 @@ def define_scrapers(collection):
     
 
     guard_politics = guardScraper("Guardian Politics", api_id="dafhjgqo", region="nigeria", category="Politics", db_collection=collection,
-                           logo="http://newngrguardiannewscom.c.presscdn.com/wp-content/uploads/2015/03/Guardian-Logo4501.jpg")
+                           logo="http://s20.postimg.org/ihd9yvd7x/The_guardian.png")
     print "Adding " + guard_politics.get_name() + " scraper..."
     scrapers.append(guard_politics)    
 
