@@ -42,7 +42,7 @@ def define_scrapers(collection):
     scrapers.append(ynaij_gossip)
 
     ventures_gossip = venturesScraper("Ventures Africa Gossip", api_id="3w6fsfew", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
+                             logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
     print "Adding " + ventures_gossip.get_name() + " scraper..."
     scrapers.append(ventures_gossip)
     
@@ -123,12 +123,12 @@ def define_scrapers(collection):
     scrapers.append(techpoint)
 
     ventures_tech = Scraper("Ventures Africa Tech", api_id="bu960i24", region="nigeria", category="Tech", db_collection=collection,
-                       logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
+                       logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
     print "Adding " + ventures_tech.get_name() + " scraper..."
     scrapers.append(ventures_tech)
     
     ventures_tech_long = venturesScraper("Ventures Africa Tech Long", api_id="2dlebr7k", region="nigeria", category="Tech", db_collection=collection,
-                       logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
+                       logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
     print "Adding " + ventures_tech_long.get_name() + " scraper..."
     scrapers.append(ventures_tech_long)
 
@@ -148,12 +148,12 @@ def define_scrapers(collection):
     # Business
 
     ventures = Scraper("Ventures Africa Business", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
-                       logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
+                       logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
     print "Adding " + ventures.get_name() + " scraper..."
     scrapers.append(ventures)
     
     ventures_biz_long = venturesScraper("Ventures Africa Business Long", api_id="bbudi886", region="nigeria", category="Business", db_collection=collection,
-                       logo="http://www.ventures-africa.com/wp-content/uploads/2013/12/logo_web.png")
+                       logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
     print "Adding " + ventures_biz_long.get_name() + " scraper..."
     scrapers.append(ventures_biz_long)
     
