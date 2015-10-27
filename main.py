@@ -83,7 +83,7 @@ def define_scrapers(collection):
     scrapers.append(sahara)
     
     premium = Scraper("Premium Headlines", api_id="4r6sdgjm", region="nigeria", category="Headlines", db_collection=collection,
-                           logo="http://media.premiumtimesng.com/wp-content/themes/PTN/images/176x64xptn-logo.png.pagespeed.ic.AedNv1evLn.png")
+                           logo="http://s20.postimg.org/hwatg3k4t/176x64xptn_logo_png.png")
     print "Adding " + premium.get_name() + " scraper..."
     scrapers.append(premium)
 
@@ -168,7 +168,7 @@ def define_scrapers(collection):
     scrapers.append(punch_biz)
     
     premium_biz = Scraper("Premium Business", api_id="8lc0dzni", region="nigeria", category="Business", db_collection=collection,
-                           logo="http://media.premiumtimesng.com/wp-content/themes/PTN/images/176x64xptn-logo.png.pagespeed.ic.AedNv1evLn.png")
+                           logo="http://s20.postimg.org/hwatg3k4t/176x64xptn_logo_png.png")
     print "Adding " + premium_biz.get_name() + " scraper..."
     scrapers.append(premium_biz)
 
@@ -221,7 +221,7 @@ def define_scrapers(collection):
 
 
     premium_sport = Scraper("Premium Sport", api_id="43z2ds64", region="nigeria", category="Sports", db_collection=collection,
-                           logo="http://media.premiumtimesng.com/wp-content/themes/PTN/images/176x64xptn-logo.png.pagespeed.ic.AedNv1evLn.png")
+                           logo="http://s20.postimg.org/hwatg3k4t/176x64xptn_logo_png.png")
     print "Adding " + premium_sport.get_name() + " scraper..."
     scrapers.append(premium_sport)
 
