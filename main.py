@@ -78,7 +78,7 @@ def define_scrapers(collection):
 
     
     sahara = Scraper("Sahara Headlines", api_id="5ih3db3a", region="nigeria", category="Headlines", db_collection=collection,
-                           logo="http://saharareporters.com/sites/default/themes/sr_theme/images/layout/header/header-logo.png")
+                           logo="http://s20.postimg.org/5j316b0rx/sahara_reporter.png")
     print "Adding " + sahara.get_name() + " scraper..."
     scrapers.append(sahara)
     
@@ -93,7 +93,7 @@ def define_scrapers(collection):
     scrapers.append(guard_head)
 
     thisday_head = thisdayScraper("Thisday Headlines", api_id="4thturvi", region="nigeria", category="Headlines", db_collection=collection,
-                           logo="http://cdn.akamai.thisdaylive.com/0bef99d6-acf5-4e2c-9779-8fa02ba3fcd4/img/thisday_logo.gif")
+                           logo="http://s20.postimg.org/o8zm0siwd/This_daylive.png")
     print "Adding " + thisday_head.get_name() + " scraper..."
     scrapers.append(thisday_head)
 
@@ -197,7 +197,7 @@ def define_scrapers(collection):
     #Sport
     
     sahara_sport = Scraper("Sahara Sport", api_id="ayzkjxn6", region="nigeria", category="Sports", db_collection=collection,
-                           logo="http://saharareporters.com/sites/default/themes/sr_theme/images/layout/header/header-logo.png")
+                           logo="http://s20.postimg.org/5j316b0rx/sahara_reporter.png")
     print "Adding " + sahara_sport.get_name() + " scraper..."
     scrapers.append(sahara_sport)
     
@@ -290,7 +290,7 @@ def define_scrapers(collection):
     #Politics
 
     sahara_politics = Scraper("Sahara Politics", api_id="adq8oezk", region="nigeria", category="Politics", db_collection=collection,
-                           logo="http://saharareporters.com/sites/default/themes/sr_theme/images/layout/header/header-logo.png")
+                           logo="http://s20.postimg.org/5j316b0rx/sahara_reporter.png")
     print "Adding " + sahara_politics.get_name() + " scraper..."
     scrapers.append(sahara_politics)
     
