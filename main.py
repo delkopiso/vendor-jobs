@@ -248,7 +248,7 @@ def define_scrapers(collection):
 
 
     tss_style = Scraper("The September Style", api_id="46qaagqm", region="nigeria", category="Fashion", db_collection=collection,
-                                logo="http://theseptemberstandard.com/wp-content/uploads/2015/06/The-September-Standard-Logo.png")
+                                logo="http://s20.postimg.org/fpg831ajx/The_September_Standard_Logo.png")
     print "Adding " + tss_style.get_name() + " scraper..."
     scrapers.append(tss_style)
 
@@ -282,7 +282,7 @@ def define_scrapers(collection):
     scrapers.append(styleme)
 
     shirley = Scraper("Shirley's Wardrobe", api_id="3uwqzkjk", region="nigeria", category="Fashion", db_collection=collection,
-                     logo="http://shirleyswardrobe.com/wp-content/uploads/2014/11/Logo.png")
+                     logo="http://s20.postimg.org/yo16vyqp9/shirley_s_wardrobe.png")
     print "Adding " + shirley.get_name() + " scraper..."
     scrapers.append(shirley)
 
