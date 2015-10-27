@@ -66,7 +66,7 @@ def define_scrapers(collection):
     scrapers.append(today_headlines)
     
     vanguard_headlines = Scraper("Vanguard Headlines", api_id="abzmopk8", region="nigeria", category="Headlines", db_collection=collection,
-                                 logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
+                                 logo="http://s20.postimg.org/lxrwlrcfh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_headlines.get_name() + " scraper..."
     scrapers.append(vanguard_headlines)
     
@@ -113,7 +113,7 @@ def define_scrapers(collection):
     scrapers.append(tech_cabal)
 
     vanguard_tech = Scraper("Vanguard Tech", api_id="e9qp7s1a", region="nigeria", category="Tech", db_collection=collection,
-                            logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
+                            logo="http://s20.postimg.org/lxrwlrcfh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_tech.get_name() + " scraper..."
     scrapers.append(vanguard_tech)
 
@@ -158,7 +158,7 @@ def define_scrapers(collection):
     scrapers.append(ventures_biz_long)
     
     vanguard_business = Scraper("Vanguard Business", api_id="cskj1sxo", region="nigeria", category="Business", db_collection=collection,
-                                logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
+                                logo="http://s20.postimg.org/lxrwlrcfh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_business.get_name() + " scraper..."
     scrapers.append(vanguard_business)
     
@@ -233,7 +233,7 @@ def define_scrapers(collection):
 
 
     vanguard_sport = Scraper("Vanguard Sport", api_id="8h4jou12", region="nigeria", category="Sports", db_collection=collection,
-                                logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
+                                logo="http://s20.postimg.org/lxrwlrcfh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_sport.get_name() + " scraper..."
     scrapers.append(vanguard_sport)
 
@@ -314,7 +314,7 @@ def define_scrapers(collection):
 
 
     vanguard_politics = Scraper("Vanguard Politics", api_id="415802o6", region="nigeria", category="Politics", db_collection=collection,
-                                logo="http://cdn1.vanguardngr.com/wp-content/uploads/2013/12/250x55xvanguardlogo.png.pagespeed.ic.WF70w5uJ9P.png")
+                                logo="http://s20.postimg.org/lxrwlrcfh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_politics.get_name() + " scraper..."
     scrapers.append(vanguard_politics)
 
