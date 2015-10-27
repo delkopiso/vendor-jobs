@@ -52,7 +52,7 @@ def define_scrapers(collection):
     scrapers.append(zikoko_gossip)
 
     today_gossip = todayScraper("Today Gossip", api_id="98sgndus", region="nigeria", category="Gossip", db_collection=collection,
-                            logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+                            logo="http://s20.postimg.org/mv7z5hjn1/today.png")
     print "Adding " + today_gossip.get_name() + " scraper..."
     scrapers.append(today_gossip)
     
@@ -61,7 +61,7 @@ def define_scrapers(collection):
     # Headline sources
     
     today_headlines = Scraper("Today Headlines", api_id="b9lqpkyy", region="nigeria", category="Headlines", db_collection=collection,
-                                 logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+                                 logo="http://s20.postimg.org/mv7z5hjn1/today.png")
     print "Adding " + today_headlines.get_name() + " scraper..."
     scrapers.append(today_headlines)
     
@@ -103,7 +103,7 @@ def define_scrapers(collection):
     # Tech
 
     today_tech = Scraper("Today Tech", api_id="2f7vilp6", region="nigeria", category="Tech", db_collection=collection,
-                            logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+                            logo="http://s20.postimg.org/mv7z5hjn1/today.png")
     print "Adding " + today_tech.get_name() + " scraper..."
     scrapers.append(today_tech)
 
@@ -173,7 +173,7 @@ def define_scrapers(collection):
     scrapers.append(premium_biz)
 
     today_biz = Scraper("Today Business", api_id="ah2kx1zc", region="nigeria", category="Business", db_collection=collection,
-                                 logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+                                 logo="http://s20.postimg.org/mv7z5hjn1/today.png")
     print "Adding " + today_biz.get_name() + " scraper..."
     scrapers.append(today_biz)
 
@@ -227,7 +227,7 @@ def define_scrapers(collection):
 
 
     today_sport = Scraper("Today Sport", api_id="6230ic18", region="nigeria", category="Sports", db_collection=collection,
-                                 logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+                                 logo="http://s20.postimg.org/mv7z5hjn1/today.png")
     print "Adding " + today_sport.get_name() + " scraper..."
     scrapers.append(today_sport)
 
@@ -308,7 +308,7 @@ def define_scrapers(collection):
 
 
     today_politics = Scraper("Today Politics", api_id="5o03jioc", region="nigeria", category="Politics", db_collection=collection,
-                                 logo="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjEw9FCJP0MgaACcs95m9HDYx4IHxm7bjkGWtkJgohhiO6yuitGKDiIIo")
+                                 logo="http://s20.postimg.org/mv7z5hjn1/today.png")
     print "Adding " + today_politics.get_name() + " scraper..."
     scrapers.append(today_politics)
 
