@@ -26,7 +26,7 @@ def define_scrapers(collection):
     scrapers.append(bnaij_gossip)
     
     pulse = Scraper("Pulse Gossip", api_id="dnxrp1h6", region="nigeria", category="Gossip", db_collection=collection,
-                    logo="http://static.pulse.ng/resources/20150218-3ng/ver1-0/img/logo_print.gif")
+                    logo="http://s20.postimg.org/gg4cv2njd/pulset.png")
     print "Adding " + pulse.get_name() + " scraper..."
     scrapers.append(pulse)
     
@@ -239,7 +239,7 @@ def define_scrapers(collection):
 
 
     pulse_sport = Scraper("Pulse Sport", api_id="atek2opq", region="nigeria", category="Sports", db_collection=collection,
-                    logo="http://static.pulse.ng/resources/20150218-3ng/ver1-0/img/logo_print.gif")
+                    logo="http://s20.postimg.org/gg4cv2njd/pulset.png")
     print "Adding " + pulse_sport.get_name() + " scraper..."
     scrapers.append(pulse_sport)
 
@@ -260,13 +260,13 @@ def define_scrapers(collection):
 
     
     style_vitae = Scraper("Style Vitae Fashion", api_id="ajm8bq7c", region="nigeria", category="Fashion", db_collection=collection,
-                                logo="http://www.stylevitae.com/wp-content/uploads/2015/05/Header-StyleVitae.com-Fun-Fashion-Real-Style..png")
+                                logo="http://s20.postimg.org/vxruyru0d/Header_Style_Vitae.png")
     print "Adding " + style_vitae.get_name() + " scraper..."
     scrapers.append(style_vitae)
     
 
     pulse_fash = Scraper("Pulse Fashion", api_id="6iq08fpw", region="nigeria", category="Fashion", db_collection=collection,
-                    logo="http://static.pulse.ng/resources/20150218-3ng/ver1-0/img/logo_print.gif")
+                    logo="http://s20.postimg.org/gg4cv2njd/pulset.png")
     print "Adding " + pulse_fash.get_name() + " scraper..."
     scrapers.append(pulse_fash)
 
