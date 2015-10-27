@@ -47,7 +47,7 @@ def define_scrapers(collection):
     scrapers.append(ventures_gossip)
     
     zikoko_gossip = Scraper("Zikoko Gossip", api_id="6tyylw1s", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://zikoko.com/wp-content/uploads/2015/07/logo-300x92.png")
+                             logo="http://s20.postimg.org/q3cgij5wt/zikoko.png")
     print "Adding " + zikoko_gossip.get_name() + " scraper..."
     scrapers.append(zikoko_gossip)
 
