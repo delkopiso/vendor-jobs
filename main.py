@@ -118,7 +118,7 @@ def define_scrapers(collection):
     scrapers.append(vanguard_tech)
 
     techpoint = Scraper("Techpoint Tech", api_id="490y6x36", region="nigeria", category="Tech", db_collection=collection,
-                        logo="http://techpoint.ng/wp-content/uploads/2014/05/Techpoint_web_logo.png")
+                        logo="http://s20.postimg.org/qmhjrsxbh/Techpoint_web_logo.png")
     print "Adding " + techpoint.get_name() + " scraper..."
     scrapers.append(techpoint)
 
@@ -188,7 +188,7 @@ def define_scrapers(collection):
     scrapers.append(made_it)
 
     bizday_biz = Scraper("Businessday Business", api_id="6zzop1eu", region="nigeria", category="Business", db_collection=collection,
-                           logo="http://businessdayonline.com/wp-content/uploads/2015/08/bd-mast-head_set.png")
+                           logo="http://s20.postimg.org/3tow14er1/bd_mast_head_set.png")
     print "Adding " + bizday_biz.get_name() + " scraper..."
     scrapers.append(bizday_biz)
 
