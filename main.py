@@ -37,7 +37,7 @@ def define_scrapers(collection):
     
 
     ynaij_gossip = Scraper("Ynaija Gossip", api_id="acbiv2i8", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
+                             logo="http://s20.postimg.org/nquta2xm5/belumynaija_logo.png")
     print "Adding " + ynaij_gossip.get_name() + " scraper..."
     scrapers.append(ynaij_gossip)
 
@@ -72,7 +72,7 @@ def define_scrapers(collection):
     
 
     y_naija_headlines = Scraper("Y Naija Headlines", api_id="8172f0f2", region="nigeria", category="Headlines", db_collection=collection,
-                                logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
+                                logo="http://s20.postimg.org/nquta2xm5/belumynaija_logo.png")
     print "Adding " + y_naija_headlines.get_name() + " scraper..."
     scrapers.append(y_naija_headlines)
 
@@ -209,7 +209,7 @@ def define_scrapers(collection):
 
 
     ynaija_sport = Scraper("Y Naija Sport", api_id="61gee0ww", region="nigeria", category="Sports", db_collection=collection,
-                                logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
+                                logo="http://s20.postimg.org/nquta2xm5/belumynaija_logo.png")
     print "Adding " + ynaija_sport.get_name() + " scraper..."
     scrapers.append(ynaija_sport)
 
@@ -277,7 +277,7 @@ def define_scrapers(collection):
     scrapers.append(bnaij_fash)
 
     styleme = Scraper("Style Me Africa", api_id="bdjnldvy", region="nigeria", category="Fashion", db_collection=collection,
-                     logo="http://www.stylemeafrica.com/wp-content/uploads/2014/09/SMA-Logo.jpg")
+                     logo="http://s20.postimg.org/ql7lydvhp/styleme_01.png")
     print "Adding " + styleme.get_name() + " scraper..."
     scrapers.append(styleme)
 
@@ -302,7 +302,7 @@ def define_scrapers(collection):
 
 
     ynaija_politics = Scraper("Y Naija Politics", api_id="46p6rxx6", region="nigeria", category="Politics", db_collection=collection,
-                                logo="http://ynaija.com/wp-content/uploads/2015/08/ynaija-logo.png")
+                                logo="http://s20.postimg.org/nquta2xm5/belumynaija_logo.png")
     print "Adding " + ynaija_politics.get_name() + " scraper..."
     scrapers.append(ynaija_politics)
 
