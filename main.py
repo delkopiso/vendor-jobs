@@ -163,7 +163,7 @@ def define_scrapers(collection):
     scrapers.append(vanguard_business)
     
     punch_biz = punchScraper("Punch Business", api_id="bdid5uka", region="nigeria", category="Business", db_collection=collection,
-                        logo="http://punch.cdn.ng/wp-content/themes/punch/images/punch_logo.jpg")
+                        logo="http://s20.postimg.org/kzglgl5f1/punchh.png")
     print "Adding " + punch_biz.get_name() + " scraper..."
     scrapers.append(punch_biz)
     
@@ -183,7 +183,7 @@ def define_scrapers(collection):
     scrapers.append(guard_biz)
 
     made_it = madeScraper("How We Made it In Africa", api_id="3igwmzsq", region="nigeria", category="Business", db_collection=collection,
-                           logo="http://www.howwemadeitinafrica.com/wp-content/uploads/2015/01/HowWeMadeItInAfrica_logo.gif")
+                           logo="http://s20.postimg.org/fy97f7xyl/How_we_made_it_in_africa.png")
     print "Adding " + made_it.get_name() + " scraper..."
     scrapers.append(made_it)
 
@@ -320,7 +320,7 @@ def define_scrapers(collection):
 
 
     punch_politics = punchScraper("Punch Politics", api_id="ei7tbc0y", region="nigeria", category="Politics", db_collection=collection,
-                        logo="http://punch.cdn.ng/wp-content/themes/punch/images/punch_logo.jpg")
+                        logo="http://s20.postimg.org/kzglgl5f1/punchh.png")
     print "Adding " + punch_politics.get_name() + " scraper..."
     scrapers.append(punch_politics)
     
