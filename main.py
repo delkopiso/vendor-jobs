@@ -138,7 +138,7 @@ def define_scrapers(collection):
     scrapers.append(it_news)
 
     ms_techy = Scraper("Miss Techy Tech", api_id="an3p00uy", region="nigeria", category="Tech", db_collection=collection,
-                       logo="'http://s20.postimg.org/dnb5b1n71/misstechy_header_logo.png")
+                       logo="http://s20.postimg.org/dnb5b1n71/misstechy_header_logo.png")
     print "Adding " + ms_techy.get_name() + " scraper..."
     scrapers.append(ms_techy)
     
