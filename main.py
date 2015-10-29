@@ -21,7 +21,7 @@ def define_scrapers(collection):
     # Gossip sources
     
     bnaij_gossip = Scraper("Bella Naija Gossip", api_id="5u0c0qoi", region="nigeria", category="Gossip", db_collection=collection,
-                     logo="http://s20.postimg.org/4up4q8vql/bellanaija_mobile.png")
+                     logo="http://s20.postimg.org/lb78ku0ml/bellanaija_mobile.png")
     print "Adding " + bnaij_gossip.get_name() + " scraper..."
     scrapers.append(bnaij_gossip)
     
@@ -47,7 +47,7 @@ def define_scrapers(collection):
     scrapers.append(ventures_gossip)
     
     zikoko_gossip = Scraper("Zikoko Gossip", api_id="6tyylw1s", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://s20.postimg.org/q3cgij5wt/zikoko.png")
+                             logo="http://s20.postimg.org/ugk6sftf1/zikoko.png")
     print "Adding " + zikoko_gossip.get_name() + " scraper..."
     scrapers.append(zikoko_gossip)
 
@@ -272,7 +272,7 @@ def define_scrapers(collection):
 
     
     bnaij_fash = Scraper("Bella Naija Fashion", api_id="7zpspzcs", region="nigeria", category="Fashion", db_collection=collection,
-                     logo="http://s20.postimg.org/4up4q8vql/bellanaija_mobile.png")
+                     logo="http://s20.postimg.org/lb78ku0ml/bellanaija_mobile.png")
     print "Adding " + bnaij_fash.get_name() + " scraper..."
     scrapers.append(bnaij_fash)
 
