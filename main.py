@@ -37,7 +37,7 @@ def define_scrapers(collection):
     
 
     ynaij_gossip = Scraper("Ynaija Gossip", api_id="acbiv2i8", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://s20.postimg.org/nquta2xm5/belumynaija_logo.png")
+                             logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
     print "Adding " + ynaij_gossip.get_name() + " scraper..."
     scrapers.append(ynaij_gossip)
 
@@ -72,13 +72,13 @@ def define_scrapers(collection):
     
 
     y_naija_headlines = Scraper("Y Naija Headlines", api_id="8172f0f2", region="nigeria", category="Headlines", db_collection=collection,
-                                logo="http://s20.postimg.org/nquta2xm5/belumynaija_logo.png")
+                                logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
     print "Adding " + y_naija_headlines.get_name() + " scraper..."
     scrapers.append(y_naija_headlines)
 
     
     sahara = Scraper("Sahara Headlines", api_id="5ih3db3a", region="nigeria", category="Headlines", db_collection=collection,
-                           logo="http://s20.postimg.org/5j316b0rx/sahara_reporter.png")
+                           logo="http://s20.postimg.org/khums7ulp/sahara_reporter.png")
     print "Adding " + sahara.get_name() + " scraper..."
     scrapers.append(sahara)
     
@@ -93,7 +93,7 @@ def define_scrapers(collection):
     scrapers.append(guard_head)
 
     thisday_head = thisdayScraper("Thisday Headlines", api_id="4thturvi", region="nigeria", category="Headlines", db_collection=collection,
-                           logo="http://s20.postimg.org/o8zm0siwd/This_daylive.png")
+                           logo="http://s20.postimg.org/79zud0mgd/This_daylive.png")
     print "Adding " + thisday_head.get_name() + " scraper..."
     scrapers.append(thisday_head)
 
@@ -197,7 +197,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
     #Sport
     
     sahara_sport = Scraper("Sahara Sport", api_id="ayzkjxn6", region="nigeria", category="Sports", db_collection=collection,
-                           logo="http://s20.postimg.org/5j316b0rx/sahara_reporter.png")
+                           logo="http://s20.postimg.org/khums7ulp/sahara_reporter.png")
     print "Adding " + sahara_sport.get_name() + " scraper..."
     scrapers.append(sahara_sport)
     
@@ -209,7 +209,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
 
 
     ynaija_sport = Scraper("Y Naija Sport", api_id="61gee0ww", region="nigeria", category="Sports", db_collection=collection,
-                                logo="http://s20.postimg.org/nquta2xm5/belumynaija_logo.png")
+                                logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
     print "Adding " + ynaija_sport.get_name() + " scraper..."
     scrapers.append(ynaija_sport)
 
@@ -291,7 +291,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
     #Politics
 
     sahara_politics = Scraper("Sahara Politics", api_id="adq8oezk", region="nigeria", category="Politics", db_collection=collection,
-                           logo="http://s20.postimg.org/5j316b0rx/sahara_reporter.png")
+                           logo="http://s20.postimg.org/khums7ulp/sahara_reporter.png")
     print "Adding " + sahara_politics.get_name() + " scraper..."
     scrapers.append(sahara_politics)
     
@@ -303,7 +303,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
 
 
     ynaija_politics = Scraper("Y Naija Politics", api_id="46p6rxx6", region="nigeria", category="Politics", db_collection=collection,
-                                logo="http://s20.postimg.org/nquta2xm5/belumynaija_logo.png")
+                                logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
     print "Adding " + ynaija_politics.get_name() + " scraper..."
     scrapers.append(ynaija_politics)
 
