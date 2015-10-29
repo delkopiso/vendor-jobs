@@ -83,12 +83,12 @@ def define_scrapers(collection):
     scrapers.append(sahara)
     
     premium = Scraper("Premium Headlines", api_id="4r6sdgjm", region="nigeria", category="Headlines", db_collection=collection,
-                           logo="http://s20.postimg.org/hwatg3k4t/176x64xptn_logo_png.png")
+                           logo="http://s20.postimg.org/5khkdgrzh/176x64xptn_logo_png_pagespeed.png")
     print "Adding " + premium.get_name() + " scraper..."
     scrapers.append(premium)
 
     guard_head = guardScraper("Guardian Headlines", api_id="egzuf672", region="nigeria", category="Headlines", db_collection=collection,
-                           logo="http://s20.postimg.org/ihd9yvd7x/The_guardian.png")
+                           logo="http://s20.postimg.org/6uokk00j1/The_guardian.png")
     print "Adding " + guard_head.get_name() + " scraper..."
     scrapers.append(guard_head)
 
@@ -163,12 +163,12 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
     scrapers.append(vanguard_business)
     
     punch_biz = punchScraper("Punch Business", api_id="bdid5uka", region="nigeria", category="Business", db_collection=collection,
-                        logo="http://s20.postimg.org/kzglgl5f1/punchh.png")
+                        logo="http://s20.postimg.org/bk9wuv25p/punchh.png")
     print "Adding " + punch_biz.get_name() + " scraper..."
     scrapers.append(punch_biz)
     
     premium_biz = Scraper("Premium Business", api_id="8lc0dzni", region="nigeria", category="Business", db_collection=collection,
-                           logo="http://s20.postimg.org/hwatg3k4t/176x64xptn_logo_png.png")
+                           logo="http://s20.postimg.org/5khkdgrzh/176x64xptn_logo_png_pagespeed.png")
     print "Adding " + premium_biz.get_name() + " scraper..."
     scrapers.append(premium_biz)
 
@@ -178,17 +178,17 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
     scrapers.append(today_biz)
 
     guard_biz = guardScraper("Guardian Business", api_id="94g1s2v4", region="nigeria", category="Business", db_collection=collection,
-                           logo="http://s20.postimg.org/ihd9yvd7x/The_guardian.png")
+                           logo="http://s20.postimg.org/6uokk00j1/The_guardian.png")
     print "Adding " + guard_biz.get_name() + " scraper..."
     scrapers.append(guard_biz)
 
     made_it = madeScraper("How We Made it In Africa", api_id="3igwmzsq", region="nigeria", category="Business", db_collection=collection,
-                           logo="http://s20.postimg.org/fy97f7xyl/How_we_made_it_in_africa.png")
+                           logo="http://s20.postimg.org/d8929ig19/How_we_made_it_in_africa.png")
     print "Adding " + made_it.get_name() + " scraper..."
     scrapers.append(made_it)
 
     bizday_biz = Scraper("Businessday Business", api_id="6zzop1eu", region="nigeria", category="Business", db_collection=collection,
-                           logo="http://s20.postimg.org/3tow14er1/bd_mast_head_set.png")
+                           logo="http://s20.postimg.org/i1o80mn59/bd_mast_head_set.png")
     print "Adding " + bizday_biz.get_name() + " scraper..."
     scrapers.append(bizday_biz)
 
@@ -203,7 +203,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
     
 
     guard_sport = guardScraper("Guardian Sport", api_id="2x0tlqrm", region="nigeria", category="Sports", db_collection=collection,
-                           logo="http://s20.postimg.org/ihd9yvd7x/The_guardian.png")
+                           logo="http://s20.postimg.org/6uokk00j1/The_guardian.png")
     print "Adding " + guard_sport.get_name() + " scraper..."
     scrapers.append(guard_sport)    
 
@@ -221,7 +221,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
 
 
     premium_sport = Scraper("Premium Sport", api_id="43z2ds64", region="nigeria", category="Sports", db_collection=collection,
-                           logo="http://s20.postimg.org/hwatg3k4t/176x64xptn_logo_png.png")
+                           logo="http://s20.postimg.org/5khkdgrzh/176x64xptn_logo_png_pagespeed.png")
     print "Adding " + premium_sport.get_name() + " scraper..."
     scrapers.append(premium_sport)
 
@@ -297,7 +297,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
     
 
     guard_politics = guardScraper("Guardian Politics", api_id="dafhjgqo", region="nigeria", category="Politics", db_collection=collection,
-                           logo="http://s20.postimg.org/ihd9yvd7x/The_guardian.png")
+                           logo="http://s20.postimg.org/6uokk00j1/The_guardian.png")
     print "Adding " + guard_politics.get_name() + " scraper..."
     scrapers.append(guard_politics)    
 
@@ -321,7 +321,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
 
 
     punch_politics = punchScraper("Punch Politics", api_id="ei7tbc0y", region="nigeria", category="Politics", db_collection=collection,
-                        logo="http://s20.postimg.org/kzglgl5f1/punchh.png")
+                        logo="http://s20.postimg.org/bk9wuv25p/punchh.png")
     print "Adding " + punch_politics.get_name() + " scraper..."
     scrapers.append(punch_politics)
     
