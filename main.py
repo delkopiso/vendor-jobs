@@ -260,7 +260,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
 
     
     style_vitae = Scraper("Style Vitae Fashion", api_id="ajm8bq7c", region="nigeria", category="Fashion", db_collection=collection,
-                                logo="http://s20.postimg.org/vxruyru0d/Header_Style_Vitae.png")
+                                logo="http://s20.postimg.org/cu7q9wvxp/Header_Style_Vitae.png")
     print "Adding " + style_vitae.get_name() + " scraper..."
     scrapers.append(style_vitae)
     
@@ -277,7 +277,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
     scrapers.append(bnaij_fash)
 
     styleme = Scraper("Style Me Africa", api_id="bdjnldvy", region="nigeria", category="Fashion", db_collection=collection,
-                     logo="http://s20.postimg.org/ql7lydvhp/styleme_01.png")
+                     logo="http://s20.postimg.org/dhb8d6i7h/styleme_01.png")
     print "Adding " + styleme.get_name() + " scraper..."
     scrapers.append(styleme)
 
