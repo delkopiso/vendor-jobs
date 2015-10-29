@@ -286,10 +286,6 @@ def define_scrapers(collection):
     print "Adding " + shirley.get_name() + " scraper..."
     scrapers.append(shirley)
 
-    style_hq = Scraper("Style HQ Fashion", api_id ="5ho7bmf4", region = "nigeria", category="Fashion", db_collection=collection, 
-                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
-    print "Adding " + style_hq() + " scraper..."
-    scraper.append(style_hq)
 
     
     #Politics
