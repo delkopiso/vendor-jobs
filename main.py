@@ -103,7 +103,7 @@ def define_scrapers(collection):
     # Tech
 
     today_tech = Scraper("Today Tech", api_id="2f7vilp6", region="nigeria", category="Tech", db_collection=collection,
-                            logo="http://s20.postimg.org/mv7z5hjn1/today.png")
+                            logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_tech.get_name() + " scraper..."
     scrapers.append(today_tech)
 
@@ -133,7 +133,7 @@ def define_scrapers(collection):
     scrapers.append(ventures_tech_long)
 
     it_news = itnScraper("IT News Africa Tech", api_id="1youwujk", region="nigeria", category="Tech", db_collection=collection,
-                       logo="http://www.itnewsafrica.com/wp-content/uploads/2013/08/ITNewsAfrica_logo.gif")
+                       logo="http://s20.postimg.org/4sjhs0d65/it_s_new_africa.png")
     print "Adding " + it_news.get_name() + " scraper..."
     scrapers.append(it_news)
 
@@ -146,7 +146,7 @@ def define_scrapers(collection):
 
 
     # Business
-
+    
     ventures = Scraper("Ventures Africa Business", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
                        logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
     print "Adding " + ventures.get_name() + " scraper..."
