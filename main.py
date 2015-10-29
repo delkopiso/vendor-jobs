@@ -26,12 +26,12 @@ def define_scrapers(collection):
     scrapers.append(bnaij_gossip)
     
     pulse = Scraper("Pulse Gossip", api_id="dnxrp1h6", region="nigeria", category="Gossip", db_collection=collection,
-                    logo="http://s20.postimg.org/gg4cv2njd/pulset.png")
+                    logo="http://s20.postimg.org/po5s399d5/pulset.png")
     print "Adding " + pulse.get_name() + " scraper..."
     scrapers.append(pulse)
     
     sixty_gossip = Scraper("360 Gossip", api_id="3007ai6g", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://s20.postimg.org/vehpsdwa1/360nobs_logo.png")
+                             logo="http://s20.postimg.org/bpdo4j9gp/360nobs_logo.png")
     print "Adding " + sixty_gossip.get_name() + " scraper..."
     scrapers.append(sixty_gossip)
     
@@ -215,7 +215,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
 
     
     sixty_sport = Scraper("360 Sport", api_id="82amsk5k", region="nigeria", category="Sports", db_collection=collection,
-                             logo="http://s20.postimg.org/vehpsdwa1/360nobs_logo.png")
+                             logo="http://s20.postimg.org/bpdo4j9gp/360nobs_logo.png")
     print "Adding " + sixty_sport.get_name() + " scraper..."
     scrapers.append(sixty_sport)
 
@@ -239,7 +239,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
 
 
     pulse_sport = Scraper("Pulse Sport", api_id="atek2opq", region="nigeria", category="Sports", db_collection=collection,
-                    logo="http://s20.postimg.org/gg4cv2njd/pulset.png")
+                    logo="http://s20.postimg.org/po5s399d5/pulset.png")
     print "Adding " + pulse_sport.get_name() + " scraper..."
     scrapers.append(pulse_sport)
 
@@ -254,7 +254,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
 
 
     sixty_fash = Scraper("360 Fashion", api_id="9g7x0tow", region="nigeria", category="Fashion", db_collection=collection,
-                             logo="http://s20.postimg.org/vehpsdwa1/360nobs_logo.png")
+                             logo="http://s20.postimg.org/bpdo4j9gp/360nobs_logo.png")
     print "Adding " + sixty_fash.get_name() + " scraper..."
     scrapers.append(sixty_fash)
 
@@ -266,7 +266,7 @@ http://s20.postimg.org/z506nmilp/tclogobig.png
     
 
     pulse_fash = Scraper("Pulse Fashion", api_id="6iq08fpw", region="nigeria", category="Fashion", db_collection=collection,
-                    logo="http://s20.postimg.org/gg4cv2njd/pulset.png")
+                    logo="http://s20.postimg.org/po5s399d5/pulset.png")
     print "Adding " + pulse_fash.get_name() + " scraper..."
     scrapers.append(pulse_fash)
 
