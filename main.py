@@ -42,7 +42,7 @@ def define_scrapers(collection):
     scrapers.append(ynaij_gossip)
 
     ventures_gossip = venturesScraper("Ventures Africa Gossip", api_id="3w6fsfew", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
+                             logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
     print "Adding " + ventures_gossip.get_name() + " scraper..."
     scrapers.append(ventures_gossip)
     
@@ -52,7 +52,7 @@ def define_scrapers(collection):
     scrapers.append(zikoko_gossip)
 
     today_gossip = todayScraper("Today Gossip", api_id="98sgndus", region="nigeria", category="Gossip", db_collection=collection,
-                            logo="http://s20.postimg.org/mv7z5hjn1/today.png")
+                            logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_gossip.get_name() + " scraper..."
     scrapers.append(today_gossip)
     
@@ -61,12 +61,12 @@ def define_scrapers(collection):
     # Headline sources
     
     today_headlines = Scraper("Today Headlines", api_id="b9lqpkyy", region="nigeria", category="Headlines", db_collection=collection,
-                                 logo="http://s20.postimg.org/mv7z5hjn1/today.png")
+                                 logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_headlines.get_name() + " scraper..."
     scrapers.append(today_headlines)
     
     vanguard_headlines = Scraper("Vanguard Headlines", api_id="abzmopk8", region="nigeria", category="Headlines", db_collection=collection,
-                                 logo="http://s20.postimg.org/lxrwlrcfh/250x55xvanguardlogo.png")
+                                 logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_headlines.get_name() + " scraper..."
     scrapers.append(vanguard_headlines)
     
@@ -108,22 +108,22 @@ def define_scrapers(collection):
     scrapers.append(today_tech)
 
     tech_cabal = Scraper("Tech Cabal Tech", api_id="4bsxr58e", region="nigeria", category="Tech", db_collection=collection,
-                         logo="http://s20.postimg.org/6cfmyx6st/tclogobig.png")
+                         logo="http://s20.postimg.org/z506nmilp/tclogobig.png")
     print "Adding " + tech_cabal.get_name() + " scraper..."
     scrapers.append(tech_cabal)
-
+http://s20.postimg.org/z506nmilp/tclogobig.png
     vanguard_tech = Scraper("Vanguard Tech", api_id="e9qp7s1a", region="nigeria", category="Tech", db_collection=collection,
-                            logo="http://s20.postimg.org/lxrwlrcfh/250x55xvanguardlogo.png")
+                            logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_tech.get_name() + " scraper..."
     scrapers.append(vanguard_tech)
 
     techpoint = Scraper("Techpoint Tech", api_id="490y6x36", region="nigeria", category="Tech", db_collection=collection,
-                        logo="http://s20.postimg.org/qmhjrsxbh/Techpoint_web_logo.png")
+                        logo="http://s20.postimg.org/m24k4csdp/Techpoint_web_logo.png")
     print "Adding " + techpoint.get_name() + " scraper..."
     scrapers.append(techpoint)
 
     ventures_tech = Scraper("Ventures Africa Tech", api_id="bu960i24", region="nigeria", category="Tech", db_collection=collection,
-                       logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
+                       logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
     print "Adding " + ventures_tech.get_name() + " scraper..."
     scrapers.append(ventures_tech)
     
@@ -138,7 +138,7 @@ def define_scrapers(collection):
     scrapers.append(it_news)
 
     ms_techy = Scraper("Miss Techy Tech", api_id="an3p00uy", region="nigeria", category="Tech", db_collection=collection,
-                       logo="http://s20.postimg.org/dnb5b1n71/misstechy_header_logo.png")
+                       logo="http://s20.postimg.org/57url0z3h/misstechy_header_logo.png")
     print "Adding " + ms_techy.get_name() + " scraper..."
     scrapers.append(ms_techy)
     
@@ -148,17 +148,17 @@ def define_scrapers(collection):
     # Business
     
     ventures = Scraper("Ventures Africa Business", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
-                       logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
+                       logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
     print "Adding " + ventures.get_name() + " scraper..."
     scrapers.append(ventures)
     
     ventures_biz_long = venturesScraper("Ventures Africa Business Long", api_id="bbudi886", region="nigeria", category="Business", db_collection=collection,
-                       logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
+                       logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
     print "Adding " + ventures_biz_long.get_name() + " scraper..."
     scrapers.append(ventures_biz_long)
     
     vanguard_business = Scraper("Vanguard Business", api_id="cskj1sxo", region="nigeria", category="Business", db_collection=collection,
-                                logo="http://s20.postimg.org/lxrwlrcfh/250x55xvanguardlogo.png")
+                                logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_business.get_name() + " scraper..."
     scrapers.append(vanguard_business)
     
@@ -173,7 +173,7 @@ def define_scrapers(collection):
     scrapers.append(premium_biz)
 
     today_biz = Scraper("Today Business", api_id="ah2kx1zc", region="nigeria", category="Business", db_collection=collection,
-                                 logo="http://s20.postimg.org/mv7z5hjn1/today.png")
+                                 logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_biz.get_name() + " scraper..."
     scrapers.append(today_biz)
 
@@ -227,13 +227,13 @@ def define_scrapers(collection):
 
 
     today_sport = Scraper("Today Sport", api_id="6230ic18", region="nigeria", category="Sports", db_collection=collection,
-                                 logo="http://s20.postimg.org/mv7z5hjn1/today.png")
+                                 logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_sport.get_name() + " scraper..."
     scrapers.append(today_sport)
 
 
     vanguard_sport = Scraper("Vanguard Sport", api_id="8h4jou12", region="nigeria", category="Sports", db_collection=collection,
-                                logo="http://s20.postimg.org/lxrwlrcfh/250x55xvanguardlogo.png")
+                                logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_sport.get_name() + " scraper..."
     scrapers.append(vanguard_sport)
 
@@ -309,13 +309,13 @@ def define_scrapers(collection):
 
 
     today_politics = Scraper("Today Politics", api_id="5o03jioc", region="nigeria", category="Politics", db_collection=collection,
-                                 logo="http://s20.postimg.org/mv7z5hjn1/today.png")
+                                 logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_politics.get_name() + " scraper..."
     scrapers.append(today_politics)
 
 
     vanguard_politics = Scraper("Vanguard Politics", api_id="415802o6", region="nigeria", category="Politics", db_collection=collection,
-                                logo="http://s20.postimg.org/lxrwlrcfh/250x55xvanguardlogo.png")
+                                logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_politics.get_name() + " scraper..."
     scrapers.append(vanguard_politics)
 
