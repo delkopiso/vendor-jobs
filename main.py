@@ -111,7 +111,7 @@ def define_scrapers(collection):
                          logo="http://s20.postimg.org/z506nmilp/tclogobig.png")
     print "Adding " + tech_cabal.get_name() + " scraper..."
     scrapers.append(tech_cabal)
-http://s20.postimg.org/z506nmilp/tclogobig.png
+
     vanguard_tech = Scraper("Vanguard Tech", api_id="e9qp7s1a", region="nigeria", category="Tech", db_collection=collection,
                             logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_tech.get_name() + " scraper..."
