@@ -128,7 +128,7 @@ def define_scrapers(collection):
     scrapers.append(ventures_tech)
     
     ventures_tech_long = venturesScraper("Ventures Africa Tech Long", api_id="2dlebr7k", region="nigeria", category="Tech", db_collection=collection,
-                       logo="http://s20.postimg.org/f4wlmlrxl/Screen_Shot_2015_10_24_at_10.png")
+                       logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
     print "Adding " + ventures_tech_long.get_name() + " scraper..."
     scrapers.append(ventures_tech_long)
 
