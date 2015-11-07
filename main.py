@@ -304,14 +304,65 @@ def define_scrapers(collection):
     blackfab_style = Scraper("Black Fabulosity Style", api_id="b71iga7u", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
     print "Adding " + blackfab_style.get_name() + " scraper..."
-    scrapers.append(blackfab_style)    
-    
-    
+    scrapers.append(blackfab_style)
+
+
+    #Food
+    stylehq_food = Scraper("Style HQ Food", api_id="dj3e3z0i", region="nigeria", category="Food", db_collection=collection,
+                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
+    print "Adding " + stylehq_food.get_name() + " scraper..."
+    scrapers.append(stylehq_food)
+
+    butterfly_food = Scraper("Kitchen Butterfly Food", api_id="7i313vq6", region="nigeria", category="Food", db_collection=collection,
+                     logo="http://www.kitchenbutterfly.com/wp-content/uploads/2015/01/logo-3.png")
+    print "Adding " + butterfly_food.get_name() + " scraper..."
+    scrapers.append(butterfly_food)
+
+    naija_foodie = Scraper("9ja Foodie", api_id="8k6tn98m", region="nigeria", category="Food", db_collection=collection,
+                     logo="http://www.9jafoodie.com/wp-content/uploads/2015/04/9jafoodie_watermark_ret.jpg")
+    print "Adding " + naija_foodie.get_name() + " scraper..."
+    scrapers.append(naija_foodie)
+
+    vegan_food = Scraper("Vegan", api_id="88rw04wo", region="nigeria", category="Food", db_collection=collection,
+                     logo="http://yupitsvegan.com/wp-content/uploads/2015/04/cropped-yiv-logo-retina.png")
+    print "Adding " + vegan_food.get_name() + " scraper..."
+    scrapers.append(vegan_food_foodie)
+
+
+    #Lifestyle
+
+    stylehq_lifestyle = Scraper("Style HQ Lifestyle", api_id="6uil7rwe", region="nigeria", category="Lifestyle", db_collection=collection,
+                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
+    print "Adding " + stylehq_lifestyle.get_name() + " scraper..."
+    scrapers.append(stylehq_lifestyle)
+
+
+    blackfab_lifestyle1 = Scraper("Black Fabulosity Lifestyle 1", api_id="3iioys3c", region="nigeria", category="Lifestyle", db_collection=collection,
+                     logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
+    print "Adding " + blackfab_lifestyle1.get_name() + " scraper..."
+    scrapers.append(blackfab_lifestyle1)
+
+    blackfab_lifestyle2 = Scraper("Black Fabulosity Lifestyle 2", api_id="c0mpmajk", region="nigeria", category="Lifestyle", db_collection=collection,
+                     logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
+    print "Adding " + blackfab_lifestyle2.get_name() + " scraper..."
+    scrapers.append(blackfab_lifestyle2)
+
+    ours_lifestyle = Scraper("Ours Lifestyle", api_id="daotpyle", region="nigeria", category="Lifestyle", db_collection=collection,
+                     logo="http://ours-mag.com/wp-content/uploads/2015/10/Logo_Ours_noir1.png")
+    print "Adding " + ours_lifestyle.get_name() + " scraper..."
+    scrapers.append(ours_lifestyle)    
 
 
 
-    
-    
+
+
+
+
+
+
+
+
+
     #Politics
     
     sahara_politics = Scraper("Sahara Politics", api_id="adq8oezk", region="nigeria", category="Politics", db_collection=collection,
