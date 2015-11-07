@@ -286,34 +286,58 @@ def define_scrapers(collection):
     print "Adding " + shirley.get_name() + " scraper..."
     scrapers.append(shirley)
 
+    blackfab_fashion = Scraper("Black Fabulosity Fashion", api_id="e1l2f700", region="nigeria", category="Fashion", db_collection=collection,
+                     logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
+    print "Adding " + blackfab_fashion.get_name() + " scraper..."
+    scrapers.append(blackfab_fashion)
+
+    stylehq_fashion = Scraper("Style HQ Fashion", api_id="5ho7bmf4", region="nigeria", category="Fashion", db_collection=collection,
+                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
+    print "Adding " + stylehq_fashion.get_name() + " scraper..."
+    scrapers.append(stylehq_fashion)    
+
+    onobello_fashion = Scraper("Ono Bello Fashion", api_id="97yjawcw", region="nigeria", category="Fashion", db_collection=collection,
+                     logo="http://onobello.com/wp-content/uploads/2014/06/logo35.jpg")
+    print "Adding " + onobello_fashion.get_name() + " scraper..."
+    scrapers.append(onobello_fashion)    
+
+    blackfab_style = Scraper("Black Fabulosity Style", api_id="b71iga7u", region="nigeria", category="Fashion", db_collection=collection,
+                     logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
+    print "Adding " + blackfab_style.get_name() + " scraper..."
+    scrapers.append(blackfab_style)    
+    
+    
+
+
 
     
+    
     #Politics
-
+    
     sahara_politics = Scraper("Sahara Politics", api_id="adq8oezk", region="nigeria", category="Politics", db_collection=collection,
                            logo="http://s20.postimg.org/khums7ulp/sahara_reporter.png")
     print "Adding " + sahara_politics.get_name() + " scraper..."
     scrapers.append(sahara_politics)
     
-
+    
     guard_politics = guardScraper("Guardian Politics", api_id="dafhjgqo", region="nigeria", category="Politics", db_collection=collection,
                            logo="http://s20.postimg.org/6uokk00j1/The_guardian.png")
     print "Adding " + guard_politics.get_name() + " scraper..."
     scrapers.append(guard_politics)    
-
-
+    
+    
     ynaija_politics = Scraper("Y Naija Politics", api_id="46p6rxx6", region="nigeria", category="Politics", db_collection=collection,
                                 logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
     print "Adding " + ynaija_politics.get_name() + " scraper..."
     scrapers.append(ynaija_politics)
-
-
+    
+    
     today_politics = Scraper("Today Politics", api_id="5o03jioc", region="nigeria", category="Politics", db_collection=collection,
                                  logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_politics.get_name() + " scraper..."
     scrapers.append(today_politics)
-
-
+    
+    
     vanguard_politics = Scraper("Vanguard Politics", api_id="415802o6", region="nigeria", category="Politics", db_collection=collection,
                                 logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_politics.get_name() + " scraper..."
