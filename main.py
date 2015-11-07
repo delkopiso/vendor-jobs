@@ -326,7 +326,7 @@ def define_scrapers(collection):
     vegan_food = Scraper("Vegan", api_id="88rw04wo", region="nigeria", category="Food", db_collection=collection,
                      logo="http://yupitsvegan.com/wp-content/uploads/2015/04/cropped-yiv-logo-retina.png")
     print "Adding " + vegan_food.get_name() + " scraper..."
-    scrapers.append(vegan_food_foodie)
+    scrapers.append(vegan_food)
 
 
     #Lifestyle
