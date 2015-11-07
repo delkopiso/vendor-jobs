@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -318,7 +318,7 @@ def define_scrapers(collection):
     print "Adding " + butterfly_food.get_name() + " scraper..."
     scrapers.append(butterfly_food)
 
-    naija_foodie = Scraper("9ja Foodie", api_id="8k6tn98m", region="nigeria", category="Food", db_collection=collection,
+    naija_foodie = naija_food_Scraper("9ja Foodie", api_id="8k6tn98m", region="nigeria", category="Food", db_collection=collection,
                      logo="http://www.9jafoodie.com/wp-content/uploads/2015/04/9jafoodie_watermark_ret.jpg")
     print "Adding " + naija_foodie.get_name() + " scraper..."
     scrapers.append(naija_foodie)
