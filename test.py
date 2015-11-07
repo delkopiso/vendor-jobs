@@ -8,7 +8,7 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/9bhwv2y4?apikey=b08304e70880d8872c8732a6c32985df"))
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/8k6tn98m?apikey=b08304e70880d8872c8732a6c32985df"))
 
 for x in range(0,3):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])
@@ -19,23 +19,23 @@ for x in range(0,3):
 	soup = BS(content)
 	
 	
-	#NotJustOK
-	div = str(soup.findAll('div',{'class':'entry'}))
-	img = str(str(div).split('src="')[1])
-	coverPic = str(img.split('" alt')[0])
+	#9jaFoodie
 
-	'''
-	coverPic = str(img).split('src="')
+	img = str(results['results']['collection2'][x ]['coverPic']['src'].encode("utf-8"))
+	coverPic = str(img).split('?resize')
 	coverPic = coverPic[0]
-	coverPic = str(coverPic).split('<a href="')
-	coverPic = coverPic[1]
-	coverPic = str(coverPic).split('" ')[0]
-	'''
 	print coverPic
+
+	
 	
 
 
 	'''
+
+	#NotJustOK
+	div = str(soup.findAll('div',{'class':'entry'}))
+	img = str(str(div).split('src="')[1])
+	coverPic = str(img.split('" alt')[0])
 
 	#BeautyinLagos
 	img = soup.findAll('div',{'class':'separator'})
