@@ -411,9 +411,9 @@ class naija_food_Scraper(Scraper):
         content = r.content
         soup = BS(content)
         try:
-            img = str(results['results']['collection2'][x ]['coverPic']['src'].encode("utf-8"))
-            coverPic = str(img).split('?resize')
-            coverPic = coverPic[0]
+            div = str(soup.findAll('div',{'class':'portfolio-one-sidebar'}))
+            img = str(str(div).split('src="')[2])
+            coverPic = str(img.split("?resize")[0])
             return coverPic
         except:
             return ""
