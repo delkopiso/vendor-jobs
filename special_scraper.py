@@ -406,7 +406,7 @@ class naija_food_Scraper(Scraper):
     def __init__(self, name, api_id, region, category, db_collection, logo=""):
         Scraper.__init__(self, name, api_id, region, category, db_collection, logo)
 
-    def retrieve_picture(self, source):
+    def retrieve_picture(self, source, results):
         r = requests.get(source)
         content = r.content
         soup = BS(content)
@@ -425,7 +425,7 @@ class naija_food_Scraper(Scraper):
             piece = results["results"]["collection1"][count]
             title = piece["title"]["text"].encode("utf-8")
             source = str(piece["title"]["href"])
-            cover_pic = self.retrieve_picture(source)
+            cover_pic = self.retrieve_picture(source, results)
             if self.db_collection.find({"source": source}).count() != 0:
                 return
             else:
