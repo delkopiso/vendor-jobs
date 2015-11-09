@@ -8,7 +8,7 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/49j7pfyc?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/dj3e3z0i?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
 
 for x in range(0,5):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])
@@ -19,12 +19,13 @@ for x in range(0,5):
 	soup = BS(content)
 	
 	
-	#QZ
+	#HQ
 	try:
-		div = str(soup.findAll('picture'))
-		img = str(str(div).split('srcset="')[1])
-		img = str(img.split("?quality")[0])
-		print img
+		div = str(soup.findAll('div',{'id':'featured-image'}))
+		img = str(str(div).split('src="')[1])
+		coverPic = str(img.split(".jpg")[0])+".jpg"
+		coverPic = str(str(coverPic).split('" />')[0])
+		print coverPic
 	except:
 		print("Skipped")
 	
@@ -34,6 +35,16 @@ for x in range(0,5):
 
 
 	'''
+
+	#QZ
+
+	try:
+		div = str(soup.findAll('picture'))
+		img = str(str(div).split('srcset="')[1])
+		coverPic = str(img.split("?quality")[0])
+		print coverPic
+	except:
+		print("Skipped")
 
 	#9jaFoodie
 

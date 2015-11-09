@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -296,7 +296,7 @@ def define_scrapers(collection):
     print "Adding " + blackfab_fashion.get_name() + " scraper..."
     scrapers.append(blackfab_fashion)
 
-    stylehq_fashion = Scraper("Style HQ Fashion", api_id="5ho7bmf4", region="nigeria", category="Fashion", db_collection=collection,
+    stylehq_fashion = hqScraper("Style HQ Fashion", api_id="5ho7bmf4", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
     print "Adding " + stylehq_fashion.get_name() + " scraper..."
     scrapers.append(stylehq_fashion)    
@@ -313,7 +313,7 @@ def define_scrapers(collection):
 
 
     #Food
-    stylehq_food = Scraper("Style HQ Food", api_id="dj3e3z0i", region="nigeria", category="Food", db_collection=collection,
+    stylehq_food = hqScraper("Style HQ Food", api_id="dj3e3z0i", region="nigeria", category="Food", db_collection=collection,
                      logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
     print "Adding " + stylehq_food.get_name() + " scraper..."
     scrapers.append(stylehq_food)
@@ -336,7 +336,7 @@ def define_scrapers(collection):
 
     #Lifestyle
 
-    stylehq_lifestyle = Scraper("Style HQ Lifestyle", api_id="6uil7rwe", region="nigeria", category="Lifestyle", db_collection=collection,
+    stylehq_lifestyle = hqScraper("Style HQ Lifestyle", api_id="6uil7rwe", region="nigeria", category="Lifestyle", db_collection=collection,
                      logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
     print "Adding " + stylehq_lifestyle.get_name() + " scraper..."
     scrapers.append(stylehq_lifestyle)
