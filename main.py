@@ -97,6 +97,11 @@ def define_scrapers(collection):
     print "Adding " + thisday_head.get_name() + " scraper..."
     scrapers.append(thisday_head)
 
+    qz = Scraper("Quartz Headlines", api_id="bnazfi6", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBISmAJnq9x7AgT_vFrEYvYkf3UUmEeyC3Sbc3GDENAPxUuK3cjQ")
+    print "Adding " + qz.get_name() + " scraper..."
+    scrapers.append(qz)
+
     
 
 

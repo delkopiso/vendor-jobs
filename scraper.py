@@ -4,6 +4,7 @@ import urllib
 import datetime
 
 KIMONO_API_KEY = os.environ.get('KIMONO_API_KEY')
+limit = 5
 
 
 class Scraper:
@@ -21,7 +22,7 @@ class Scraper:
 
     def load_data(self):
         results = json.load(
-            urllib.urlopen("https://www.kimonolabs.com/api/"+self.api_id+"?apikey="+KIMONO_API_KEY)
+            urllib.urlopen("https://www.kimonolabs.com/api/"+self.api_id+"?apikey="+KIMONO_API_KEY+"kimlimit="+limit)
         )
         return results
 
