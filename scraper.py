@@ -4,7 +4,7 @@ import urllib
 import datetime
 
 KIMONO_API_KEY = os.environ.get('KIMONO_API_KEY')
-limit = 5
+limit = "5"
 
 
 class Scraper:
