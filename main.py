@@ -357,17 +357,7 @@ def define_scrapers(collection):
     print "Adding " + ours_lifestyle.get_name() + " scraper..."
     scrapers.append(ours_lifestyle)    
 
-
-
-
-
-
-
-
-
-
-
-
+    
     #Politics
     
     sahara_politics = Scraper("Sahara Politics", api_id="adq8oezk", region="nigeria", category="Politics", db_collection=collection,
@@ -399,12 +389,43 @@ def define_scrapers(collection):
     print "Adding " + vanguard_politics.get_name() + " scraper..."
     scrapers.append(vanguard_politics)
 
-
     punch_politics = punchScraper("Punch Politics", api_id="ei7tbc0y", region="nigeria", category="Politics", db_collection=collection,
                         logo="http://s20.postimg.org/bk9wuv25p/punchh.png")
     print "Adding " + punch_politics.get_name() + " scraper..."
     scrapers.append(punch_politics)
     
+
+    #Beauty
+
+    bnaij_beauty = Scraper("Bella Naija Beauty", api_id="81ifhajm", region="nigeria", category="Beauty", db_collection=collection,
+                     logo="http://s20.postimg.org/lb78ku0ml/bellanaija_mobile.png")
+    print "Adding " + bnaij_beauty.get_name() + " scraper..."
+    scrapers.append(bnaij_beauty)
+
+    stylehq_beauty = hqScraper("Style HQ Beauty", api_id="50eu30h6", region="nigeria", category="Beauty", db_collection=collection,
+                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
+    print "Adding " + stylehq_beauty.get_name() + " scraper..."
+    scrapers.append(stylehq_beauty)
+
+    natural_nigerian = Scraper("Natural Nigerian", api_id="cids7wge", region="nigeria", category="Beauty", db_collection=collection,
+                     logo="http://naturalnigerian.com/wp-content/themes/nn/images/nn_logo.png")
+    print "Adding " + natural_nigerian.get_name() + " scraper..."
+    scrapers.append(natural_nigerian)    
+
+    beauty_lagos = Scraper("Beauty in Lagos", api_id="b9uu2hyc", region="nigeria", category="Beauty", db_collection=collection,
+                     logo="http://1.bp.blogspot.com/-1hYLUhAt6ck/Vai_l-n7PKI/AAAAAAAAE_U/mgeSjCBI1n4/s960/BANNER1.png")
+    print "Adding " + beauty_lagos.get_name() + " scraper..."
+    scrapers.append(beauty_lagos)
+
+    onobello_beauty = Scraper("Ono Bello Beauty", api_id="9c157ol6", region="nigeria", category="Fashion", db_collection=collection,
+                     logo="http://onobello.com/wp-content/uploads/2014/06/logo35.jpg")
+    print "Adding " + onobello_beauty.get_name() + " scraper..."
+    scrapers.append(onobello_beauty)      
+
+
+    
+
+
 
 
 
