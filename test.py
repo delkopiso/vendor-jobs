@@ -8,9 +8,9 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/8k6tn98m?apikey=b08304e70880d8872c8732a6c32985df"))
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/49j7pfyc?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
 
-for x in range(0,4):
+for x in range(0,5):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])
 	title = str(results['results']['collection1'][x ]['title']['text'].encode("utf-8"))
 	print title
@@ -19,12 +19,14 @@ for x in range(0,4):
 	soup = BS(content)
 	
 	
-	#9jaFoodie
-
-	div = str(soup.findAll('div',{'class':'portfolio-one-sidebar'}))
-	img = str(str(div).split('src="')[2])
-	img = str(img.split("?resize")[0])
-	print img
+	#QZ
+	try:
+		div = str(soup.findAll('picture'))
+		img = str(str(div).split('srcset="')[1])
+		img = str(img.split("?quality")[0])
+		print img
+	except:
+		print("Skipped")
 	
 
 	
@@ -32,6 +34,13 @@ for x in range(0,4):
 
 
 	'''
+
+	#9jaFoodie
+
+	#div = str(soup.findAll('div',{'class':'portfolio-one-sidebar'}))
+	#img = str(str(div).split('src="')[2])
+	#img = str(img.split("?resize")[0])
+	#print img
 
 	#NotJustOK
 	div = str(soup.findAll('div',{'class':'entry'}))
