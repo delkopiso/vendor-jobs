@@ -22,7 +22,7 @@ class Scraper:
 
     def load_data(self):
         results = json.load(
-            urllib.urlopen("https://www.kimonolabs.com/api/"+self.api_id+"?apikey="+KIMONO_API_KEY+"kimlimit="+limit)
+            urllib.urlopen("https://www.kimonolabs.com/api/"+self.api_id+"?apikey="+KIMONO_API_KEY+"&kimlimit="+limit)
         )
         return results
 
