@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -412,7 +412,7 @@ def define_scrapers(collection):
     print "Adding " + natural_nigerian.get_name() + " scraper..."
     scrapers.append(natural_nigerian)    
 
-    beauty_lagos = Scraper("Beauty in Lagos", api_id="b9uu2hyc", region="nigeria", category="Beauty", db_collection=collection,
+    beauty_lagos = beautyScraper("Beauty in Lagos", api_id="b9uu2hyc", region="nigeria", category="Beauty", db_collection=collection,
                      logo="http://1.bp.blogspot.com/-1hYLUhAt6ck/Vai_l-n7PKI/AAAAAAAAE_U/mgeSjCBI1n4/s960/BANNER1.png")
     print "Adding " + beauty_lagos.get_name() + " scraper..."
     scrapers.append(beauty_lagos)
