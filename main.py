@@ -46,11 +46,6 @@ def define_scrapers(collection):
     print "Adding " + ventures_gossip.get_name() + " scraper..."
     scrapers.append(ventures_gossip)
     
-    zikoko_gossip = Scraper("Zikoko Gossip", api_id="6tyylw1s", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://s20.postimg.org/ugk6sftf1/zikoko.png")
-    print "Adding " + zikoko_gossip.get_name() + " scraper..."
-    scrapers.append(zikoko_gossip)
-
     today_gossip = todayScraper("Today Gossip", api_id="98sgndus", region="nigeria", category="Gossip", db_collection=collection,
                             logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_gossip.get_name() + " scraper..."
@@ -146,6 +141,11 @@ def define_scrapers(collection):
                        logo="http://s20.postimg.org/57url0z3h/misstechy_header_logo.png")
     print "Adding " + ms_techy.get_name() + " scraper..."
     scrapers.append(ms_techy)
+
+    tech_africa = Scraper("Tech Africa", api_id="dqa7uz7m", region="nigeria", category="Tech", db_collection=collection,
+                       logo="http://techafri.ca/wp-content/uploads/2014/01/techafrica-logo-small.png")
+    print "Adding " + tech_africa.get_name() + " scraper..."
+    scrapers.append(tech_africa)
     
     
 
@@ -417,17 +417,23 @@ def define_scrapers(collection):
     print "Adding " + beauty_lagos.get_name() + " scraper..."
     scrapers.append(beauty_lagos)
 
-    onobello_beauty = Scraper("Ono Bello Beauty", api_id="9c157ol6", region="nigeria", category="Fashion", db_collection=collection,
+    onobello_beauty = Scraper("Ono Bello Beauty", api_id="9c157ol6", region="nigeria", category="Beauty", db_collection=collection,
                      logo="http://onobello.com/wp-content/uploads/2014/06/logo35.jpg")
     print "Adding " + onobello_beauty.get_name() + " scraper..."
     scrapers.append(onobello_beauty)      
 
 
-    
+    #Funny
 
+    battabox_funny = Scraper("Battabox Funny", api_id="bz8q161w", region="nigeria", category="Funny", db_collection=collection,
+                     logo="https://battabox-battabox.netdna-ssl.com/wp-content/uploads/2015/08/BattaBox-Logo-Nigeria.png")
+    print "Adding " + battabox_funny.get_name() + " scraper..."
+    scrapers.append(battabox_funny)
 
-
-
+    zikoko_funny = Scraper("Zikoko Funny", api_id="6tyylw1s", region="nigeria", category="Funny", db_collection=collection,
+                             logo="http://s20.postimg.org/ugk6sftf1/zikoko.png")
+    print "Adding " + zikoko_funny.get_name() + " scraper..."
+    scrapers.append(zikoko_funny)
 
 
 
