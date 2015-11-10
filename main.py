@@ -438,17 +438,17 @@ def define_scrapers(collection):
 
     #Art & Design
 
-    ours_art = Scraper("Ours Art", api_id="62ddxayo", region="nigeria", category="Art & Design", db_collection=collection,
+    ours_art = Scraper("Ours Art", api_id="62ddxayo", region="nigeria", category="Art", db_collection=collection,
                      logo="http://ours-mag.com/wp-content/uploads/2015/10/Logo_Ours_noir1.png")
     print "Adding " + ours_art.get_name() + " scraper..."
     scrapers.append(ours_art)        
 
-    ada_art = Scraper("African Digital Art", api_id="7jji0dpo", region="nigeria", category="Art & Design", db_collection=collection,
+    ada_art = Scraper("African Digital Art", api_id="7jji0dpo", region="nigeria", category="Art", db_collection=collection,
                      logo="http://s20.postimg.org/c2aatzc19/adalogo_01.png")
     print "Adding " + ada_art.get_name() + " scraper..."
     scrapers.append(ada_art)        
 
-    indaba_art = Scraper("Desing Indaba", api_id="dyiz6gpi", region="nigeria", category="Art & Design", db_collection=collection,
+    indaba_art = Scraper("Desing Indaba", api_id="dyiz6gpi", region="nigeria", category="Art", db_collection=collection,
                      logo="http://s20.postimg.org/o2r5gyu25/design_indaba_logo.png")
     print "Adding " + indaba_art.get_name() + " scraper..."
     scrapers.append(indaba_art)        
