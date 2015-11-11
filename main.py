@@ -459,6 +459,35 @@ def define_scrapers(collection):
     scrapers.append(blackfab_art)
 
 
+    #Travel
+
+    stylehq_travel = hqScraper("Style HQ Travel", api_id="ekdq2bdq", region="nigeria", category="Travel", db_collection=collection,
+                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
+    print "Adding " + stylehq_travel.get_name() + " scraper..."
+    scrapers.append(stylehq_travel)
+
+    pursuits_travel = Scraper("Spirited Pursuits Travel", api_id="4q9638mm", region="nigeria", category="Travel", db_collection=collection,
+                     logo="http://static1.squarespace.com/static/52ee7408e4b0d94885a12285/t/52eea240e4b01528abbad4f0/1446338588469/?format=1500w")
+    print "Adding " + pursuits_travel.get_name() + " scraper..."
+    scrapers.append(pursuits_travel)
+
+    nomads_travel = Scraper("Nomads Travel", api_id="cm723she", region="nigeria", category="Travel", db_collection=collection,
+                     logo="https://naijanomads.files.wordpress.com/2015/10/cropped-fullsizerender-2.jpg?w=1000")
+    print "Adding " + nomads_travel.get_name() + " scraper..."
+    scrapers.append(nomads_travel)
+
+    gold_travel = Scraper("Gold Travel", api_id="bs04vyio", region="nigeria", category="Travel", db_collection=collection,
+                     logo="http://static1.squarespace.com/static/533b44d9e4b0ac2733685dc4/t/5544f2dbe4b067ba8b423aa5/1446335979794/?format=1500w")
+    print "Adding " + gold_travel.get_name() + " scraper..."
+    scrapers.append(gold_travel)
+
+    tastemakers_travel = Scraper("Tastemakers Travel", api_id="2b6efqsi", region="nigeria", category="Travel", db_collection=collection,
+                     logo="http://tastemakersafrica.com/wp-content/uploads/2014/11/TMA_Logo_Short_WebLg.png")
+    print "Adding " + tastemakers_travel.get_name() + " scraper..."
+    scrapers.append(tastemakers_travel)
+
+
+
 def run_scrapers():
     for scraper in scrapers:
         try:
