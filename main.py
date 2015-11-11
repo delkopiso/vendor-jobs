@@ -453,6 +453,11 @@ def define_scrapers(collection):
     print "Adding " + indaba_art.get_name() + " scraper..."
     scrapers.append(indaba_art)        
 
+    blackfab_art = Scraper("Black Fabulosity Art", api_id="9g24zlg2", region="nigeria", category="Art", db_collection=collection,
+                     logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
+    print "Adding " + blackfab_art.get_name() + " scraper..."
+    scrapers.append(blackfab_art)
+
 
 def run_scrapers():
     for scraper in scrapers:
