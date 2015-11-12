@@ -297,7 +297,7 @@ def define_scrapers(collection):
     scrapers.append(blackfab_fashion)
 
     stylehq_fashion = hqScraper("Style HQ Fashion", api_id="5ho7bmf4", region="nigeria", category="Fashion", db_collection=collection,
-                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
+                     logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_fashion.get_name() + " scraper..."
     scrapers.append(stylehq_fashion)    
 
@@ -314,7 +314,7 @@ def define_scrapers(collection):
 
     #Food
     stylehq_food = hqScraper("Style HQ Food", api_id="dj3e3z0i", region="nigeria", category="Food", db_collection=collection,
-                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
+                     logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_food.get_name() + " scraper..."
     scrapers.append(stylehq_food)
 
@@ -337,7 +337,7 @@ def define_scrapers(collection):
     #Lifestyle
 
     stylehq_lifestyle = hqScraper("Style HQ Lifestyle", api_id="6uil7rwe", region="nigeria", category="Lifestyle", db_collection=collection,
-                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
+                     logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_lifestyle.get_name() + " scraper..."
     scrapers.append(stylehq_lifestyle)
 
@@ -403,7 +403,7 @@ def define_scrapers(collection):
     scrapers.append(bnaij_beauty)
 
     stylehq_beauty = hqScraper("Style HQ Beauty", api_id="50eu30h6", region="nigeria", category="Beauty", db_collection=collection,
-                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
+                     logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_beauty.get_name() + " scraper..."
     scrapers.append(stylehq_beauty)
 
@@ -449,7 +449,7 @@ def define_scrapers(collection):
     scrapers.append(ada_art)        
 
     indaba_art = Scraper("Desing Indaba", api_id="dyiz6gpi", region="nigeria", category="Art", db_collection=collection,
-                     logo="http://s20.postimg.org/o2r5gyu25/design_indaba_logo.png")
+                     logo="http://i.imgur.com/avSP9b3.png")
     print "Adding " + indaba_art.get_name() + " scraper..."
     scrapers.append(indaba_art)        
 
@@ -462,7 +462,7 @@ def define_scrapers(collection):
     #Travel
 
     stylehq_travel = hqScraper("Style HQ Travel", api_id="ekdq2bdq", region="nigeria", category="Travel", db_collection=collection,
-                     logo="http://www.thestylehq.com/wp-content/uploads/2014/05/THESTYLEHQ1.png")
+                     logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_travel.get_name() + " scraper..."
     scrapers.append(stylehq_travel)
 
