@@ -444,7 +444,7 @@ def define_scrapers(collection):
     scrapers.append(ours_art)        
 
     ada_art = Scraper("African Digital Art", api_id="7jji0dpo", region="nigeria", category="Art", db_collection=collection,
-                     logo="http://s20.postimg.org/c2aatzc19/adalogo_01.png")
+                     logo="http://i.imgur.com/DbWfwtB.png")
     print "Adding " + ada_art.get_name() + " scraper..."
     scrapers.append(ada_art)        
 
