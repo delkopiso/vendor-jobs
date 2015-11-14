@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper, stearsScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -196,6 +196,11 @@ def define_scrapers(collection):
                            logo="http://s20.postimg.org/i1o80mn59/bd_mast_head_set.png")
     print "Adding " + bizday_biz.get_name() + " scraper..."
     scrapers.append(bizday_biz)
+
+    stearsng_biz = stearsScraper("Stears Business", api_id="9ryzjpym", region="nigeria", category="Business", db_collection=collection,
+                           logo="http://i.imgur.com/ycYEKtJ.jpg")
+    print "Adding " + stearsng_biz.get_name() + " scraper..."
+    scrapers.append(stearsng_biz)
 
 
 
@@ -522,6 +527,8 @@ def define_scrapers(collection):
                      logo="http://sugarweddings.com/sites/all/themes/sugar_2015/images/sugarlogo.png")
     print "Adding " + sugar_weddings.get_name() + " scraper..."
     scrapers.append(sugar_weddings)
+
+
 def run_scrapers():
     for scraper in scrapers:
         try:

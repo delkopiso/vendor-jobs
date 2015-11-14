@@ -527,6 +527,7 @@ class hqScraper(Scraper):
             self.mix_index = count % results["count"]
             count += 1
 
+
 class beautyScraper(Scraper):
     def __init__(self, name, api_id, region, category, db_collection, logo=""):
         Scraper.__init__(self, name, api_id, region, category, db_collection, logo)
@@ -542,6 +543,49 @@ class beautyScraper(Scraper):
             coverPic = str(coverPic).split('<a href="')
             coverPic = coverPic[1]
             coverPic = str(coverPic).split('" ')[0]
+            return coverPic
+        except:
+            return ""
+
+    def run(self):
+        results = self.load_data()
+        count = 0
+        while count < results["count"]:
+            piece = results["results"]["collection1"][count]
+            title = piece["title"]["text"].encode("utf-8")
+            source = str(piece["title"]["href"])
+            cover_pic = self.retrieve_picture(source, results)
+            if self.db_collection.find({"source": source}).count() != 0:
+                return
+            else:
+                self.db_collection.insert({
+                    "title": title,
+                    "source": source,
+                    "coverPic": cover_pic,
+                    "region": self.region,
+                    "section": self.category,
+                    "logo": self.logo,
+                    "popularity": 0,
+                    "mixIndex": self.mix_index,
+                    "dateAdded": datetime.datetime.now()
+                })
+            self.mix_index = count % results["count"]
+            count += 1
+
+
+class stearsScraper(Scraper):
+    def __init__(self, name, api_id, region, category, db_collection, logo=""):
+        Scraper.__init__(self, name, api_id, region, category, db_collection, logo)
+
+    def retrieve_picture(self, source, results):
+        r = requests.get(source)
+        content = r.content
+        soup = BS(content)
+        try:
+            div = str(soup.findAll('div',{'class':'w-section article-image'}))            
+            img = str(str(div).split('src="')[2])
+            coverPic = str(img.split('" class=')[0])
+            coverPic = "http://www.stearsng.com/"+coverPic
             return coverPic
         except:
             return ""
