@@ -304,7 +304,7 @@ def define_scrapers(collection):
     onobello_fashion = Scraper("Ono Bello Fashion", api_id="97yjawcw", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://onobello.com/wp-content/uploads/2014/06/logo35.jpg")
     print "Adding " + onobello_fashion.get_name() + " scraper..."
-    scrapers.append(onobello_fashion)    
+    scrapers.append(onobello_fashion)
 
     blackfab_style = Scraper("Black Fabulosity Style", api_id="b71iga7u", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
@@ -487,7 +487,41 @@ def define_scrapers(collection):
     scrapers.append(tastemakers_travel)
 
 
+    #Weddings
+    bnaij_weddings = Scraper("Bella Naija Weddings", api_id="aaem0hv6", region="nigeria", category="Weddings", db_collection=collection,
+                     logo="http://s20.postimg.org/lb78ku0ml/bellanaija_mobile.png")
+    print "Adding " + bnaij_weddings.get_name() + " scraper..."
+    scrapers.append(bnaij_weddings)
 
+
+    onobello_weddings = Scraper("Ono Bello Weddings", api_id="6991ib7o", region="nigeria", category="Weddings", db_collection=collection,
+                     logo="http://onobello.com/wp-content/uploads/2014/06/logo35.jpg")
+    print "Adding " + onobello_weddings.get_name() + " scraper..."
+    scrapers.append(onobello_weddings)
+
+
+    groom_weddings = Scraper("Groomspiration Weddings", api_id="8cl9n7l4", region="nigeria", category="Weddings", db_collection=collection,
+                     logo="http://groominspiration.com/v2015/wp-content/uploads/2015/03/logoWhite1.png")
+    print "Adding " + groom_weddings.get_name() + " scraper..."
+    scrapers.append(groom_weddings)
+
+
+    nigeria_weddings = Scraper("My Wedding Nigeria Weddings", api_id="2t8t85po", region="nigeria", category="Weddings", db_collection=collection,
+                     logo="http://myweddingnigeria.com/wp-content/themes/sight/images/logo.png")
+    print "Adding " + nigeria_weddings.get_name() + " scraper..."
+    scrapers.append(nigeria_weddings)
+
+
+    digest_weddings = Scraper("Wedding Digest Weddings", api_id="62y68gyy", region="nigeria", category="Weddings", db_collection=collection,
+                     logo="http://www.weddingdigestnaija.com/wp-content/uploads/2015/10/Large-Final.png")
+    print "Adding " + digest_weddings.get_name() + " scraper..."
+    scrapers.append(digest_weddings)    
+
+
+    sugar_weddings = Scraper("Sugar Weddings", api_id="2n05s2kk", region="nigeria", category="Weddings", db_collection=collection,
+                     logo="http://sugarweddings.com/sites/all/themes/sugar_2015/images/sugarlogo.png")
+    print "Adding " + sugar_weddings.get_name() + " scraper..."
+    scrapers.append(sugar_weddings)
 def run_scrapers():
     for scraper in scrapers:
         try:
