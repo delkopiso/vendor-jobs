@@ -198,7 +198,7 @@ def define_scrapers(collection):
     scrapers.append(bizday_biz)
 
     stearsng_biz = stearsScraper("Stears Business", api_id="9ryzjpym", region="nigeria", category="Business", db_collection=collection,
-                           logo="http://i.imgur.com/ycYEKtJ.jpg")
+                           logo="http://i.imgur.com/V27BUsU.png")
     print "Adding " + stearsng_biz.get_name() + " scraper..."
     scrapers.append(stearsng_biz)
 
