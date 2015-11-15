@@ -346,6 +346,10 @@ def define_scrapers(collection):
     print "Adding " + stylehq_lifestyle.get_name() + " scraper..."
     scrapers.append(stylehq_lifestyle)
 
+    stylehq_living = hqScraper("Style HQ Living", api_id="e8wxf19", region="nigeria", category="Lifestyle", db_collection=collection,
+                     logo="http://i.imgur.com/PZslF5g.png")
+    print "Adding " + stylehq_living.get_name() + " scraper..."
+    scrapers.append(stylehq_living)
 
     blackfab_lifestyle1 = Scraper("Black Fabulosity Lifestyle 1", api_id="3iioys3c", region="nigeria", category="Lifestyle", db_collection=collection,
                      logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
