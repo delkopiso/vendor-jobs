@@ -217,11 +217,12 @@ def define_scrapers(collection):
     print "Adding " + guard_sport.get_name() + " scraper..."
     scrapers.append(guard_sport)    
 
-
+    '''
     ynaija_sport = Scraper("Y Naija Sport", api_id="61gee0ww", region="nigeria", category="Sports", db_collection=collection,
                                 logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
     print "Adding " + ynaija_sport.get_name() + " scraper..."
     scrapers.append(ynaija_sport)
+    '''
 
     
     sixty_sport = Scraper("360 Sport", api_id="82amsk5k", region="nigeria", category="Sports", db_collection=collection,
@@ -286,11 +287,6 @@ def define_scrapers(collection):
     print "Adding " + bnaij_fash.get_name() + " scraper..."
     scrapers.append(bnaij_fash)
 
-    styleme = Scraper("Style Me Africa", api_id="bdjnldvy", region="nigeria", category="Fashion", db_collection=collection,
-                     logo="http://s20.postimg.org/dhb8d6i7h/styleme_01.png")
-    print "Adding " + styleme.get_name() + " scraper..."
-    scrapers.append(styleme)
-
     shirley = Scraper("Shirley's Wardrobe", api_id="3uwqzkjk", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://s20.postimg.org/yo16vyqp9/shirley_s_wardrobe.png")
     print "Adding " + shirley.get_name() + " scraper..."
@@ -346,7 +342,7 @@ def define_scrapers(collection):
     print "Adding " + stylehq_lifestyle.get_name() + " scraper..."
     scrapers.append(stylehq_lifestyle)
 
-    stylehq_living = hqScraper("Style HQ Living", api_id="e8wxf19", region="nigeria", category="Lifestyle", db_collection=collection,
+    stylehq_living = hqScraper("Style HQ Living", api_id="e8wxf19s", region="nigeria", category="Lifestyle", db_collection=collection,
                      logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_living.get_name() + " scraper..."
     scrapers.append(stylehq_living)
