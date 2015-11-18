@@ -491,6 +491,16 @@ def define_scrapers(collection):
     print "Adding " + tastemakers_travel.get_name() + " scraper..."
     scrapers.append(tastemakers_travel)
 
+    hotels_travel = Scraper("Hotels Travel", api_id="apwqxsdi", region="nigeria", category="Travel", db_collection=collection,
+                     logo="http://hotels.ng/media/v5/img/logo.png")
+    print "Adding " + hotels_travel.get_name() + " scraper..."
+    scrapers.append(hotels_travel)
+
+    jovago_travel = Scraper("Jovago Travel", api_id="dwt47zq4", region="nigeria", category="Travel", db_collection=collection,
+                     logo="http://techloy.com/wp-content/uploads/2015/04/164350-JovagoLogo-7e0f6d-large-1429700953.png")
+    print "Adding " + jovago_travel.get_name() + " scraper..."
+    scrapers.append(jovago_travel)
+
 
     #Weddings
     bnaij_weddings = Scraper("Bella Naija Weddings", api_id="aaem0hv6", region="nigeria", category="Weddings", db_collection=collection,
