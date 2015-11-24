@@ -320,12 +320,12 @@ class madeScraper(Scraper):
     def __init__(self, name, api_id, region, category, db_collection, logo=""):
         Scraper.__init__(self, name, api_id, region, category, db_collection, logo)
 
-    def retrieve_picture(self, source):
+    def retrieve_picture(self, source, count):
         r = requests.get(source)
         content = r.content
         soup = BS(content)
         try:
-            coverPic = str(results['results']['collection1'][x ]['coverPic']['src'].encode("utf-8"))
+            coverPic = str(results['results']['collection1'][count ]['coverPic']['src'].encode("utf-8"))
             coverPic = coverPic.split("200x240-100x120")
             coverPic = "600x300".join(coverPic)
             return coverPic
@@ -339,7 +339,7 @@ class madeScraper(Scraper):
             piece = results["results"]["collection1"][count]
             title = piece["title"]["text"].encode("utf-8")
             source = str(piece["title"]["href"])
-            cover_pic = self.retrieve_picture(source)
+            cover_pic = self.retrieve_picture(source, count)
             if self.db_collection.find({"source": source}).count() != 0:
                 return
             else:
