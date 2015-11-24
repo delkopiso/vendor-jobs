@@ -46,7 +46,7 @@ def define_scrapers(collection):
     print "Adding " + ventures_gossip.get_name() + " scraper..."
     scrapers.append(ventures_gossip)
     
-    today_gossip = todayScraper("Today Gossip", api_id="98sgndus", region="nigeria", category="Gossip", db_collection=collection,
+    today_gossip = todayScraper("Today Gossip", api_id="5zucxtg0", region="nigeria", category="Gossip", db_collection=collection,
                             logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_gossip.get_name() + " scraper..."
     scrapers.append(today_gossip)
@@ -177,7 +177,7 @@ def define_scrapers(collection):
     print "Adding " + premium_biz.get_name() + " scraper..."
     scrapers.append(premium_biz)
 
-    today_biz = Scraper("Today Business", api_id="ah2kx1zc", region="nigeria", category="Business", db_collection=collection,
+    today_biz = Scraper("Today Business", api_id="5t4jj7j8", region="nigeria", category="Business", db_collection=collection,
                                  logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_biz.get_name() + " scraper..."
     scrapers.append(today_biz)

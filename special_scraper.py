@@ -325,11 +325,9 @@ class madeScraper(Scraper):
         content = r.content
         soup = BS(content)
         try:
-            img = soup.findAll('div',{'class':'wp-caption aligncenter'})
-            coverPic = str(img).split('src="')
-            coverPic = coverPic[1]
-            coverPic = str(coverPic).split('" alt')
-            coverPic = coverPic[0]
+            coverPic = str(results['results']['collection1'][x ]['coverPic']['src'].encode("utf-8"))
+            coverPic = coverPic.split("200x240-100x120")
+            coverPic = "600x300".join(coverPic)
             return coverPic
         except:
             return ""
