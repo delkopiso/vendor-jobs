@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper, stearsScraper, wdigestScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper, stearsScraper, wdigestScraper, yabaLeftScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -427,8 +427,14 @@ def define_scrapers(collection):
     onobello_beauty = Scraper("Ono Bello Beauty", api_id="9c157ol6", region="nigeria", category="Beauty", db_collection=collection,
                      logo="http://onobello.com/wp-content/uploads/2014/06/logo35.jpg")
     print "Adding " + onobello_beauty.get_name() + " scraper..."
-    scrapers.append(onobello_beauty)      
+    scrapers.append(onobello_beauty)   
 
+    '''
+    igbo_chick = Scraper("That Igbo Chick", api_id="cx2vef1m", region="nigeria", category="Beauty", db_collection=collection,
+                     logo="")
+    print "Adding " + igbo_chick.get_name() + " scraper..."
+    scrapers.append(igbo_chick)    
+    '''
 
     #Funny
 
@@ -442,6 +448,10 @@ def define_scrapers(collection):
     print "Adding " + zikoko_funny.get_name() + " scraper..."
     scrapers.append(zikoko_funny)
 
+    yabaleft_funny = yabaLeftScraper("Yaba Left Funny", api_id="2w2ous02", region="nigeria", category="Funny", db_collection=collection,
+                             logo="http://yabaleftonline.com/wp-content/uploads/2014/11/YABALEFTONLINE-LOGO.png")
+    print "Adding " + yabaleft_funny.get_name() + " scraper..."
+    scrapers.append(yabaleft_funny)    
 
     #Art & Design
 

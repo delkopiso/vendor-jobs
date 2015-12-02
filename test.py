@@ -8,7 +8,7 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/62y68gyy?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/2w2ous02?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
 
 for x in range(0,5):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])
@@ -19,16 +19,13 @@ for x in range(0,5):
 	soup = BS(content)
 	
 	
-	#Wedding Digest
+	#YabaLeft
 	
 	try:
-		div = str(soup.findAll('div',{'class':'post-entry'}))
-		snip = div.split('data-lazy-src="')[1]
+		div = str(soup.findAll('div',{'class':'theiaPostSlider_slides'}))
+		snip = div.split(' src="')[1]
 		coverPic = snip.split('" alt="')[0]
 		print coverPic
-		#img = str(str(div).split('src="')[2])
-		#coverPic = str(img.split('" class=')[0])
-		#print coverPic
 	except:
 		print("Skipped")
 	
@@ -38,6 +35,25 @@ for x in range(0,5):
 
 
 	'''
+	#Wedding Digest
+	
+	try:
+		div = str(soup.findAll('div',{'class':'post-entry'}))
+		snip = div.split('data-lazy-src="')[1]
+		coverPic = snip.split('" alt="')[0]
+		print coverPic
+	except:
+		print("Skipped")
+
+
+	#YabaLeft
+	try:
+		div = str(soup.findAll('div',{'class':'theiaPostSlider_slides'}))
+		snip = div.split(' src="')[1]
+		coverPic = snip.split('" alt="')[0]
+		print coverPic
+	except:
+		print("Skipped")
 
 
 	#Stears
