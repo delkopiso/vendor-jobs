@@ -341,7 +341,6 @@ class madeScraper(Scraper):
             title = piece["title"]["text"].encode("utf-8")
             source = str(piece["title"]["href"])
             cover_pic = self.retrieve_picture(source, count, piece)
-            print cover_pic
             if self.db_collection.find({"source": source}).count() != 0:
                 return
             else:
