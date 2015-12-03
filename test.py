@@ -8,7 +8,7 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/2w2ous02?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/3igwmzsq?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
 
 for x in range(0,5):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])
@@ -19,22 +19,33 @@ for x in range(0,5):
 	soup = BS(content)
 	
 	
-	#YabaLeft
+	#Made
 	
 	try:
-		div = str(soup.findAll('div',{'class':'theiaPostSlider_slides'}))
-		snip = div.split(' src="')[1]
-		coverPic = snip.split('" alt="')[0]
+		coverPic = str(results['results']['collection1'][x]['coverPic']['src'].encode("utf-8"))
+		coverPic = coverPic.split("200x240-100x120")
+		coverPic = "600x300".join(coverPic)
 		print coverPic
 	except:
-		print("Skipped")
-	
+		print("Goodbye")
+		
+
 
 	
 	
 
 
 	'''
+	#Made
+	
+	try:
+        coverPic = str(results['results']['collection1'][count]['coverPic']['src'].encode("utf-8"))
+        coverPic = coverPic.split("200x240-100x120")
+        coverPic = "600x300".join(coverPic)
+        return coverPic
+    except:
+        return ""
+
 	#Wedding Digest
 	
 	try:

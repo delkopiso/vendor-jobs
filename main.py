@@ -429,12 +429,12 @@ def define_scrapers(collection):
     print "Adding " + onobello_beauty.get_name() + " scraper..."
     scrapers.append(onobello_beauty)   
 
-    '''
+    
     igbo_chick = Scraper("That Igbo Chick", api_id="cx2vef1m", region="nigeria", category="Beauty", db_collection=collection,
-                     logo="")
+                     logo="http://i.imgur.com/ywlP1Z5.png")
     print "Adding " + igbo_chick.get_name() + " scraper..."
     scrapers.append(igbo_chick)    
-    '''
+    
 
     #Funny
 

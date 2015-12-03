@@ -325,11 +325,12 @@ class madeScraper(Scraper):
         content = r.content
         soup = BS(content)
         try:
-            coverPic = str(results['results']['collection1'][count ]['coverPic']['src'].encode("utf-8"))
+            coverPic = str(results['results']['collection1'][count]['coverPic']['src'].encode("utf-8"))
             coverPic = coverPic.split("200x240-100x120")
             coverPic = "600x300".join(coverPic)
             return coverPic
-        except:
+        except Exception as e:
+            print "Unexpected error:", e, "with Made Scraper "
             return ""
 
     def run(self):
@@ -340,6 +341,7 @@ class madeScraper(Scraper):
             title = piece["title"]["text"].encode("utf-8")
             source = str(piece["title"]["href"])
             cover_pic = self.retrieve_picture(source, count)
+            print cover_pic
             if self.db_collection.find({"source": source}).count() != 0:
                 return
             else:
