@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper, stearsScraper, wdigestScraper, yabaLeftScraper, styleDocScraper, lagosStreetScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper, stearsScraper, wdigestScraper, yabaLeftScraper, styleDocScraper, lagosStreetScraper, nairametricsScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -204,7 +204,10 @@ def define_scrapers(collection):
     print "Adding " + stearsng_biz.get_name() + " scraper..."
     scrapers.append(stearsng_biz)
 
-
+    nairametrics_biz = nairametricsScraper("Nairametrics Business", api_id="alrs1xdw", region="nigeria", category="Business", db_collection=collection,
+                           logo="http://nairametrics.com/wp-content/uploads/2015/10/quango115.png")
+    print "Adding " + nairametrics_biz.get_name() + " scraper..."
+    scrapers.append(nairametrics_biz)
 
     #Sport
     
