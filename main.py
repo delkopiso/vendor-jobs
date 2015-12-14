@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper, stearsScraper, wdigestScraper, yabaLeftScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper, stearsScraper, wdigestScraper, yabaLeftScraper, styleDocScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -313,6 +313,11 @@ def define_scrapers(collection):
                      logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
     print "Adding " + blackfab_style.get_name() + " scraper..."
     scrapers.append(blackfab_style)
+
+    style_doc_fashion = styleDocScraper("Style Doc Fashion", api_id="4rjegzza", region="nigeria", category="Fashion", db_collection=collection,
+                     logo="http://www.styledoctor.net/wp-content/uploads/2015/01/Style-Doctor-LogoBIG-e1426425608800.png")
+    print "Adding " + style_doc_fashion.get_name() + " scraper..."
+    scrapers.append(style_doc_fashion)
 
 
     #Food
