@@ -7,7 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
-from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper, stearsScraper, wdigestScraper, yabaLeftScraper, styleDocScraper
+from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper, stearsScraper, wdigestScraper, yabaLeftScraper, styleDocScraper, lagosStreetScraper
 
 logging.basicConfig()
 ARTICLE_COLLECTION = "article"
@@ -318,6 +318,12 @@ def define_scrapers(collection):
                      logo="http://www.styledoctor.net/wp-content/uploads/2015/01/Style-Doctor-LogoBIG-e1426425608800.png")
     print "Adding " + style_doc_fashion.get_name() + " scraper..."
     scrapers.append(style_doc_fashion)
+
+    lagos_street_fashion = lagosStreetScraper("Lagos Street Style", api_id="8tu1hpka", region="nigeria", category="Fashion", db_collection=collection,
+                     logo="http://i.imgur.com/RiV9YZl.png")
+    print "Adding " + lagos_street_fashion.get_name() + " scraper..."
+    scrapers.append(lagos_street_fashion)
+
 
 
     #Food

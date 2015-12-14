@@ -8,7 +8,7 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/4rjegzza?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/8tu1hpka?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
 
 for x in range(0,5):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])
@@ -22,10 +22,9 @@ for x in range(0,5):
 	#StyleDoc
 	
 	try:
-		coverPic = str(results['results']['collection1'][x]['coverPic']['src'].encode("utf-8"))
-		coverPic = coverPic.split("?resize")
-		coverPic = coverPic[0]
-		print coverPic
+		div = str(soup.findAll('img',{'border':'0'})[4])
+		img = div.split('src="')[1].split('"')[0]
+		print img
 	except:
 		print("Goodbye")
 		
