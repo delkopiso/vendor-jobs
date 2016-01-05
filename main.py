@@ -304,10 +304,12 @@ def define_scrapers(collection):
     scrapers.append(blackfab_fashion)
     '''
 
+    '''
     stylehq_fashion = hqScraper("Style HQ Fashion", api_id="5ho7bmf4", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_fashion.get_name() + " scraper..."
     scrapers.append(stylehq_fashion)    
+    '''
 
     onobello_fashion = Scraper("Ono Bello Fashion", api_id="97yjawcw", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://onobello.com/wp-content/uploads/2014/06/logo35.jpg")
@@ -335,10 +337,12 @@ def define_scrapers(collection):
 
 
     #Food
+    '''
     stylehq_food = hqScraper("Style HQ Food", api_id="dj3e3z0i", region="nigeria", category="Food", db_collection=collection,
                      logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_food.get_name() + " scraper..."
     scrapers.append(stylehq_food)
+    '''
 
     butterfly_food = Scraper("Kitchen Butterfly Food", api_id="7i313vq6", region="nigeria", category="Food", db_collection=collection,
                      logo="http://www.kitchenbutterfly.com/wp-content/uploads/2015/01/logo-3.png")
@@ -363,6 +367,7 @@ def define_scrapers(collection):
 
     #Lifestyle
 
+    '''
     stylehq_lifestyle = hqScraper("Style HQ Lifestyle", api_id="6uil7rwe", region="nigeria", category="Lifestyle", db_collection=collection,
                      logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_lifestyle.get_name() + " scraper..."
@@ -372,6 +377,7 @@ def define_scrapers(collection):
                      logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_living.get_name() + " scraper..."
     scrapers.append(stylehq_living)
+    '''
 
     '''
     blackfab_lifestyle1 = Scraper("Black Fabulosity Lifestyle 1", api_id="3iioys3c", region="nigeria", category="Lifestyle", db_collection=collection,
@@ -436,10 +442,12 @@ def define_scrapers(collection):
     print "Adding " + bnaij_beauty.get_name() + " scraper..."
     scrapers.append(bnaij_beauty)
 
+    '''
     stylehq_beauty = hqScraper("Style HQ Beauty", api_id="50eu30h6", region="nigeria", category="Beauty", db_collection=collection,
                      logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_beauty.get_name() + " scraper..."
     scrapers.append(stylehq_beauty)
+    '''
 
     natural_nigerian = Scraper("Natural Nigerian", api_id="cids7wge", region="nigeria", category="Beauty", db_collection=collection,
                      logo="http://naturalnigerian.com/wp-content/themes/nn/images/nn_logo.png")
@@ -507,10 +515,12 @@ def define_scrapers(collection):
 
     #Travel
 
+    '''
     stylehq_travel = hqScraper("Style HQ Travel", api_id="ekdq2bdq", region="nigeria", category="Travel", db_collection=collection,
                      logo="http://i.imgur.com/PZslF5g.png")
     print "Adding " + stylehq_travel.get_name() + " scraper..."
     scrapers.append(stylehq_travel)
+    '''
 
     pursuits_travel = Scraper("Spirited Pursuits Travel", api_id="4q9638mm", region="nigeria", category="Travel", db_collection=collection,
                      logo="http://static1.squarespace.com/static/52ee7408e4b0d94885a12285/t/52eea240e4b01528abbad4f0/1446338588469/?format=1500w")
