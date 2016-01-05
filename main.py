@@ -54,6 +54,7 @@ def define_scrapers(collection):
     linda_gossip = Scraper("Linda Ikeji Gossip", api_id="2a6kuva6", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://i.imgur.com/7wOUVhV.png")
     print "Adding " + linda_gossip.get_name() + " scraper..."
+    scrapers.append(linda_gossip)
     
 
 
