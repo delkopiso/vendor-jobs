@@ -174,7 +174,7 @@ def define_scrapers(collection):
     print "Adding " + vanguard_business.get_name() + " scraper..."
     scrapers.append(vanguard_business)
     
-    punch_biz = punchScraper("Punch Business", api_id="bdid5uka", region="nigeria", category="Business", db_collection=collection,
+    punch_biz = punchScraper("Punch Business", api_id="7r88v2se", region="nigeria", category="Business", db_collection=collection,
                         logo="http://s20.postimg.org/bk9wuv25p/punchh.png")
     print "Adding " + punch_biz.get_name() + " scraper..."
     scrapers.append(punch_biz)
@@ -434,7 +434,7 @@ def define_scrapers(collection):
     print "Adding " + vanguard_politics.get_name() + " scraper..."
     scrapers.append(vanguard_politics)
 
-    punch_politics = punchScraper("Punch Politics", api_id="ei7tbc0y", region="nigeria", category="Politics", db_collection=collection,
+    punch_politics = punchScraper("Punch Politics", api_id="8id0ixuu", region="nigeria", category="Politics", db_collection=collection,
                         logo="http://s20.postimg.org/bk9wuv25p/punchh.png")
     print "Adding " + punch_politics.get_name() + " scraper..."
     scrapers.append(punch_politics)
@@ -547,7 +547,7 @@ def define_scrapers(collection):
     print "Adding " + tastemakers_travel.get_name() + " scraper..."
     scrapers.append(tastemakers_travel)
 
-    hotels_travel = Scraper("Hotels Travel", api_id="apwqxsdi", region="nigeria", category="Travel", db_collection=collection,
+    hotels_travel = Scraper("Hotels Travel", api_id="3eoeilro", region="nigeria", category="Travel", db_collection=collection,
                      logo="http://hotels.ng/media/v5/img/logo.png")
     print "Adding " + hotels_travel.get_name() + " scraper..."
     scrapers.append(hotels_travel)
@@ -578,7 +578,7 @@ def define_scrapers(collection):
 
 
     nigeria_weddings = Scraper("My Wedding Nigeria Weddings", api_id="2t8t85po", region="nigeria", category="Weddings", db_collection=collection,
-                     logo="http://myweddingnigeria.com/wp-content/themes/sight/images/logo.png")
+                     logo="http://myweddingnigeria.com/wp-content/uploads/2012/01/My-Wedding-Nigeria-Logo-Small.png")
     print "Adding " + nigeria_weddings.get_name() + " scraper..."
     scrapers.append(nigeria_weddings)
 

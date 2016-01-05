@@ -195,11 +195,8 @@ class punchScraper(Scraper):
         content = r.content
         soup = BS(content)
         try:
-            img = soup.findAll('div',{'class':'story-featured-image'})
-            coverPic = str(img).split('src="')
-            coverPic = coverPic[1]
-            coverPic = str(coverPic).split('" class')
-            coverPic = coverPic[0]
+            div = str(soup.findAll('div',{'class':'td-post-featured-image'}))
+            coverPic = div.split('src="')[1].split('" alt=')[0]
             return coverPic
         except:
             return ""
@@ -209,7 +206,7 @@ class punchScraper(Scraper):
         count = 0
         while count < results["count"]:
             piece = results["results"]["collection1"][count]
-            title = piece["title"]["text"].encode("utf-8")
+            title = piece["title"]["title"].encode("utf-8")
             source = str(piece["title"]["href"])
             cover_pic = self.retrieve_picture(source)
             if self.db_collection.find({"source": source}).count() != 0:
