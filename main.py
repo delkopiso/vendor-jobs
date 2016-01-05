@@ -297,10 +297,12 @@ def define_scrapers(collection):
     print "Adding " + shirley.get_name() + " scraper..."
     scrapers.append(shirley)
 
+    '''
     blackfab_fashion = Scraper("Black Fabulosity Fashion", api_id="e1l2f700", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
     print "Adding " + blackfab_fashion.get_name() + " scraper..."
     scrapers.append(blackfab_fashion)
+    '''
 
     stylehq_fashion = hqScraper("Style HQ Fashion", api_id="5ho7bmf4", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://i.imgur.com/PZslF5g.png")
@@ -312,16 +314,19 @@ def define_scrapers(collection):
     print "Adding " + onobello_fashion.get_name() + " scraper..."
     scrapers.append(onobello_fashion)
 
+    '''
     blackfab_style = Scraper("Black Fabulosity Style", api_id="b71iga7u", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
     print "Adding " + blackfab_style.get_name() + " scraper..."
     scrapers.append(blackfab_style)
+    
 
     style_doc_fashion = styleDocScraper("Style Doc Fashion", api_id="4rjegzza", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://www.styledoctor.net/wp-content/uploads/2015/01/Style-Doctor-LogoBIG-e1426425608800.png")
     print "Adding " + style_doc_fashion.get_name() + " scraper..."
     scrapers.append(style_doc_fashion)
-
+    '''
+    
     lagos_street_fashion = lagosStreetScraper("Lagos Street Style", api_id="8tu1hpka", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://i.imgur.com/RiV9YZl.png")
     print "Adding " + lagos_street_fashion.get_name() + " scraper..."
@@ -368,15 +373,18 @@ def define_scrapers(collection):
     print "Adding " + stylehq_living.get_name() + " scraper..."
     scrapers.append(stylehq_living)
 
+    '''
     blackfab_lifestyle1 = Scraper("Black Fabulosity Lifestyle 1", api_id="3iioys3c", region="nigeria", category="Lifestyle", db_collection=collection,
                      logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
     print "Adding " + blackfab_lifestyle1.get_name() + " scraper..."
     scrapers.append(blackfab_lifestyle1)
 
+
     blackfab_lifestyle2 = Scraper("Black Fabulosity Lifestyle 2", api_id="c0mpmajk", region="nigeria", category="Lifestyle", db_collection=collection,
                      logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
     print "Adding " + blackfab_lifestyle2.get_name() + " scraper..."
     scrapers.append(blackfab_lifestyle2)
+    '''
 
     ours_lifestyle = Scraper("Ours Lifestyle", api_id="daotpyle", region="nigeria", category="Lifestyle", db_collection=collection,
                      logo="http://ours-mag.com/wp-content/uploads/2015/10/Logo_Ours_noir1.png")
@@ -489,10 +497,12 @@ def define_scrapers(collection):
     print "Adding " + indaba_art.get_name() + " scraper..."
     scrapers.append(indaba_art)        
 
+    '''
     blackfab_art = Scraper("Black Fabulosity Art", api_id="9g24zlg2", region="nigeria", category="Art", db_collection=collection,
                      logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
     print "Adding " + blackfab_art.get_name() + " scraper..."
     scrapers.append(blackfab_art)
+    '''
 
 
     #Travel
