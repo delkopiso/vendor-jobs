@@ -8,23 +8,24 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/7r88v2se?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/62y68gyy?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
 
 for x in range(0,5):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])
-	title = str(results['results']['collection1'][x ]['title']['title'].encode("utf-8"))
+	title = str(results['results']['collection1'][x ]['title']['text'].encode("utf-8"))
 	print title
 	r = requests.get(source_url)
 	content = r.content
 	soup = BS(content)
 	
 	
-	#Punch New
+	#WEdding Digest
 	
 	try:
-		div = str(soup.findAll('div',{'class':'td-post-featured-image'}))
-		img = div.split('src="')[1].split('" alt=')[0]
-		print img
+		div = str(soup.findAll('div',{'class':'post-content entry-content cf'}))
+		img =  div.split('<p><img')[1].split('" alt')[0].split('src="')[1]
+		coverPic = img
+		print coverPic
 	except:
 		print("Goodbye")
 		
@@ -35,6 +36,7 @@ for x in range(0,5):
 
 
 	'''
+	
 	#Made
 	
 	try:
