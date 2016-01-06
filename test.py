@@ -8,9 +8,9 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/62y68gyy?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/bbudi886?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
 
-for x in range(0,5):
+for x in range(0,4):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])
 	title = str(results['results']['collection1'][x ]['title']['text'].encode("utf-8"))
 	print title
@@ -19,13 +19,14 @@ for x in range(0,5):
 	soup = BS(content)
 	
 	
-	#WEdding Digest
+	#Ventures
 	
 	try:
-		div = str(soup.findAll('div',{'class':'post-content entry-content cf'}))
-		img =  div.split('<p><img')[1].split('" alt')[0].split('src="')[1]
-		coverPic = img
+		img = soup.findAll('section',{'class':'top-story banner type--post'})
+		img = str(img).split('320w')[1].split('640w')[0]
+		coverPic = ("http://" + str(img.split('jpg')[0]) + "jpg").split('http://, ')[1]
 		print coverPic
+
 	except:
 		print("Goodbye")
 		
@@ -36,6 +37,18 @@ for x in range(0,5):
 
 
 	'''
+
+	#WEdding Digest
+	
+	try:
+		div = str(soup.findAll('div',{'class':'post-content entry-content cf'}))
+		img =  div.split('<p><img')[1].split('" alt')[0].split('src="')[1]
+		coverPic = img
+		print coverPic
+	except:
+		print("Goodbye")
+
+
 	
 	#Made
 	

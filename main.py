@@ -134,7 +134,7 @@ def define_scrapers(collection):
     print "Adding " + ventures_tech.get_name() + " scraper..."
     scrapers.append(ventures_tech)
     
-    ventures_tech_long = venturesScraper("Ventures Africa Tech Long", api_id="2dlebr7k", region="nigeria", category="Tech", db_collection=collection,
+    ventures_tech_long = venturesScraper("Ventures Africa Tech Long", api_id="bu960i24", region="nigeria", category="Tech", db_collection=collection,
                        logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
     print "Adding " + ventures_tech_long.get_name() + " scraper..."
     scrapers.append(ventures_tech_long)
@@ -159,15 +159,10 @@ def define_scrapers(collection):
 
     # Business
     
-    ventures = Scraper("Ventures Africa Business", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
+    ventures_biz = venturesScraper("Ventures Africa Business Long", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
                        logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
-    print "Adding " + ventures.get_name() + " scraper..."
-    scrapers.append(ventures)
-    
-    ventures_biz_long = venturesScraper("Ventures Africa Business Long", api_id="bbudi886", region="nigeria", category="Business", db_collection=collection,
-                       logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
-    print "Adding " + ventures_biz_long.get_name() + " scraper..."
-    scrapers.append(ventures_biz_long)
+    print "Adding " + ventures_biz.get_name() + " scraper..."
+    scrapers.append(ventures_biz)
     
     vanguard_business = Scraper("Vanguard Business", api_id="cskj1sxo", region="nigeria", category="Business", db_collection=collection,
                                 logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
