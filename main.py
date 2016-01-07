@@ -359,7 +359,7 @@ def define_scrapers(collection):
     print "Adding " + vegan_food.get_name() + " scraper..."
     scrapers.append(vegan_food)
 
-    dooney_food = Scraper("Dooney Food", api_id="dptak1d4", region="nigeria", category="Food", db_collection=collection,
+    dooney_food = Scraper("Dooney Food", api_id="5pn5cwsu", region="nigeria", category="Food", db_collection=collection,
                      logo="http://i.imgur.com/PC0Y6ov.png")
     print "Adding " + dooney_food.get_name() + " scraper..."
     scrapers.append(dooney_food)
