@@ -2,6 +2,7 @@ import json
 import os
 import urllib
 import datetime
+import ssl
 
 KIMONO_API_KEY = os.environ.get('KIMONO_API_KEY')
 limit = "5"
@@ -21,8 +22,9 @@ class Scraper:
         return self.name
 
     def load_data(self):
+        gcontext = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
         results = json.load(
-            urllib.urlopen("https://www.kimonolabs.com/api/"+self.api_id+"?apikey="+KIMONO_API_KEY+"&kimlimit="+limit)
+            urllib.urlopen("https://www.kimonolabs.com/api/"+self.api_id+"?apikey="+KIMONO_API_KEY+"&kimlimit="+limit, context=gcontext)
         )
         return results
 
