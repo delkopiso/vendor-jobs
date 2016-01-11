@@ -60,7 +60,7 @@ def define_scrapers(collection):
 
     # Headline sources
     
-    today_headlines = Scraper("Today Headlines", api_id="b9lqpkyy", region="nigeria", category="Headlines", db_collection=collection,
+    today_headlines = todayScraper("Today Headlines", api_id="b9lqpkyy", region="nigeria", category="Headlines", db_collection=collection,
                                  logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_headlines.get_name() + " scraper..."
     scrapers.append(today_headlines)
@@ -109,7 +109,7 @@ def define_scrapers(collection):
 
     # Tech
 
-    today_tech = Scraper("Today Tech", api_id="2f7vilp6", region="nigeria", category="Tech", db_collection=collection,
+    today_tech = todayScraper("Today Tech", api_id="2f7vilp6", region="nigeria", category="Tech", db_collection=collection,
                             logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_tech.get_name() + " scraper..."
     scrapers.append(today_tech)
@@ -179,7 +179,7 @@ def define_scrapers(collection):
     print "Adding " + premium_biz.get_name() + " scraper..."
     scrapers.append(premium_biz)
 
-    today_biz = Scraper("Today Business", api_id="5t4jj7j8", region="nigeria", category="Business", db_collection=collection,
+    today_biz = todayScraper("Today Business", api_id="5t4jj7j8", region="nigeria", category="Business", db_collection=collection,
                                  logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_biz.get_name() + " scraper..."
     scrapers.append(today_biz)
@@ -242,7 +242,7 @@ def define_scrapers(collection):
     scrapers.append(premium_sport)
 
 
-    today_sport = Scraper("Today Sport", api_id="6230ic18", region="nigeria", category="Sports", db_collection=collection,
+    today_sport = todayScraper("Today Sport", api_id="6230ic18", region="nigeria", category="Sports", db_collection=collection,
                                  logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_sport.get_name() + " scraper..."
     scrapers.append(today_sport)
@@ -418,7 +418,7 @@ def define_scrapers(collection):
     scrapers.append(ynaija_politics)
     
     
-    today_politics = Scraper("Today Politics", api_id="5o03jioc", region="nigeria", category="Politics", db_collection=collection,
+    today_politics = todayScraper("Today Politics", api_id="5o03jioc", region="nigeria", category="Politics", db_collection=collection,
                                  logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_politics.get_name() + " scraper..."
     scrapers.append(today_politics)

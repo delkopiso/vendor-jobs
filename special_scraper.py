@@ -277,12 +277,14 @@ class todayScraper(Scraper):
         content = r.content
         soup = BS(content)
         try:
-            img = soup.findAll('div',{'class':'post-featured'})
-            coverPic = str(img).split('src="')
-            coverPic = coverPic[1]
-            coverPic = str(coverPic).split('" class')
-            coverPic = coverPic[0]
+            img = soup.findAll('a',{'class':'post_image page_margin_top prettyPhoto'})
+            if len(img) == 0:
+                img = soup.findAll('a',{'class':'post_image prettyPhoto'})
+            
+            img = str(img).split('href="')[1].split('" title')[0]
+            coverPic = img
             return coverPic
+            
         except:
             return ""
 

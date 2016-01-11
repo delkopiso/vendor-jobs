@@ -8,9 +8,9 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/bbudi886?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/b9lqpkyy?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
 
-for x in range(0,4):
+for x in range(0,5):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])
 	title = str(results['results']['collection1'][x ]['title']['text'].encode("utf-8"))
 	print title
@@ -22,11 +22,14 @@ for x in range(0,4):
 	#Ventures
 	
 	try:
-		img = soup.findAll('section',{'class':'top-story banner type--post'})
-		img = str(img).split('320w')[1].split('640w')[0]
-		coverPic = ("http://" + str(img.split('jpg')[0]) + "jpg").split('http://, ')[1]
+		img = soup.findAll('a',{'class':'post_image page_margin_top prettyPhoto'})
+		if len(img) == 0:
+			img = soup.findAll('a',{'class':'post_image prettyPhoto'})
+		
+		img = str(img).split('href="')[1].split('" title')[0]
+		coverPic = img
 		print coverPic
-
+		
 	except:
 		print("Goodbye")
 		
