@@ -8,7 +8,7 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/b9lqpkyy?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/5zucxtg0?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
 
 for x in range(0,5):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])

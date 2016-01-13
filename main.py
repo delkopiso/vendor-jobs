@@ -488,6 +488,11 @@ def define_scrapers(collection):
     print "Adding " + yabaleft_funny.get_name() + " scraper..."
     scrapers.append(yabaleft_funny)    
 
+    funnyafrica_funny = Scraper("Funny Africa Funny", api_id="2jeixwo8", region="nigeria", category="Funny", db_collection=collection,
+                             logo="http://i.imgur.com/ZF9Xjaa.jpg")
+    print "Adding " + funnyafrica_funny.get_name() + " scraper..."
+    scrapers.append(funnyafrica_funny)
+
     #Art & Design
 
     ours_art = Scraper("Ours Art", api_id="62ddxayo", region="nigeria", category="Art", db_collection=collection,
