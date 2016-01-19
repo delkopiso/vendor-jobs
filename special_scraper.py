@@ -622,7 +622,7 @@ class wdigestScraper(Scraper):
         soup = BS(content)
         try:
             div = str(soup.findAll('div',{'class':'post-content entry-content cf'}))
-            img =  div.split('<p><img')[1].split('" alt')[0].split('src="')[1]
+            img =  div.split('data-lazy-src="')[1].split('" alt')[0]
             coverPic = img
             return coverPic
         except:
