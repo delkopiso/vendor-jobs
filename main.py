@@ -7,6 +7,7 @@ from apscheduler.executors.pool import ProcessPoolExecutor
 import logging
 from pymongo.mongo_client import MongoClient
 from scraper import Scraper
+from ioScraper import ioScraper
 from special_scraper import SaharaScraper, RadrScraper, venturesScraper, guardScraper, punchScraper, itnScraper, todayScraper, madeScraper, thisdayScraper, naija_food_Scraper, qzScraper, hqScraper, beautyScraper, stearsScraper, wdigestScraper, yabaLeftScraper, styleDocScraper, lagosStreetScraper, nairametricsScraper
 
 logging.basicConfig()
@@ -493,6 +494,11 @@ def define_scrapers(collection):
     print "Adding " + funnyafrica_funny.get_name() + " scraper..."
     scrapers.append(funnyafrica_funny)
 
+    partyjollof_funny = ioScraper("Party Jollof Funny", site="http%3A%2F%2Fpartyjollof.com%2F&&" , api_id="149f2867-f608-41c2-9538-61bf0e4c7945", region="nigeria", category="Funny", db_collection=collection,
+                             logo="http://partyjollof.com/wp-content/uploads/2015/12/NEW-LOGOS-RED-BRANDS_PartyJollof1.png")
+    print "Adding " + partyjollof_funny.get_name() + " scraper..."
+    scrapers.append(partyjollof_funny)
+
     #Art & Design
 
     ours_art = Scraper("Ours Art", api_id="62ddxayo", region="nigeria", category="Art", db_collection=collection,
@@ -509,13 +515,6 @@ def define_scrapers(collection):
                      logo="http://i.imgur.com/avSP9b3.png")
     print "Adding " + indaba_art.get_name() + " scraper..."
     scrapers.append(indaba_art)        
-
-    '''
-    blackfab_art = Scraper("Black Fabulosity Art", api_id="9g24zlg2", region="nigeria", category="Art", db_collection=collection,
-                     logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
-    print "Adding " + blackfab_art.get_name() + " scraper..."
-    scrapers.append(blackfab_art)
-    '''
 
 
     #Travel

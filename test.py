@@ -8,11 +8,21 @@ import cStringIO
 
 
 print "Started Test"
-results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/62y68gyy?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=5"))
 
-for x in range(0,5):
+api_id = "149f2867-f608-41c2-9538-61bf0e4c7945"
+site = "http%3A%2F%2Fpartyjollof.com%2F&&"
+IMPORT_API_KEY = "5a2844a10ccb47deabeaa0417c4f054a89cfae07a6b1dd6a8d5f7b4ce0741e65b28d43c0b0bd992894a60c35c777aaf1ebc51ccd02f2632031353c7f12646e5a6b521fd5862b428bcd1afed2be474fd2"
+
+
+url = "https://api.import.io/store/connector/"+api_id+"/_query?input=webpage/url:"+site+"_apikey="+IMPORT_API_KEY
+print url
+
+'''
+results = json.load(urllib.urlopen("https://www.kimonolabs.com/api/7r88v2se?apikey=b08304e70880d8872c8732a6c32985df&kimlimit=12"))
+
+for x in range(0,4):
 	source_url = str(results['results']['collection1'][x ]['title']['href'])
-	title = str(results['results']['collection1'][x ]['title']['text'].encode("utf-8"))
+	title = str(results['results']['collection1'][x ]['title']['title'].encode("utf-8"))
 	print title
 	r = requests.get(source_url)
 	content = r.content
@@ -22,21 +32,13 @@ for x in range(0,5):
 	#Ventures
 	
 	try:
-		div = str(soup.findAll('div',{'class':'post-content entry-content cf'}))
-		img =  div.split('data-lazy-src="')[1].split('" alt')[0]
-		coverPic = img
+		div = str(soup.findAll('div',{'class':'td-post-featured-image'}))
+		coverPic = div.split('src="')[1].split('" alt=')[0]
 		print coverPic
 	except:
 		print("Goodbye")
-		
-
-
 	
 	
-
-
-	'''
-
 	#WEdding Digest
 	
 	try:
