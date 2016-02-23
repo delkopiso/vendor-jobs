@@ -5,7 +5,7 @@ import datetime
 import ssl
 
 IMPORT_API_KEY = "5a2844a10ccb47deabeaa0417c4f054a89cfae07a6b1dd6a8d5f7b4ce0741e65b28d43c0b0bd992894a60c35c777aaf1ebc51ccd02f2632031353c7f12646e5a6b521fd5862b428bcd1afed2be474fd2"
-limit = "5"
+limit = 5
 
 
 class ioScraper:
