@@ -40,7 +40,7 @@ class ioScraper:
                 return
             else:
                 self.db_collection.insert({
-                    "title": piece["title/_text"],
+                    "title": piece["title/_text"].encode("utf-8") ,
                     "source": source,
                     "coverPic": piece["coverpic"],
                     "region": self.region,
