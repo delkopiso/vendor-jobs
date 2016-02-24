@@ -33,7 +33,8 @@ class ioScraper:
     def run(self):
         results = self.load_data()
         count = 0
-        while count < 5:
+        print len(results['results'])
+        while count < limit:
             piece = results["results"][count]
             source = piece["title"]
             title = piece["title/_text"].encode("utf-8")
@@ -53,5 +54,5 @@ class ioScraper:
                     "mixIndex": self.mix_index,
                     "dateAdded": datetime.datetime.now()
                 })
-            self.mix_index = count % results["count"]
+            self.mix_index = count % limit
             count += 1
