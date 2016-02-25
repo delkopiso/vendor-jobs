@@ -16,8 +16,9 @@ IMPORT_API_KEY = "5a2844a10ccb47deabeaa0417c4f054a89cfae07a6b1dd6a8d5f7b4ce0741e
 results = json.load(urllib.urlopen("https://api.import.io/store/connector/"+api_id+"/_query?input=webpage/url:"+site+"_apikey="+IMPORT_API_KEY))
 
 print len(results['results'])
+print "https://api.import.io/store/connector/"+api_id+"/_query?input=webpage/url:"+site+"_apikey="+IMPORT_API_KEY
 
-for x in range(0,4):
+for x in range(0,5):
 	source_url = str(results['results'][x]['title']).encode("utf-8")
 	print source_url
 	title = results['results'][x]['title/_text'].encode("utf-8")
