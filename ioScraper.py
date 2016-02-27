@@ -34,13 +34,13 @@ class ioScraper:
         results = self.load_data()
         count = 0
         length = len(results['results'])
+        print length
         while count < length:
             piece = results["results"][count]
             source = piece["title"]
             title = piece["title/_text"].encode("utf-8")
             print title
             if self.db_collection.find({"source": source}).count() != 0:
-                print "Returned PJ"
                 return
             else:
                 self.db_collection.insert({
