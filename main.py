@@ -101,53 +101,162 @@ def define_scrapers(collection):
     print "Adding " + linda_gossip_io_2100.get_name() + " scraper..."
     scrapers.append(linda_gossip_io_2100)
 
-    # Headline sources
+    ###################################################### HEADLINES SOUCRES ##########################################################
     
+    
+    ##Today Headline Sources##
     today_headlines = todayScraper("Today Headlines", api_id="b9lqpkyy", region="nigeria", category="Headlines", db_collection=collection,
                                  logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_headlines.get_name() + " scraper..."
     scrapers.append(today_headlines)
+
+    today_headlines_io_0600 = ioScraper("Today Headlines IO 0600 ", site="https%3A%2F%2Fwww.today.ng%2Fnews%2F&&", api_id="cb7bffab-02e7-4bb7-959a-f771f763b81c", region="nigeria", category="Headlines", db_collection=collection,
+                                 logo="http://s20.postimg.org/ic4xbggj1/today.png")
+    print "Adding " + today_headlines_io_0600.get_name() + " scraper..."
+    scrapers.append(today_headlines_io_0600)
+
+    today_headlines_io_0900 = ioScraper("Today Headlines IO 0900 ", site="https%3A%2F%2Fwww.today.ng%2Fnews%2F&&", api_id="0c4b9106-4573-4389-914c-aff1790581ba", region="nigeria", category="Headlines", db_collection=collection,
+                                 logo="http://s20.postimg.org/ic4xbggj1/today.png")
+    print "Adding " + today_headlines_io_0900.get_name() + " scraper..."
+    scrapers.append(today_headlines_io_0900)
+
+    today_headlines_io_1800 = ioScraper("Today Headlines IO 1800 ", site="https%3A%2F%2Fwww.today.ng%2Fnews%2F&&", api_id="2e051a53-e29a-4f52-bbbe-0da36b1a7761", region="nigeria", category="Headlines", db_collection=collection,
+                                 logo="http://s20.postimg.org/ic4xbggj1/today.png")
+    print "Adding " + today_headlines_io_1800.get_name() + " scraper..."
+    scrapers.append(today_headlines_io_1800)
     
+    
+
+    ##Vanguard Headline Sources##
     vanguard_headlines = Scraper("Vanguard Headlines", api_id="abzmopk8", region="nigeria", category="Headlines", db_collection=collection,
                                  logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_headlines.get_name() + " scraper..."
     scrapers.append(vanguard_headlines)
     
+    vanguard_headlines_io_0900 = ioScraper("Vanguard Headlines IO 0900 ", site="http%3A%2F%2Fwww.vanguardngr.com%2Fcategory%2Fbusiness%2F&&", api_id="dda2c15f-52b1-46e5-b2c2-33ca1e60bfea", region="nigeria", category="Headlines", db_collection=collection,
+                                 logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
+    print "Adding " + vanguard_headlines_io_0900.get_name() + " scraper..."
+    scrapers.append(vanguard_headlines_io_0900)
 
+    vanguard_headlines_io_1330 = ioScraper("Vanguard Headlines IO 1330 ", site="http%3A%2F%2Fwww.vanguardngr.com%2Fcategory%2Fbusiness%2F&&", api_id="e657a791-f6ba-41bc-ad5e-e7a6f8ea997b", region="nigeria", category="Headlines", db_collection=collection,
+                                 logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
+    print "Adding " + vanguard_headlines_io_1330.get_name() + " scraper..."
+    scrapers.append(vanguard_headlines_io_1330)
+
+    vanguard_headlines_io_1800 = ioScraper("Vanguard Headlines IO 1800 ", site="http%3A%2F%2Fwww.vanguardngr.com%2Fcategory%2Fbusiness%2F&&", api_id="78e26784-cd14-44e6-bdf7-a27b3049cd33", region="nigeria", category="Headlines", db_collection=collection,
+                                 logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
+    print "Adding " + vanguard_headlines_io_1800.get_name() + " scraper..."
+    scrapers.append(vanguard_headlines_io_1800)
+    
+
+    ##Ynaija Headline Sources##
     y_naija_headlines = Scraper("Y Naija Headlines", api_id="8172f0f2", region="nigeria", category="Headlines", db_collection=collection,
                                 logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
     print "Adding " + y_naija_headlines.get_name() + " scraper..."
     scrapers.append(y_naija_headlines)
 
+    ynaij_headlines_io = ioScraper("Ynaija Headlines IO", site="http%3A%2F%2Fynaija.com%2Fnews%2F&&", api_id="a5987e28-e976-46f7-afa4-16370a37d13f", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
+    print "Adding " + ynaij_headlines_io.get_name() + " scraper..."
+    scrapers.append(ynaij_headlines_io)
     
-    sahara = Scraper("Sahara Headlines", api_id="5ih3db3a", region="nigeria", category="Headlines", db_collection=collection,
-                           logo="http://s20.postimg.org/khums7ulp/sahara_reporter.png")
-    print "Adding " + sahara.get_name() + " scraper..."
-    scrapers.append(sahara)
     
+    ##Premium Headline Sources##
     premium = Scraper("Premium Headlines", api_id="4r6sdgjm", region="nigeria", category="Headlines", db_collection=collection,
                            logo="http://s20.postimg.org/5khkdgrzh/176x64xptn_logo_png_pagespeed.png")
     print "Adding " + premium.get_name() + " scraper..."
     scrapers.append(premium)
 
+    premium_io_0600 = ioScraper("Premium Headlines 0600", site="http%3A%2F%2Fwww.premiumtimesng.com%2Fcategory%2Fnews%2Fheadlines&&", api_id="3edb5b4a-fa43-4e37-b332-79f3639c517b", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/5khkdgrzh/176x64xptn_logo_png_pagespeed.png")
+    print "Adding " + premium_io_0600.get_name() + " scraper..."
+    scrapers.append(premium_io_0600)
+
+    premium_io_1800 = ioScraper("Premium Headlines 1800", site="http%3A%2F%2Fwww.premiumtimesng.com%2Fcategory%2Fnews%2Fheadlines&&", api_id="3b15da009-ab9d-4610-adcf-9503d64b1ef5", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/5khkdgrzh/176x64xptn_logo_png_pagespeed.png")
+    print "Adding " + premium_io_1800.get_name() + " scraper..."
+    scrapers.append(premium_io_1800)
+
+
+    ##Guardian Headline Sources##
     guard_head = guardScraper("Guardian Headlines", api_id="egzuf672", region="nigeria", category="Headlines", db_collection=collection,
                            logo="http://s20.postimg.org/6uokk00j1/The_guardian.png")
     print "Adding " + guard_head.get_name() + " scraper..."
     scrapers.append(guard_head)
 
+    guard_head_io_0000 = ioScraper("Guardian Headlines IO 0000 ", site="http%3A%2F%2Fwww.ngrguardiannews.com%2Fnews%2Fnational%2F&&", api_id="370b095f-3ee8-457d-a957-c2076250582c", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/6uokk00j1/The_guardian.png")
+    print "Adding " + guard_head_io_0000.get_name() + " scraper..."
+    scrapers.append(guard_head_io_0000)
+
+    guard_head_io_0600 = ioScraper("Guardian Headlines IO 0600 ", site="http%3A%2F%2Fwww.ngrguardiannews.com%2Fnews%2Fnational%2F&&", api_id="5ab2e92e-bb99-48c7-aafb-022f049f2ec1", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/6uokk00j1/The_guardian.png")
+    print "Adding " + guard_head_io_0600.get_name() + " scraper..."
+    scrapers.append(guard_head_io_0600)    
+
+    '''
+    guard_head_io_1330 = ioScraper("Guardian Headlines IO 1330 ", site="http%3A%2F%2Fwww.ngrguardiannews.com%2Fnews%2Fnational%2F&&", api_id="", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/6uokk00j1/The_guardian.png")
+    print "Adding " + guard_head_io_1330.get_name() + " scraper..."
+    scrapers.append(guard_head_io_1330)
+    '''
+
+    guard_head_io_2100 = ioScraper("Guardian Headlines IO 2100 ", site="http%3A%2F%2Fwww.ngrguardiannews.com%2Fnews%2Fnational%2F&&", api_id="e06e2677-8237-455f-843b-bd6ae34b0832", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/6uokk00j1/The_guardian.png")
+    print "Adding " + guard_head_io_2100.get_name() + " scraper..."
+    scrapers.append(guard_head_io_2100)
+
+
+    ##Thisday Headline Sources##
     thisday_head = thisdayScraper("Thisday Headlines", api_id="4thturvi", region="nigeria", category="Headlines", db_collection=collection,
                            logo="http://s20.postimg.org/79zud0mgd/This_daylive.png")
     print "Adding " + thisday_head.get_name() + " scraper..."
     scrapers.append(thisday_head)
 
-    
+    thisday_head_io_0600 = ioScraper("Thisday Headlines IO 0600", site="http%3A%2F%2Fwww.thisdaylive.com%2Fnews%2F&&", api_id="8038fdd9-a64e-4924-b8a1-66b7bbb99618", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/79zud0mgd/This_daylive.png")
+    print "Adding " + thisday_head_io_0600.get_name() + " scraper..."
+    scrapers.append(thisday_head_io_0600)
+
+    thisday_head_io_0900 = ioScraper("Thisday Headlines IO 0900", site="http%3A%2F%2Fwww.thisdaylive.com%2Fnews%2F&&", api_id="4621095d-a210-451c-85c1-d3a2494682cf", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/79zud0mgd/This_daylive.png")
+    print "Adding " + thisday_head_io_0900.get_name() + " scraper..."
+    scrapers.append(thisday_head_io_0900)
+
+    thisday_head_io_1330 = ioScraper("Thisday Headlines IO 1330", site="http%3A%2F%2Fwww.thisdaylive.com%2Fnews%2F&&", api_id="bcaa7eb6-b433-4b06-bca0-827afcc8f3f7", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/79zud0mgd/This_daylive.png")
+    print "Adding " + thisday_head_io_1330.get_name() + " scraper..."
+    scrapers.append(thisday_head_io_1330)
+
+    thisday_head_io_1800 = ioScraper("Thisday Headlines IO 1800", site="http%3A%2F%2Fwww.thisdaylive.com%2Fnews%2F&&", api_id="2b37b2a8-756e-4889-af81-84d26876bdb1", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/79zud0mgd/This_daylive.png")
+    print "Adding " + thisday_head_io_1800.get_name() + " scraper..."
+    scrapers.append(thisday_head_io_1800)
+
+    thisday_head_io_2100 = ioScraper("Thisday Headlines IO 2100", site="http%3A%2F%2Fwww.thisdaylive.com%2Fnews%2F&&", api_id="e822442c-e434-4d8f-9b03-4f52984717a9", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="http://s20.postimg.org/79zud0mgd/This_daylive.png")
+    print "Adding " + thisday_head_io_2100.get_name() + " scraper..."
+    scrapers.append(thisday_head_io_2100)
+
+
+    ##Quartz Headline Sources##
     qz = qzScraper("Quartz Headlines", api_id="49j7pfyc", region="nigeria", category="Headlines", db_collection=collection,
                            logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBISmAJnq9x7AgT_vFrEYvYkf3UUmEeyC3Sbc3GDENAPxUuK3cjQ")
     print "Adding " + qz.get_name() + " scraper..."
     scrapers.append(qz)
-    
 
-    # Tech
+    qz_io_0600 = ioScraper("Quartz Headlines IO 0600", site="http%3A%2F%2Fqz.com%2Flatest%2F&&", api_id="f639464f-1466-421f-b9ae-aa3a6b0dc851", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBISmAJnq9x7AgT_vFrEYvYkf3UUmEeyC3Sbc3GDENAPxUuK3cjQ")
+    print "Adding " + qz_io_0600.get_name() + " scraper..."
+    scrapers.append(qz_io_0600)
+
+    qz_io_2100 = ioScraper("Quartz Headlines IO 0600", site="http%3A%2F%2Fqz.com%2Flatest%2F&&", api_id="0829fafc-9a4a-49ca-8dff-8ba7533794b6", region="nigeria", category="Headlines", db_collection=collection,
+                           logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBISmAJnq9x7AgT_vFrEYvYkf3UUmEeyC3Sbc3GDENAPxUuK3cjQ")
+    print "Adding " + qz_io_2100.get_name() + " scraper..."
+    scrapers.append(qz_io_2100)
+
+
+    ###################################################### TECH SOUCRES ##########################################################
 
     today_tech = todayScraper("Today Tech", api_id="2f7vilp6", region="nigeria", category="Tech", db_collection=collection,
                             logo="http://s20.postimg.org/ic4xbggj1/today.png")
