@@ -17,13 +17,13 @@ results = json.load(urllib.urlopen("https://api.import.io/store/connector/"+api_
 
 #print len(results['results'])
 print "https://api.import.io/store/connector/"+api_id+"/_query?input=webpage/url:"+site+"_apikey="+IMPORT_API_KEY
-print results['results'][5]['title/_text'].encode("utf-8")
+
 
 for x in range(0,12):
 	source_url = str(results['results'][x]['title']).encode("utf-8")
 	#print source_url
 	title = results['results'][x]['title/_text'].encode("utf-8")
-	#print title
+	print title
 	#r = requests.get(source_url)
 	#content = r.content
 	#soup = BS(content)

@@ -19,50 +19,55 @@ def define_scrapers(collection):
     
 
 
-    # Gossip sources
+    ###################################################### GOSSIP SOUCRES ##########################################################
     
     bnaij_gossip = Scraper("Bella Naija Gossip", api_id="5u0c0qoi", region="nigeria", category="Gossip", db_collection=collection,
                      logo="http://s20.postimg.org/lb78ku0ml/bellanaija_mobile.png")
     print "Adding " + bnaij_gossip.get_name() + " scraper..."
     scrapers.append(bnaij_gossip)
 
+    ##Pulse Sources
     pulse_gossip_io_0600 = ioScraper("Pulse Naija Gossip IO - 6:00", site="http%3A%2F%2Fpulse.ng%2Ffashion%2F&&" , api_id="f2d2670a-93d9-43c0-9569-7280f09deb95", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://s20.postimg.org/po5s399d5/pulset.png")
-    print "Adding " + pulse_gossip_io_6am.get_name() + " scraper..."
-    scrapers.append(pulse_gossip_io_6am)
+    print "Adding " + pulse_gossip_io_0600.get_name() + " scraper..."
+    scrapers.append(pulse_gossip_io_0600)
 
     pulse_gossip_io_1330 = ioScraper("Pulse Naija Gossip IO - 13:30", site="http%3A%2F%2Fpulse.ng%2Ffashion%2F&&" , api_id="db4343e4-13f9-4e46-b578-a9a5101112cd", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://s20.postimg.org/po5s399d5/pulset.png")
     print "Adding " + pulse_gossip_io_1330.get_name() + " scraper..."
     scrapers.append(pulse_gossip_io_1330)
     
-    '''
     pulse = Scraper("Pulse Gossip", api_id="dnxrp1h6", region="nigeria", category="Gossip", db_collection=collection,
                     logo="http://s20.postimg.org/po5s399d5/pulset.png")
     print "Adding " + pulse.get_name() + " scraper..."
     scrapers.append(pulse)
-    '''
+    
+
+    ##360 Nobs Gossip Sources
     sixty_gossip = Scraper("360 Gossip", api_id="3007ai6g", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://s20.postimg.org/bpdo4j9gp/360nobs_logo.png")
     print "Adding " + sixty_gossip.get_name() + " scraper..."
     scrapers.append(sixty_gossip)
     
-
+    ##YNaija Gossip Sources
     ynaij_gossip = Scraper("Ynaija Gossip", api_id="acbiv2i8", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
     print "Adding " + ynaij_gossip.get_name() + " scraper..."
     scrapers.append(ynaij_gossip)
 
+    ##Ventures Gossip Sources
     ventures_gossip = venturesScraper("Ventures Africa Gossip", api_id="3w6fsfew", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
     print "Adding " + ventures_gossip.get_name() + " scraper..."
     scrapers.append(ventures_gossip)
     
+    ##Today Gossip Sources
     today_gossip = todayScraper("Today Gossip", api_id="5zucxtg0", region="nigeria", category="Gossip", db_collection=collection,
                             logo="http://s20.postimg.org/ic4xbggj1/today.png")
     print "Adding " + today_gossip.get_name() + " scraper..."
     scrapers.append(today_gossip)
 
+    ##Linda Gossip Sources
     linda_gossip = Scraper("Linda Ikeji Gossip", api_id="2a6kuva6", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://i.imgur.com/7wOUVhV.png")
     print "Adding " + linda_gossip.get_name() + " scraper..."
@@ -115,9 +120,6 @@ def define_scrapers(collection):
     print "Adding " + qz.get_name() + " scraper..."
     scrapers.append(qz)
     
-
-    
-
 
     # Tech
 
