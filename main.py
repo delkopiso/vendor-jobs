@@ -48,32 +48,58 @@ def define_scrapers(collection):
                              logo="http://s20.postimg.org/bpdo4j9gp/360nobs_logo.png")
     print "Adding " + sixty_gossip.get_name() + " scraper..."
     scrapers.append(sixty_gossip)
-    
+
+    sixty_gossip_io_0600 = ioScraper("360 Gossip IO - 0600", site="http%3A%2F%2Fwww.360nobs.com%2Fcategory%2Fnews%2Fentertainment_news%2F&&" , api_id="919f81ac-9084-4168-b6ad-189317367074", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://s20.postimg.org/bpdo4j9gp/360nobs_logo.png")
+    print "Adding " + sixty_gossip_io_0600.get_name() + " scraper..."
+    scrapers.append(sixty_gossip_io_0600)
+
+    sixty_gossip_io_1800 = ioScraper("360 Gossip IO - 1800", site="http%3A%2F%2Fwww.360nobs.com%2Fcategory%2Fnews%2Fentertainment_news%2F&&" , api_id="ac72a90c-f09c-4e95-a832-89b50e4f6fc1", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://s20.postimg.org/bpdo4j9gp/360nobs_logo.png")
+    print "Adding " + sixty_gossip_io_1800.get_name() + " scraper..."
+    scrapers.append(sixty_gossip_io_1800)
+
     ##YNaija Gossip Sources
     ynaij_gossip = Scraper("Ynaija Gossip", api_id="acbiv2i8", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
     print "Adding " + ynaij_gossip.get_name() + " scraper..."
     scrapers.append(ynaij_gossip)
 
-    ##Ventures Gossip Sources
-    ventures_gossip = venturesScraper("Ventures Africa Gossip", api_id="3w6fsfew", region="nigeria", category="Gossip", db_collection=collection,
-                             logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
-    print "Adding " + ventures_gossip.get_name() + " scraper..."
-    scrapers.append(ventures_gossip)
-    
-    ##Today Gossip Sources
-    today_gossip = todayScraper("Today Gossip", api_id="5zucxtg0", region="nigeria", category="Gossip", db_collection=collection,
-                            logo="http://s20.postimg.org/ic4xbggj1/today.png")
-    print "Adding " + today_gossip.get_name() + " scraper..."
-    scrapers.append(today_gossip)
+    ynaij_gossip_io = ioScraper("Ynaija Gossip IO", site="http%3A%2F%2Fynaija.com%2Fcelebrity%2F&&", api_id="3fda0fa5-3a11-4863-a36c-33d07e0f365d", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
+    print "Adding " + ynaij_gossip_io.get_name() + " scraper..."
+    scrapers.append(ynaij_gossip_io)
 
     ##Linda Gossip Sources
-    linda_gossip = Scraper("Linda Ikeji Gossip", api_id="2a6kuva6", region="nigeria", category="Gossip", db_collection=collection,
+    linda_gossip_io_0000 = ioScraper("Linda Ikeji Gossip IO 0000", site="http%3A%2F%2Fwww.lindaikejisblog.com%2F&&", api_id="5d600d18-3a8c-4b95-a76f-97c2f69b6f94", region="nigeria", category="Gossip", db_collection=collection,
                              logo="http://i.imgur.com/7wOUVhV.png")
-    print "Adding " + linda_gossip.get_name() + " scraper..."
-    scrapers.append(linda_gossip)
+    print "Adding " + linda_gossip_io_0000.get_name() + " scraper..."
+    scrapers.append(linda_gossip_io_0000)
     
+    linda_gossip_io_0600 = ioScraper("Linda Ikeji Gossip IO 0600", site="http%3A%2F%2Fwww.lindaikejisblog.com%2F&&", api_id="472989dd-8729-46cc-bd4b-1e97c035c947", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://i.imgur.com/7wOUVhV.png")
+    print "Adding " + linda_gossip_io_0600.get_name() + " scraper..."
+    scrapers.append(linda_gossip_io_0600)
 
+    linda_gossip_io_0900 = ioScraper("Linda Ikeji Gossip IO 0900", site="http%3A%2F%2Fwww.lindaikejisblog.com%2F&&", api_id="b892fcb5-357e-4664-8590-cb61160be6a9", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://i.imgur.com/7wOUVhV.png")
+    print "Adding " + linda_gossip_io_0900.get_name() + " scraper..."
+    scrapers.append(linda_gossip_io_0900)
+
+    linda_gossip_io_1330 = ioScraper("Linda Ikeji Gossip IO 1200", site="http%3A%2F%2Fwww.lindaikejisblog.com%2F&&", api_id="7c93a470-7c70-432b-9176-43820e5c057d", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://i.imgur.com/7wOUVhV.png")
+    print "Adding " + linda_gossip_io_1330.get_name() + " scraper..."
+    scrapers.append(linda_gossip_io_1330)
+
+    linda_gossip_io_1800 = ioScraper("Linda Ikeji Gossip IO 1800", site="http%3A%2F%2Fwww.lindaikejisblog.com%2F&&", api_id="c090a1f6-0d8c-4f2e-9283-c37c41d99990", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://i.imgur.com/7wOUVhV.png")
+    print "Adding " + linda_gossip_io_1800.get_name() + " scraper..."
+    scrapers.append(linda_gossip_io_1800)
+
+    linda_gossip_io_2100 = ioScraper("Linda Ikeji Gossip IO 2100", site="http%3A%2F%2Fwww.lindaikejisblog.com%2F&&", api_id="3aebdf54-bce4-4744-aa45-48f88f5130cf", region="nigeria", category="Gossip", db_collection=collection,
+                             logo="http://i.imgur.com/7wOUVhV.png")
+    print "Adding " + linda_gossip_io_2100.get_name() + " scraper..."
+    scrapers.append(linda_gossip_io_2100)
 
     # Headline sources
     
