@@ -20,11 +20,12 @@ def define_scrapers(collection):
 
 
     ###################################################### GOSSIP SOUCRES ##########################################################
-    
+    '''
     bnaij_gossip = Scraper("Bella Naija Gossip", api_id="5u0c0qoi", region="nigeria", category="Gossip", db_collection=collection,
                      logo="http://s20.postimg.org/lb78ku0ml/bellanaija_mobile.png")
     print "Adding " + bnaij_gossip.get_name() + " scraper..."
     scrapers.append(bnaij_gossip)
+    '''
 
     ##Pulse Sources
     pulse_gossip_io_0600 = ioScraper("Pulse Naija Gossip IO - 6:00", site="http%3A%2F%2Fpulse.ng%2Ffashion%2F&&" , api_id="f2d2670a-93d9-43c0-9569-7280f09deb95", region="nigeria", category="Gossip", db_collection=collection,
@@ -275,11 +276,6 @@ def define_scrapers(collection):
     ###################################################### BUSINESS SOUCRES ##########################################################
     
     ##Ventures Africa Biz Sources##
-    ventures_biz = venturesScraper("Ventures Africa Business Long", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
-                       logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
-    print "Adding " + ventures_biz.get_name() + " scraper..."
-    scrapers.append(ventures_biz)
-
     ventures_io_0900 = ioScraper("Ventures Africa IO 0900", site="http%3A%2F%2Fventuresafrica.com%2Fcategory%2Fbusiness%2F&&", api_id="5c28aef0-a90d-4025-bda4-6c3a682f8686", region="nigeria", category="Business", db_collection=collection, 
                         logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
     print "Adding " + ventures_io_0900.get_name() + " scraper..."
@@ -562,12 +558,12 @@ def define_scrapers(collection):
     ###################################################### FUNNY SOUCRES ##########################################################
     '''
     ##Battabox Funny Sources##
-    battabox_io_0600 = Scraper("Battabox IO 0600", site="https%3A%2F%2Fbattabox.com%2Flatest-videos%2F&&", api_id="9dee1f36-01c2-46ce-b855-07be9202a398", region="nigeria", category="Funny", db_collection=collection,
+    battabox_io_0600 = ioScraper("Battabox IO 0600", site="https%3A%2F%2Fbattabox.com%2Flatest-videos%2F&&", api_id="9dee1f36-01c2-46ce-b855-07be9202a398", region="nigeria", category="Funny", db_collection=collection,
                      logo="https://battabox-battabox.netdna-ssl.com/wp-content/uploads/2015/08/BattaBox-Logo-Nigeria.png")
     print "Adding " + battabox_io_0600.get_name() + " scraper..."
     scrapers.append(battabox_io_0600)
 
-    battabox_io_1800 = Scraper("Battabox IO 1800", site="https%3A%2F%2Fbattabox.com%2Flatest-videos%2F&&", api_id="70bf601a-5b9e-462c-a49a-6d06660ebe17", region="nigeria", category="Funny", db_collection=collection,
+    battabox_io_1800 = ioScraper("Battabox IO 1800", site="https%3A%2F%2Fbattabox.com%2Flatest-videos%2F&&", api_id="70bf601a-5b9e-462c-a49a-6d06660ebe17", region="nigeria", category="Funny", db_collection=collection,
                      logo="https://battabox-battabox.netdna-ssl.com/wp-content/uploads/2015/08/BattaBox-Logo-Nigeria.png")
     print "Adding " + battabox_io_1800.get_name() + " scraper..."
     scrapers.append(battabox_io_1800)
