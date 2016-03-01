@@ -9,20 +9,19 @@ import cStringIO
 
 print "Started Test"
 
-d_name = ("Vanguard Biz IO 0000", "Vanguard Biz IO 0900", "Vanguard Biz IO 1330")
-api_id = ("237441cb-8425-481b-acdb-66bb2dca0674","a1107ea4-3050-462b-814c-966caa8420cd","8b85b2ec-fe9b-4de8-81e7-1579e40c65c0")
-logo = ("http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
-site = "http%3A%2F%2Fwww.vanguardngr.com%2Fcategory%2Fbusiness%2F&&"
-IMPORT_API_KEY = "5a2844a10ccb47deabeaa0417c4f054a89cfae07a6b1dd6a8d5f7b4ce0741e65b28d43c0b0bd992894a60c35c777aaf1ebc51ccd02f2632031353c7f12646e5a6b521fd5862b428bcd1afed2be474fd2"
+d_name = ("Zikoko IO 0000","Zikoko IO 0900","Zikoko IO 1800")
+api_id = ("c1c83236-843c-4287-8960-5acdc6f9a0c0","0caaf34c-75d0-453c-a66a-3eb803eb6317", "6d20606d-789c-4918-8e9b-289fed212b28")
+logo = "http://s20.postimg.org/ugk6sftf1/zikoko.png"
+site = "http%3A%2F%2Fzikoko.com%2F&&"
+#IMPORT_API_KEY = "5a2844a10ccb47deabeaa0417c4f054a89cfae07a6b1dd6a8d5f7b4ce0741e65b28d43c0b0bd992894a60c35c777aaf1ebc51ccd02f2632031353c7f12646e5a6b521fd5862b428bcd1afed2be474fd2"
 
 #results = json.load(urllib.urlopen("https://api.import.io/store/connector/"+api_id+"/_query?input=webpage/url:"+site+"_apikey="+IMPORT_API_KEY))
 
-#print len(results['results'])
+print len(api_id)
 #print "https://api.import.io/store/connector/"+api_id+"/_query?input=webpage/url:"+site+"_apikey="+IMPORT_API_KEY
 
 
 for x in range(0,len(api_id)):
-	print d_name[x]
 	text = 'ioScraper("'+d_name[x]+'", site="'+site+'", api_id="'+api_id[x]+'", region="nigeria", category="Business", db_collection=collection, logo="'+logo+'")'
 	#source_url = str(results['results'][x]['title']).encode("utf-8")
 	#print source_url
