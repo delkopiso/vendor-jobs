@@ -272,13 +272,43 @@ def define_scrapers(collection):
     
     
     
-    # Business
+    ###################################################### BUSINESS SOUCRES ##########################################################
     
     ventures_biz = venturesScraper("Ventures Africa Business Long", api_id="6vo0hr5a", region="nigeria", category="Business", db_collection=collection,
                        logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
     print "Adding " + ventures_biz.get_name() + " scraper..."
     scrapers.append(ventures_biz)
+
+    ventures_io_0900 = ioScraper("Ventures Africa IO 0900", site="http%3A%2F%2Fventuresafrica.com%2Fcategory%2Fbusiness%2F&&", api_id="5c28aef0-a90d-4025-bda4-6c3a682f8686", region="nigeria", category="Business", db_collection=collection, 
+                        logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
+    print "Adding " + ventures_io_0900.get_name() + " scraper..."
+    scrapers.append(ventures_io_0900)
+
+    ventures_io_1800 = ioScraper("Ventures Africa IO 1800", site="http%3A%2F%2Fventuresafrica.com%2Fcategory%2Fbusiness%2F&&", api_id="ac2d4502-a628-4521-b44f-b06ae49bc750", region="nigeria", category="Business", db_collection=collection, 
+                        logo="http://s20.postimg.org/vf0juq6qx/Ventures.png")
+    print "Adding " + ventures_io_1800.get_name() + " scraper..."
+    scrapers.append(ventures_io_1800)
     
+    
+    vanguard_biz_io_0000 = iioScraper("Vanguard Biz IO 0000", site="http%3A%2F%2Fwww.vanguardngr.com%2Fcategory%2Fbusiness%2F&&", api_id="237441cb-8425-481b-acdb-66bb2dca0674", region="nigeria", category="Business", db_collection=collection, 
+                        logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
+    print "Adding " + vanguard_biz_io_0000.get_name() + " scraper..."
+    scrapers.append(vanguard_biz_io_0000)
+
+    vanguard_biz_io_0900 = ioScraper("Vanguard Biz IO 0900", site="http%3A%2F%2Fwww.vanguardngr.com%2Fcategory%2Fbusiness%2F&&", api_id="a1107ea4-3050-462b-814c-966caa8420cd", region="nigeria", category="Business", db_collection=collection, 
+                        logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
+    print "Adding " + vanguard_biz_io_0900.get_name() + " scraper..."
+    scrapers.append(vanguard_biz_io_0900)
+
+    vanguard_biz_io_1330 = ioScraper("Vanguard Biz IO 1330", site="http%3A%2F%2Fwww.vanguardngr.com%2Fcategory%2Fbusiness%2F&&", api_id="8b85b2ec-fe9b-4de8-81e7-1579e40c65c0", region="nigeria", category="Business", db_collection=collection, 
+                        logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
+    print "Adding " + vanguard_biz_io_0000.get_name() + " scraper..."
+    scrapers.append(vanguard_biz_io_0000)
+
+
+
+
+
     vanguard_business = Scraper("Vanguard Business", api_id="cskj1sxo", region="nigeria", category="Business", db_collection=collection,
                                 logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_business.get_name() + " scraper..."
