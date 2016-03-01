@@ -290,7 +290,7 @@ def define_scrapers(collection):
     scrapers.append(ventures_io_1800)
     
     
-    vanguard_biz_io_0000 = iioScraper("Vanguard Biz IO 0000", site="http%3A%2F%2Fwww.vanguardngr.com%2Fcategory%2Fbusiness%2F&&", api_id="237441cb-8425-481b-acdb-66bb2dca0674", region="nigeria", category="Business", db_collection=collection, 
+    vanguard_biz_io_0000 = ioScraper("Vanguard Biz IO 0000", site="http%3A%2F%2Fwww.vanguardngr.com%2Fcategory%2Fbusiness%2F&&", api_id="237441cb-8425-481b-acdb-66bb2dca0674", region="nigeria", category="Business", db_collection=collection, 
                         logo="http://s20.postimg.org/i0ea77lbh/250x55xvanguardlogo.png")
     print "Adding " + vanguard_biz_io_0000.get_name() + " scraper..."
     scrapers.append(vanguard_biz_io_0000)
@@ -367,13 +367,6 @@ def define_scrapers(collection):
     print "Adding " + guard_sport.get_name() + " scraper..."
     scrapers.append(guard_sport)    
 
-    '''
-    ynaija_sport = Scraper("Y Naija Sport", api_id="61gee0ww", region="nigeria", category="Sports", db_collection=collection,
-                                logo="http://s20.postimg.org/k57tzs1pp/ynaija_logo.png")
-    print "Adding " + ynaija_sport.get_name() + " scraper..."
-    scrapers.append(ynaija_sport)
-    '''
-
     
     sixty_sport = Scraper("360 Sport", api_id="82amsk5k", region="nigeria", category="Sports", db_collection=collection,
                              logo="http://s20.postimg.org/bpdo4j9gp/360nobs_logo.png")
@@ -441,20 +434,6 @@ def define_scrapers(collection):
                      logo="http://s20.postimg.org/yo16vyqp9/shirley_s_wardrobe.png")
     print "Adding " + shirley.get_name() + " scraper..."
     scrapers.append(shirley)
-
-    '''
-    blackfab_fashion = Scraper("Black Fabulosity Fashion", api_id="e1l2f700", region="nigeria", category="Fashion", db_collection=collection,
-                     logo="http://www.blackfabulousity.com/wp-content/uploads/2014/07/bfy-logo-2.png")
-    print "Adding " + blackfab_fashion.get_name() + " scraper..."
-    scrapers.append(blackfab_fashion)
-    '''
-
-    '''
-    stylehq_fashion = hqScraper("Style HQ Fashion", api_id="5ho7bmf4", region="nigeria", category="Fashion", db_collection=collection,
-                     logo="http://i.imgur.com/PZslF5g.png")
-    print "Adding " + stylehq_fashion.get_name() + " scraper..."
-    scrapers.append(stylehq_fashion)    
-    '''
 
     onobello_fashion = Scraper("Ono Bello Fashion", api_id="97yjawcw", region="nigeria", category="Fashion", db_collection=collection,
                      logo="http://onobello.com/wp-content/uploads/2014/06/logo35.jpg")
